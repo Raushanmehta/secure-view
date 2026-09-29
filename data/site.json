@@ -1,0 +1,658 @@
+{
+    "SecureView": {
+        "templateComponents": {
+            "template-1": {
+                "shared": {
+                    "navbar": "SecureViewNavbar1",
+                    "footer": "SecureViewFooter1"
+                },
+                "pages": {
+                    "home": {
+                        "components": [
+                            {
+                                "key": "hero",
+                                "component": "SecureViewHero1"
+                            },
+                            {
+                                "key": "about",
+                                "component": "SecureViewAbout1"
+                            },
+                            {
+                                "key": "services",
+                                "component": "SecureViewServices1"
+                            },
+                            {
+                                "key": "caseStudies",
+                                "component": "SecureViewCaseStudies1"
+                            },
+                            {
+                                "key": "team",
+                                "component": "SecureViewTeam1"
+                            },
+                            {
+                                "key": "blog",
+                                "component": "SecureViewBlog1"
+                            }
+                        ]
+                    },
+                    "about": {
+                        "components": [
+                            {
+                                "key": "about",
+                                "component": "SecureViewAbout1"
+                            },
+                            {
+                                "key": "whyChooseUs",
+                                "component": "SecureViewWhyChooseUs1"
+                            },
+                            {
+                                "key": "cta",
+                                "component": "SecureViewCta1"
+                            }
+                        ]
+                    },
+                    "services": {
+                        "components": [
+                            {
+                                "key": "services",
+                                "component": "SecureViewServices1"
+                            }
+                        ]
+                    },
+                    "caseStudies": {
+                        "components": [
+                            {
+                                "key": "caseStudies",
+                                "component": "SecureViewCaseStudies1"
+                            }
+                        ]
+                    },
+                    "team": {
+                        "components": [
+                            {
+                                "key": "team",
+                                "component": "SecureViewTeam1"
+                            }
+                        ]
+                    },
+                    "blog": {
+                        "components": [
+                            {
+                                "key": "blog",
+                                "component": "SecureViewBlog1"
+                            }
+                        ]
+                    },
+                    "contact": {
+                        "components": [
+                            {
+                                "key": "contact",
+                                "component": "SecureViewContact1"
+                            }
+                        ]
+                    },
+                    "whyChooseUs": {
+                        "components": [
+                            {
+                                "key": "whyChooseUs",
+                                "component": "SecureViewWhyChooseUs1"
+                            },
+                            {
+                                "key": "testimonial",
+                                "component": "SecureViewTestimonial1"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "sections": {
+            "navbar": {
+                "variants": {
+                    "SecureViewNavbar1": {
+                        "logo": {
+                            "src": "/logo/logo.png",
+                            "alt": "Logo",
+                            "href": "/"
+                        },
+                        "navItems": [
+                            {
+                                "name": "Home",
+                                "href": "/"
+                            },
+                            {
+                                "name": "About Us",
+                                "href": "/about"
+                            },
+                            {
+                                "name": "Services",
+                                "href": "/services",
+                                "hasDropdown": true,
+                                "dropdownItems": [
+                                    {
+                                        "name": "Residential CCTV",
+                                        "href": "/services/residential"
+                                    },
+                                    {
+                                        "name": "Commercial Surveillance",
+                                        "href": "/services/commercial"
+                                    },
+                                    {
+                                        "name": "Maintenance & Support",
+                                        "href": "/services/maintenance"
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "Why Choose Us",
+                                "href": "/why-choose-us"
+                            },
+                            {
+                                "name": "Case Study",
+                                "href": "/case-study"
+                            },
+                            {
+                                "name": "Blog",
+                                "href": "/blog"
+                            },
+                            {
+                                "name": "Contact Us",
+                                "href": "/contact"
+                            }
+                        ],
+                        "actionButton": {
+                            "text": "Get a Quote",
+                            "href": "/contact",
+                            "icon": "ArrowRight"
+                        }
+                    }
+                }
+            },
+            "footer": {
+                "variants": {
+                    "SecureViewFooter1": {
+                        "ctaBanner": {
+                            "title": "Need Expert",
+                            "highlightTitle": "CCTV Installation",
+                            "titleSuffix": "?",
+                            "description": "Get reliable security solutions for your home or business.",
+                            "image": {
+                                "src": "/images/footer-banner.png",
+                                "alt": "CCTV Installation Banner"
+                            },
+                            "button": {
+                                "text": "Get a Free Quote",
+                                "href": "/contact",
+                                "icon": "ArrowRight"
+                            }
+                        },
+                        "brand": {
+                            "logo": {
+                                "src": "/logo/logo.png",
+                                "alt": "Logo",
+                                "href": "/"
+                            },
+                            "description": "We provide advanced Security and CCTV solutions, ensuring 24/7 protection with high-quality systems.",
+                            "socials": [
+                                {
+                                    "name": "Pinterest",
+                                    "icon": "FaPinterestP",
+                                    "href": "#"
+                                },
+                                {
+                                    "name": "X",
+                                    "icon": "FaXTwitter",
+                                    "href": "#"
+                                },
+                                {
+                                    "name": "Facebook",
+                                    "icon": "FaFacebookF",
+                                    "href": "#"
+                                },
+                                {
+                                    "name": "Instagram",
+                                    "icon": "FaInstagram",
+                                    "href": "#"
+                                }
+                            ]
+                        },
+                        "quickLinks": {
+                            "title": "Quick Links",
+                            "links": [
+                                {
+                                    "name": "Home",
+                                    "href": "/"
+                                },
+                                {
+                                    "name": "About Us",
+                                    "href": "/about"
+                                },
+                                {
+                                    "name": "Services",
+                                    "href": "/services"
+                                },
+                                {
+                                    "name": "Projects",
+                                    "href": "/projects"
+                                },
+                                {
+                                    "name": "Blog",
+                                    "href": "/blog"
+                                },
+                                {
+                                    "name": "Contact Us",
+                                    "href": "/contact"
+                                }
+                            ]
+                        },
+                        "servicesLinks": {
+                            "title": "Our Services",
+                            "links": [
+                                {
+                                    "name": "24/7 Monitoring Services",
+                                    "href": "/services"
+                                },
+                                {
+                                    "name": "Alarm Systems Installation",
+                                    "href": "/services"
+                                },
+                                {
+                                    "name": "CCTV Installation",
+                                    "href": "/services"
+                                },
+                                {
+                                    "name": "Smart Home Integration",
+                                    "href": "/services"
+                                },
+                                {
+                                    "name": "Maintenance & Support",
+                                    "href": "/services"
+                                },
+                                {
+                                    "name": "Access Control Systems",
+                                    "href": "/services"
+                                }
+                            ]
+                        },
+                        "otherPagesLinks": {
+                            "title": "Other Pages",
+                            "links": [
+                                {
+                                    "name": "Case Studies",
+                                    "href": "/case-studies"
+                                },
+                                {
+                                    "name": "Privacy Policy",
+                                    "href": "/privacy-policy"
+                                },
+                                {
+                                    "name": "Terms & Conditions",
+                                    "href": "/terms-and-conditions"
+                                },
+                                {
+                                    "name": "Disclaimer",
+                                    "href": "/disclaimer"
+                                },
+                                {
+                                    "name": "Sitemap",
+                                    "href": "/sitemap"
+                                },
+                                {
+                                    "name": "FAQ",
+                                    "href": "/faq"
+                                }
+                            ]
+                        },
+                        "bottomBar": {
+                            "copyright": "Copyright © 2026 SecureView. All Rights Reserved. Powered by Lestow",
+                            "links": [
+                                {
+                                    "name": "Help",
+                                    "href": "/help"
+                                },
+                                {
+                                    "name": "Privacy Policy",
+                                    "href": "/privacy-policy"
+                                },
+                                {
+                                    "name": "Terms & Conditions",
+                                    "href": "/terms-and-conditions"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "hero": {
+                "variants": {
+                    "SecureViewHero1": {
+                        "badge": "Secure Today, Safer Tomorrow",
+                        "titlePart1": "Reliable",
+                        "titleHighlight": "CCTV",
+                        "titlePart2": "Solutions for a",
+                        "titlePart3": "Safer Tomorrow",
+                        "description": "Professional CCTV installation to protect your home, business and what matters most. Smarter security. Greater peace of mind.",
+                        "image": {
+                            "src": "/images/hero-banner.png",
+                            "alt": "Reliable CCTV Solutions Hero Banner"
+                        },
+                        "buttons": {
+                            "primary": {
+                                "text": "Get a Free Consultation",
+                                "href": "/contact",
+                                "icon": "ArrowRight"
+                            },
+                            "secondary": {
+                                "text": "Our Services",
+                                "href": "/services"
+                            }
+                        },
+                        "badges": [
+                            {
+                                "icon": "ShieldCheck",
+                                "title": "Trusted Experts",
+                                "desc": "Certified professionals"
+                            },
+                            {
+                                "icon": "Settings",
+                                "title": "Quality Installation",
+                                "desc": "Top-tier hardware"
+                            },
+                            {
+                                "icon": "Headphones",
+                                "title": "Ongoing Support",
+                                "desc": "24/7 assistance"
+                            }
+                        ]
+                    }
+                }
+            },
+            "about": {
+                "variants": {
+                    "SecureViewAbout1": {
+                        "badge": "About Us",
+                        "titlePart1": "Reliable CCTV",
+                        "titleHighlight": "Solutions for a Safer Tomorrow",
+                        "description": "We provide advanced CCTV installation and security solutions to help you protect what matters most. Our focus is on delivering reliable systems, professional service, and complete peace of mind for homes, businesses, and industries.",
+                        "features": [
+                            {
+                                "icon": "/icons/shieldes-icon.png",
+                                "title": "Quality Installation",
+                                "desc": "Professional and secure setup for maximum safety."
+                            },
+                            {
+                                "icon": "/icons/cctvs-icon.png",
+                                "title": "24/7 Surveillance",
+                                "desc": "Keep your property safe all the time."
+                            }
+                        ],
+                        "bulletPoints": [
+                            {
+                                "icon": "CheckCircle2",
+                                "text": "Customized CCTV solutions for homes, offices, and industries."
+                            },
+                            {
+                                "icon": "CheckCircle2",
+                                "text": "Dedicated support to ensure long-term security and reliability."
+                            }
+                        ],
+                        "button": {
+                            "text": "Read More",
+                            "href": "/about",
+                            "icon": "ArrowRight"
+                        },
+                        "images": {
+                            "primary": {
+                                "src": "https://i.pinimg.com/736x/0b/99/14/0b9914a7d8ea3d05051c1e74111ef068.jpg",
+                                "alt": "Technician installing CCTV camera"
+                            },
+                            "secondary": {
+                                "src": "https://i.pinimg.com/736x/9e/a4/3f/9ea43f42645c5d66ae749b0d954d9a3f.jpg",
+                                "alt": "Security camera outdoor view"
+                            }
+                        }
+                    }
+                }
+            },
+            "services": {
+                "variants": {
+                    "SecureViewServices1": {
+                        "badge": "OUR SERVICES",
+                        "titlePart1": "Complete",
+                        "titleHighlight": "CCTV Solutions",
+                        "description": "From installation to maintenance, we offer end-to-end CCTV solutions your home and business secure.",
+                        "services": [
+                            {
+                                "title": "CCTV Installation",
+                                "description": "Professional installation of high-quality CCTV for homes, offices and commercial spaces.",
+                                "icon": "Video",
+                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop",
+                                "slug": "cctv-installation"
+                            },
+                            {
+                                "title": "Remote Monitoring",
+                                "description": "24/7 remote monitoring services to keep an eye on your property from anywhere.",
+                                "icon": "Monitor",
+                                "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=600&auto=format&fit=crop",
+                                "slug": "remote-monitoring"
+                            },
+                            {
+                                "title": "Storage Solution",
+                                "description": "Reliable storage solutions with secure recording and easy access to your footage.",
+                                "icon": "Database",
+                                "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600&auto=format&fit=crop",
+                                "isHighlighted": true,
+                                "slug": "storage-solution"
+                            },
+                            {
+                                "title": "Maintain & Support",
+                                "description": "Regular maintenance and prompt support to ensure uninterrupted security.",
+                                "icon": "Wrench",
+                                "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop",
+                                "slug": "maintenance-support"
+                            }
+                        ]
+                    }
+                }
+            },
+            "caseStudies": {
+                "variants": {
+                    "SecureViewCaseStudies1": {
+                        "badge": "CASE STUDIES",
+                        "titlePart1": "Real Solutions.",
+                        "titleHighlight": "Stronger Security.",
+                        "description": "Explore how our CCTV solutions have helped homes and businesses increase safety and peace of mind.",
+                        "caseStudies": [
+                            {
+                                "title": "Security Consulting",
+                                "description": "We assess your security needs and recommend the best CCTV solutions for your space.",
+                                "icon": "Users",
+                                "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop"
+                            },
+                            {
+                                "title": "Residential Security",
+                                "description": "Helped homeowners install smart CCTV systems for 24/7 protection and peace of mind.",
+                                "icon": "Shield",
+                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop"
+                            },
+                            {
+                                "title": "Commercial Security",
+                                "description": "Implemented advanced CCTV surveillance for a safer and more secure business environment.",
+                                "icon": "Building2",
+                                "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop"
+                            }
+                        ]
+                    }
+                }
+            },
+            "team": {
+                "variants": {
+                    "SecureViewTeam1": {
+                        "badge": "OUR TEAM",
+                        "titlePart1": "Experts",
+                        "titleHighlight": "Behind Your Safety",
+                        "description": "Our skilled and dedicated team works together to deliver reliable security solutions and ensure your complete peace of mind.",
+                        "teamMembers": [
+                            {
+                                "name": "David Luponis",
+                                "role": "Founder",
+                                "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop"
+                            },
+                            {
+                                "name": "David Luponis",
+                                "role": "Founder",
+                                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
+                                "isHighlighted": true
+                            },
+                            {
+                                "name": "David Luponis",
+                                "role": "Founder",
+                                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop"
+                            },
+                            {
+                                "name": "David Luponis",
+                                "role": "Founder",
+                                "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop"
+                            }
+                        ]
+                    }
+                }
+            },
+            "blog": {
+                "variants": {
+                    "SecureViewBlog1": {
+                        "badge": "OUR BLOG",
+                        "titlePart1": "Latest",
+                        "titleHighlight": "Insights & Updates",
+                        "description": "Stay informed with our latest blogs on security solutions, tips and industry trends.",
+                        "blogPosts": [
+                            {
+                                "title": "How to Find The Best Security Guard Services Near Me",
+                                "slug": "how-to-find-best-security-guard-services",
+                                "date": "12 Apr",
+                                "category": "Our Blog V5",
+                                "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop",
+                                "commentsCount": 0
+                            },
+                            {
+                                "title": "The Benefits of Access Control Systems for a Business",
+                                "slug": "benefits-of-access-control-systems",
+                                "date": "12 Apr",
+                                "category": "Our Blog V5",
+                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop",
+                                "commentsCount": 0
+                            },
+                            {
+                                "title": "What Makes Us The Best Armed Security Guard Company?",
+                                "slug": "what-makes-us-best-armed-security-guard-company",
+                                "date": "12 Apr",
+                                "category": "Our Blog V5",
+                                "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop",
+                                "commentsCount": 0
+                            }
+                        ]
+                    }
+                }
+            },
+            "pageTopSection": {
+                "variants": {
+                    "SecureViewPageTopSection1": {
+                        "title": "About Us",
+                        "subTitle": "About Us",
+                        "breadcrumbPath": "About Us",
+                        "homeLabel": "Home",
+                        "homeHref": "/",
+                        "backgroundImage": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1920&auto=format&fit=crop",
+                        "backgroundAlt": "High tech CCTV surveillance security background"
+                    }
+                }
+            },
+            "whyChooseUs": {
+                "variants": {
+                    "SecureViewWhyChooseUs1": {
+                        "badge": "WHY CHOOSE US",
+                        "titlePart1": "Why Choose",
+                        "titleHighlight": "SecureView?",
+                        "description": "We provide reliable, high-quality CCTV solutions with a focus on security, service and complete customer satisfaction.",
+                        "image": {
+                            "src": "/images/why-choose-uss.jpg",
+                            "alt": "Employee holding an access card to a door reader"
+                        },
+                        "features": [
+                            {
+                                "title": "Trusted & Experienced",
+                                "description": "Years of expertise in delivering reliable security solutions.",
+                                "icon": "ShieldCheck",
+                                "isHighlighted": true
+                            },
+                            {
+                                "title": "Quality Installation",
+                                "description": "Professional and precise installation for maximum performance.",
+                                "icon": "Settings"
+                            },
+                            {
+                                "title": "Dedicated Support",
+                                "description": "Always here to assist you before and after installation.",
+                                "icon": "Headphones"
+                            },
+                            {
+                                "title": "24/7 Security Solutions",
+                                "description": "Round-the-clock protection for your home and business.",
+                                "icon": "Clock"
+                            }
+                        ]
+                    }
+                }
+            },
+            "cta": {
+                "variants": {
+                    "SecureViewCta1": {
+                        "title": "Let's Work Together",
+                        "href": "/contact",
+                        "buttonText": "Let's Work Together"
+                    }
+                }
+            },
+            "testimonial": {
+                "variants": {
+                    "SecureViewTestimonial1": {
+                        "badge": "TESTIMONIALS",
+                        "titlePart1": "What Our",
+                        "titleHighlight": "Clients Say",
+                        "description": "Real feedback from businesses who trust us for their security needs.",
+                        "testimonials": [
+                            {
+                                "name": "Anjali Verma",
+                                "role": "BUSINESS OWNER",
+                                "company": "VERMA RETAIL",
+                                "content": "SecureView did an excellent job with our CCTV installation. The team was professional, efficient and very supportive throughout the process. We feel much safer now. Highly recommended!",
+                                "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=300&auto=format&fit=crop"
+                            },
+                            {
+                                "name": "Rohit Malhotra",
+                                "role": "DIRECTOR",
+                                "company": "MALHOTRA ENTERPRISES",
+                                "content": "Great service and high-quality products. The SecureView team understood our requirements and provided the best solution within our budget. The installation was smooth and on time.",
+                                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=300&auto=format&fit=crop"
+                            },
+                            {
+                                "name": "Vikram Singh",
+                                "role": "OPERATIONS HEAD",
+                                "company": "APEX LOGISTICS",
+                                "content": "Top-notch security cameras with crystal clear night vision. Their proactive monitoring gave us peace of mind across our entire warehouse facility.",
+                                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=300&auto=format&fit=crop"
+                            },
+                            {
+                                "name": "Priya Sharma",
+                                "role": "MANAGING DIRECTOR",
+                                "company": "HORIZON HEALTHCARE",
+                                "content": "Professional installation and rapid post-service support. SecureView's integrated alarm and access system exceeded our expectations.",
+                                "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=300&auto=format&fit=crop"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}
