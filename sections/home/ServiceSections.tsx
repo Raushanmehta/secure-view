@@ -15,7 +15,8 @@ export default function ServiceSection({ data, className }: ServiceSectionProps 
         titleHighlight,
         description,
         services = [],
-    } = servicesData || {};
+    } = (servicesData as any) || {};
+    const items: any[] = (servicesData as any)?.servicesList || services || [];
 
     return (
         <section className={`relative w-full py-8 lg:py-14 bg-black text-white overflow-hidden ${className || ""}`}>
@@ -50,14 +51,14 @@ export default function ServiceSection({ data, className }: ServiceSectionProps 
                 </motion.div>
 
                 {/* Services Grid with Staggered Container */}
-                {services && services.length > 0 && (
+                {items && items.length > 0 && (
                     <motion.div
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.05 }}
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {services.map((service, index) => (
+                        {items.slice(0, 4).map((service, index) => (
                             <ServiceCard
                                 key={service.title + index}
                                 service={service}

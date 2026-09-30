@@ -420,36 +420,538 @@
                         "badge": "OUR SERVICES",
                         "titlePart1": "Complete",
                         "titleHighlight": "CCTV Solutions",
-                        "description": "From installation to maintenance, we offer end-to-end CCTV solutions your home and business secure.",
+                        "description": "From installation to maintenance, we offer end-to-end CCTV solutions to keep your home and business secure.",
+                        "sidebarTitle": "Our Services",
+                        "helpCta": {
+                            "title": "Need CCTV Installation?",
+                            "subtitle": "Speak to our certified security engineers for a free on-site survey and quotation.",
+                            "phone": "+91 98765 43210",
+                            "bgImage": "/images/installation/cta-camera.png"
+                        },
                         "services": [
                             {
                                 "title": "CCTV Installation",
+                                "slug": "cctv-installation",
                                 "description": "Professional installation of high-quality CCTV for homes, offices and commercial spaces.",
                                 "icon": "Video",
                                 "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop",
-                                "slug": "cctv-installation"
+                                "heroImage": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Technician installing CCTV camera",
+                                "overview": {
+                                    "title": "Reliable & High Performance",
+                                    "titleHighlight": "CCTV Camera Setup",
+                                    "description": "We specialize in end-to-end security camera installations for commercial facilities and modern residences, ensuring complete coverage, tamper-proof conduit piping, and crystal-clear recording."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "HD & 4K Resolution Cameras",
+                                        "description": "Crystal clear imaging with wide-angle field of view and ultra-low light ColorVu night vision.",
+                                        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Video",
+                                        "points": [
+                                            "Real-time 30fps smooth streaming",
+                                            "Weatherproof IP67 rated camera chassis",
+                                            "Optical zoom and pan-tilt-zoom (PTZ) support"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Discreet & Conduit Concealed Cabling",
+                                        "description": "Professional cabling infrastructure designed to resist wear, tampering, and harsh weather conditions.",
+                                        "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Wrench",
+                                        "points": [
+                                            "Zero exposed wiring in customer areas",
+                                            "Surge protected central power supply units",
+                                            "Clean organized rack mounting and labeling"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Service",
+                                    "description": "Experience total peace of mind with our industry-leading service warranty and 24/7 technical monitoring support.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "24/7 Continuous",
+                                            "titleLine2": "Surveillance",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Instant Mobile",
+                                            "titleLine2": "Alerts & App",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Certified On-Site",
+                                            "titleLine2": "Technicians",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Prompt Dedicated",
+                                            "titleLine2": "Support",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
                             },
                             {
                                 "title": "Remote Monitoring",
+                                "slug": "remote-monitoring",
                                 "description": "24/7 remote monitoring services to keep an eye on your property from anywhere.",
                                 "icon": "Monitor",
                                 "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=600&auto=format&fit=crop",
-                                "slug": "remote-monitoring"
+                                "heroImage": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Remote monitoring command center",
+                                "overview": {
+                                    "title": "Stay Connected To Your Premises",
+                                    "titleHighlight": "From Anywhere, Anytime",
+                                    "description": "Our smart cloud monitoring platform streams ultra low-latency video to your iOS/Android devices and central security desks with automated movement notifications."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Instant Push Notifications",
+                                        "description": "Get real-time motion and intrusion alerts on your smartphone the moment suspicious activity is detected.",
+                                        "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Monitor",
+                                        "points": [
+                                            "Human and vehicle detection filtering",
+                                            "Multi-user authorized access levels",
+                                            "Live audio broadcast and listen-in"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Multi-Site Central Dashboard",
+                                        "description": "Manage video feeds across multiple branch offices or warehouse locations within a single unified view.",
+                                        "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "ShieldCheck",
+                                        "points": [
+                                            "Customizable grid layouts",
+                                            "Synchronized multi-channel playback",
+                                            "Automated health and connection pings"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Service",
+                                    "description": "Empowering property owners with proactive visibility and zero blind spots 24/7/365.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Zero Hardware",
+                                            "titleLine2": "Loss Risk",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Cloud Synced",
+                                            "titleLine2": "Recordings",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Encrypted Live",
+                                            "titleLine2": "Streams",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Always-On",
+                                            "titleLine2": "Assistance",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
                             },
                             {
                                 "title": "Storage Solution",
+                                "slug": "storage-solution",
                                 "description": "Reliable storage solutions with secure recording and easy access to your footage.",
                                 "icon": "Database",
                                 "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600&auto=format&fit=crop",
                                 "isHighlighted": true,
-                                "slug": "storage-solution"
+                                "heroImage": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Secure NVR surveillance data storage",
+                                "overview": {
+                                    "title": "High Endurance & Scalable",
+                                    "titleHighlight": "Surveillance Storage",
+                                    "description": "Industrial surveillance-grade hard drives and hybrid cloud backup solutions ensuring your critical video recordings are safely archived and easily retrievable."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Hybrid Cloud & Local NVR Backup",
+                                        "description": "Dual-layer redundancy protects footage against drive failures, theft, or fire damage.",
+                                        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Database",
+                                        "points": [
+                                            "30 to 90 days continuous rolling archive",
+                                            "H.265+ smart compression saving 70% space",
+                                            "Automated raid failover architecture"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Fast Forensic Evidence Search",
+                                        "description": "Quickly pinpoint critical events using smart timeline scrubbing and timestamp tags.",
+                                        "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "ShieldCheck",
+                                        "points": [
+                                            "One-click encrypted video export to USB/MP4",
+                                            "Motion bookmarking and timeline color-coding",
+                                            "Tamper-proof watermarked video export"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Service",
+                                    "description": "Guaranteed footage integrity with zero frame drops and maximum retention.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Long-Term Safe",
+                                            "titleLine2": "Archiving",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "H.265+ High",
+                                            "titleLine2": "Efficiency",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Instant Video",
+                                            "titleLine2": "Exports",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Hardware",
+                                            "titleLine2": "Replacement SLA",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
                             },
                             {
                                 "title": "Maintain & Support",
+                                "slug": "maintenance-support",
                                 "description": "Regular maintenance and prompt support to ensure uninterrupted security.",
                                 "icon": "Wrench",
                                 "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop",
-                                "slug": "maintenance-support"
+                                "heroImage": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Preventative CCTV maintenance inspection",
+                                "overview": {
+                                    "title": "Keep Your Security Systems Running",
+                                    "titleHighlight": "At Peak Performance",
+                                    "description": "Comprehensive annual maintenance contracts (AMC), regular camera lens cleaning, cabling diagnostics, and fast on-call technician visits."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Scheduled Health Audits",
+                                        "description": "Routine quarterly inspections verifying focus, night vision sensors, power supplies, and recording health.",
+                                        "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Wrench",
+                                        "points": [
+                                            "Dust and cobweb cleaning from lenses",
+                                            "Firmware security patches and updates",
+                                            "Hard drive bad-sector scanning"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Priority Emergency Repair Service",
+                                        "description": "Guaranteed 4-hour on-site response time for camera down-time or power failure issues.",
+                                        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Headphones",
+                                        "points": [
+                                            "Free loaner cameras while units are serviced",
+                                            "Direct hotline to senior field technicians",
+                                            "Comprehensive parts and labor coverage"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Service",
+                                    "description": "Minimize system downtime and ensure your security is never compromised.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "99.9% Uptime",
+                                            "titleLine2": "Assurance",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Quarterly System",
+                                            "titleLine2": "Cleaning",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Priority Field",
+                                            "titleLine2": "Response",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Zero Hidden",
+                                            "titleLine2": "Labor Costs",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "servicesList": [
+                            {
+                                "title": "CCTV Installation",
+                                "slug": "cctv-installation",
+                                "description": "Professional installation of high-quality CCTV for homes, offices and commercial spaces.",
+                                "icon": "Video",
+                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Technician installing CCTV camera",
+                                "overview": {
+                                    "title": "Reliable & High Performance",
+                                    "titleHighlight": "CCTV Camera Setup",
+                                    "description": "We specialize in end-to-end security camera installations for commercial facilities and modern residences, ensuring complete coverage, tamper-proof conduit piping, and crystal-clear recording."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "HD & 4K Resolution Cameras",
+                                        "description": "Crystal clear imaging with wide-angle field of view and ultra-low light ColorVu night vision.",
+                                        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Video",
+                                        "points": [
+                                            "Real-time 30fps smooth streaming",
+                                            "Weatherproof IP67 rated camera chassis",
+                                            "Optical zoom and pan-tilt-zoom (PTZ) support"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Discreet & Conduit Concealed Cabling",
+                                        "description": "Professional cabling infrastructure designed to resist wear, tampering, and harsh weather conditions.",
+                                        "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Wrench",
+                                        "points": [
+                                            "Zero exposed wiring in customer areas",
+                                            "Surge protected central power supply units",
+                                            "Clean organized rack mounting and labeling"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Service",
+                                    "description": "Experience total peace of mind with our industry-leading service warranty and 24/7 technical monitoring support.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "24/7 Continuous",
+                                            "titleLine2": "Surveillance",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Instant Mobile",
+                                            "titleLine2": "Alerts & App",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Certified On-Site",
+                                            "titleLine2": "Technicians",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Prompt Dedicated",
+                                            "titleLine2": "Support",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Remote Monitoring",
+                                "slug": "remote-monitoring",
+                                "description": "24/7 remote monitoring services to keep an eye on your property from anywhere.",
+                                "icon": "Monitor",
+                                "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Remote monitoring command center",
+                                "overview": {
+                                    "title": "Stay Connected To Your Premises",
+                                    "titleHighlight": "From Anywhere, Anytime",
+                                    "description": "Our smart cloud monitoring platform streams ultra low-latency video to your iOS/Android devices and central security desks with automated movement notifications."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Instant Push Notifications",
+                                        "description": "Get real-time motion and intrusion alerts on your smartphone the moment suspicious activity is detected.",
+                                        "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Monitor",
+                                        "points": [
+                                            "Human and vehicle detection filtering",
+                                            "Multi-user authorized access levels",
+                                            "Live audio broadcast and listen-in"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Multi-Site Central Dashboard",
+                                        "description": "Manage video feeds across multiple branch offices or warehouse locations within a single unified view.",
+                                        "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "ShieldCheck",
+                                        "points": [
+                                            "Customizable grid layouts",
+                                            "Synchronized multi-channel playback",
+                                            "Automated health and connection pings"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Service",
+                                    "description": "Empowering property owners with proactive visibility and zero blind spots 24/7/365.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Zero Hardware",
+                                            "titleLine2": "Loss Risk",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Cloud Synced",
+                                            "titleLine2": "Recordings",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Encrypted Live",
+                                            "titleLine2": "Streams",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Always-On",
+                                            "titleLine2": "Assistance",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Storage Solution",
+                                "slug": "storage-solution",
+                                "description": "Reliable storage solutions with secure recording and easy access to your footage.",
+                                "icon": "Database",
+                                "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=600&auto=format&fit=crop",
+                                "isHighlighted": true,
+                                "heroImage": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Secure NVR surveillance data storage",
+                                "overview": {
+                                    "title": "High Endurance & Scalable",
+                                    "titleHighlight": "Surveillance Storage",
+                                    "description": "Industrial surveillance-grade hard drives and hybrid cloud backup solutions ensuring your critical video recordings are safely archived and easily retrievable."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Hybrid Cloud & Local NVR Backup",
+                                        "description": "Dual-layer redundancy protects footage against drive failures, theft, or fire damage.",
+                                        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Database",
+                                        "points": [
+                                            "30 to 90 days continuous rolling archive",
+                                            "H.265+ smart compression saving 70% space",
+                                            "Automated raid failover architecture"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Fast Forensic Evidence Search",
+                                        "description": "Quickly pinpoint critical events using smart timeline scrubbing and timestamp tags.",
+                                        "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "ShieldCheck",
+                                        "points": [
+                                            "One-click encrypted video export to USB/MP4",
+                                            "Motion bookmarking and timeline color-coding",
+                                            "Tamper-proof watermarked video export"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Service",
+                                    "description": "Guaranteed footage integrity with zero frame drops and maximum retention.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Long-Term Safe",
+                                            "titleLine2": "Archiving",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "H.265+ High",
+                                            "titleLine2": "Efficiency",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Instant Video",
+                                            "titleLine2": "Exports",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Hardware",
+                                            "titleLine2": "Replacement SLA",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Maintain & Support",
+                                "slug": "maintenance-support",
+                                "description": "Regular maintenance and prompt support to ensure uninterrupted security.",
+                                "icon": "Wrench",
+                                "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Preventative CCTV maintenance inspection",
+                                "overview": {
+                                    "title": "Keep Your Security Systems Running",
+                                    "titleHighlight": "At Peak Performance",
+                                    "description": "Comprehensive annual maintenance contracts (AMC), regular camera lens cleaning, cabling diagnostics, and fast on-call technician visits."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Scheduled Health Audits",
+                                        "description": "Routine quarterly inspections verifying focus, night vision sensors, power supplies, and recording health.",
+                                        "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Wrench",
+                                        "points": [
+                                            "Dust and cobweb cleaning from lenses",
+                                            "Firmware security patches and updates",
+                                            "Hard drive bad-sector scanning"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Priority Emergency Repair Service",
+                                        "description": "Guaranteed 4-hour on-site response time for camera down-time or power failure issues.",
+                                        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Headphones",
+                                        "points": [
+                                            "Free loaner cameras while units are serviced",
+                                            "Direct hotline to senior field technicians",
+                                            "Comprehensive parts and labor coverage"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Service",
+                                    "description": "Minimize system downtime and ensure your security is never compromised.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "99.9% Uptime",
+                                            "titleLine2": "Assurance",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Quarterly System",
+                                            "titleLine2": "Cleaning",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Priority Field",
+                                            "titleLine2": "Response",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Zero Hidden",
+                                            "titleLine2": "Labor Costs",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
                             }
                         ]
                     }
@@ -464,22 +966,308 @@
                         "description": "Explore how our CCTV solutions have helped homes and businesses increase safety and peace of mind.",
                         "caseStudies": [
                             {
-                                "title": "Security Consulting",
-                                "description": "We assess your security needs and recommend the best CCTV solutions for your space.",
-                                "icon": "Users",
-                                "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop"
-                            },
-                            {
-                                "title": "Residential Security",
-                                "description": "Helped homeowners install smart CCTV systems for 24/7 protection and peace of mind.",
-                                "icon": "Shield",
-                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop"
-                            },
-                            {
-                                "title": "Commercial Security",
-                                "description": "Implemented advanced CCTV surveillance for a safer and more secure business environment.",
+                                "slug": "office-security-upgrade",
+                                "title": "Office Security Upgrade",
+                                "description": "See how we helped a fast-growing company enhance its workplace security with a smart CCTV solution, ensuring a safer environment for employees and complete peace of mind for the management.",
                                 "icon": "Building2",
-                                "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop"
+                                "image": "/images/case-studies/case-study-hero.png",
+                                "imageAlt": "Technician installing security CCTV camera for office upgrade",
+                                "badge": "CASE STUDY",
+                                "titlePart1": "Office Security Upgrade",
+                                "titleHighlight": "Growing Business",
+                                "leadDescription": "See how we helped a fast-growing company enhance its workplace security with a smart CCTV solution, ensuring a safer environment for employees and complete peace of mind for the management.",
+                                "sections": [
+                                    {
+                                        "title": "Overview",
+                                        "description": "A mid-sized corporate office approached us to upgrade their outdated security system. They needed a modern CCTV solution to monitor multiple floors, improve employee safety, and secure critical areas like entry points, workstations, and server rooms. Our goal was to design a reliable, easy-to-manage system that provided complete coverage and remote access."
+                                    },
+                                    {
+                                        "title": "The Challenge",
+                                        "description": "The existing system had low-resolution cameras, limited coverage, and no remote access. As the company expanded, it became difficult to monitor activities effectively, leading to security concerns. They also needed a system that could be easily managed across multiple floors without complex maintenance."
+                                    },
+                                    {
+                                        "title": "Our Solution",
+                                        "description": "We designed and installed a customized CCTV system with high-resolution cameras, complete coverage, and remote monitoring. The solution was tailored to the client's office layout, with strategic camera placement at entry points, common areas, workstations, and server rooms. We also provided a user-friendly monitoring setup for real-time access from any location."
+                                    },
+                                    {
+                                        "title": "The Results",
+                                        "description": "The new system significantly improved surveillance, reduced security risks, and provided real-time monitoring from anywhere. The client now has a safer workplace, better control over their premises, and increased peace of mind for their employees and management."
+                                    }
+                                ],
+                                "projectDetails": {
+                                    "title": "Project Details",
+                                    "items": [
+                                        {
+                                            "label": "Client",
+                                            "value": "TechVision Pvt. Ltd."
+                                        },
+                                        {
+                                            "label": "Category",
+                                            "value": "CCTV, Security"
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "March 15, 2024"
+                                        },
+                                        {
+                                            "label": "Project Value",
+                                            "value": "$25,000"
+                                        },
+                                        {
+                                            "label": "Location",
+                                            "value": "Noida, India"
+                                        }
+                                    ]
+                                },
+                                "ourServices": {
+                                    "title": "Our Services",
+                                    "items": [
+                                        {
+                                            "name": "CCTV Installation",
+                                            "desc": "High-quality camera setup for complete coverage"
+                                        },
+                                        {
+                                            "name": "System Configuration",
+                                            "desc": "Customized setup as per your needs"
+                                        },
+                                        {
+                                            "name": "Remote Monitoring",
+                                            "desc": "Access your cameras from anywhere"
+                                        },
+                                        {
+                                            "name": "Maintenance & Support",
+                                            "desc": "Ongoing support for uninterrupted security"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "slug": "security-consulting",
+                                "title": "Security Consulting",
+                                "description": "We assess your security needs and recommend the best CCTV solutions for your commercial space.",
+                                "icon": "Users",
+                                "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop",
+                                "imageAlt": "Security consultants planning CCTV infrastructure",
+                                "badge": "CASE STUDY",
+                                "titlePart1": "Security Consulting",
+                                "titleHighlight": "Enterprise Safety",
+                                "leadDescription": "Delivering strategic risk assessments and bespoke CCTV architecture for enterprise headquarters to prevent vulnerabilities and safeguard personnel.",
+                                "sections": [
+                                    {
+                                        "title": "Overview",
+                                        "description": "Our consulting division conducted a comprehensive on-site vulnerability analysis for an enterprise financial campus requiring high-tier compliance and round-the-clock perimeter surveillance."
+                                    },
+                                    {
+                                        "title": "The Challenge",
+                                        "description": "Multiple entry zones lacked synchronized logging, and blind spots along peripheral perimeters posed compliance and physical infiltration threats."
+                                    },
+                                    {
+                                        "title": "Our Solution",
+                                        "description": "We deployed advanced AI video analytics, facial recognition gates, and centralized cloud dashboarding for instant real-time incident notifications."
+                                    },
+                                    {
+                                        "title": "The Results",
+                                        "description": "Security breach incidents decreased to zero, threat detection response times improved by 80%, and regulatory compliance was fully certified."
+                                    }
+                                ],
+                                "projectDetails": {
+                                    "title": "Project Details",
+                                    "items": [
+                                        {
+                                            "label": "Client",
+                                            "value": "Apex Financial Corp"
+                                        },
+                                        {
+                                            "label": "Category",
+                                            "value": "Consulting, AI CCTV"
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "January 20, 2024"
+                                        },
+                                        {
+                                            "label": "Project Value",
+                                            "value": "$40,000"
+                                        },
+                                        {
+                                            "label": "Location",
+                                            "value": "Gurugram, India"
+                                        }
+                                    ]
+                                },
+                                "ourServices": {
+                                    "title": "Our Services",
+                                    "items": [
+                                        {
+                                            "name": "Vulnerability Assessment",
+                                            "desc": "Holistic audits of physical and perimeter access"
+                                        },
+                                        {
+                                            "name": "System Architecture",
+                                            "desc": "Customized blueprints for enterprise networks"
+                                        },
+                                        {
+                                            "name": "AI Analytics Integration",
+                                            "desc": "Smart alerts and automated motion triggers"
+                                        },
+                                        {
+                                            "name": "24/7 Technical Support",
+                                            "desc": "Always-on emergency troubleshooting hotline"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "slug": "residential-security",
+                                "title": "Residential Security",
+                                "description": "Helped homeowners install smart CCTV systems for 24/7 protection, remote access, and peace of mind.",
+                                "icon": "Shield",
+                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop",
+                                "imageAlt": "Smart residential camera setup",
+                                "badge": "CASE STUDY",
+                                "titlePart1": "Residential Security",
+                                "titleHighlight": "Gated Community",
+                                "leadDescription": "Empowering homeowners with night-vision smart surveillance and mobile-connected security perimeter guarding against break-ins.",
+                                "sections": [
+                                    {
+                                        "title": "Overview",
+                                        "description": "A luxury gated community sought an ultra-reliable, smart CCTV network covering main driveways, residential parks, and resident gatehouses."
+                                    },
+                                    {
+                                        "title": "The Challenge",
+                                        "description": "Frequent nighttime trespassers and blind corners caused safety anxieties among residents. Legacy analog cameras provided blurry night vision."
+                                    },
+                                    {
+                                        "title": "Our Solution",
+                                        "description": "Installed 4K ColorVu infrared night-vision IP cameras with automated license plate recognition (ANPR) and remote app access for all residents."
+                                    },
+                                    {
+                                        "title": "The Results",
+                                        "description": "Resident satisfaction scored 98%, neighborhood incidents fell by 95%, and vehicle tracking became automated and seamless."
+                                    }
+                                ],
+                                "projectDetails": {
+                                    "title": "Project Details",
+                                    "items": [
+                                        {
+                                            "label": "Client",
+                                            "value": "Greenwood Estates HOA"
+                                        },
+                                        {
+                                            "label": "Category",
+                                            "value": "Residential, ColorVu"
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "February 10, 2024"
+                                        },
+                                        {
+                                            "label": "Project Value",
+                                            "value": "$18,500"
+                                        },
+                                        {
+                                            "label": "Location",
+                                            "value": "Delhi NCR, India"
+                                        }
+                                    ]
+                                },
+                                "ourServices": {
+                                    "title": "Our Services",
+                                    "items": [
+                                        {
+                                            "name": "Night Vision Cameras",
+                                            "desc": "Crystal clear color recording even in pitch dark"
+                                        },
+                                        {
+                                            "name": "ANPR Gate Automation",
+                                            "desc": "Fast automatic gate access for verified cars"
+                                        },
+                                        {
+                                            "name": "Resident Mobile App",
+                                            "desc": "Real-time feed access directly on smartphones"
+                                        },
+                                        {
+                                            "name": "Quarterly Maintenance",
+                                            "desc": "Preventative checkups and camera lens cleaning"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "slug": "commercial-security",
+                                "title": "Commercial Security",
+                                "description": "Implemented advanced CCTV surveillance and smart analytics for a safer, loss-preventative business environment.",
+                                "icon": "Camera",
+                                "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop",
+                                "imageAlt": "Commercial building CCTV security surveillance",
+                                "badge": "CASE STUDY",
+                                "titlePart1": "Commercial Surveillance",
+                                "titleHighlight": "Retail Chain",
+                                "leadDescription": "Centralizing surveillance across 15 retail outlets to eliminate inventory shrinkage and ensure customer and staff safety.",
+                                "sections": [
+                                    {
+                                        "title": "Overview",
+                                        "description": "A popular retail chain needed an interconnected security grid across 15 stores with centralized headquarter monitoring and heatmapping."
+                                    },
+                                    {
+                                        "title": "The Challenge",
+                                        "description": "Stock shrinkage and cashier counter discrepancies were hard to verify across remote branches with standalone DVRs."
+                                    },
+                                    {
+                                        "title": "Our Solution",
+                                        "description": "Integrated cloud NVRs with point-of-sale video overlay and synchronized audit trails accessible from corporate HQ."
+                                    },
+                                    {
+                                        "title": "The Results",
+                                        "description": "Shrinkage dropped by 72% within 60 days, staff accountability reached an all-time high, and management saved 30+ hours weekly on audits."
+                                    }
+                                ],
+                                "projectDetails": {
+                                    "title": "Project Details",
+                                    "items": [
+                                        {
+                                            "label": "Client",
+                                            "value": "Metro Retailers Group"
+                                        },
+                                        {
+                                            "label": "Category",
+                                            "value": "Commercial, Retail POS"
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "April 02, 2024"
+                                        },
+                                        {
+                                            "label": "Project Value",
+                                            "value": "$52,000"
+                                        },
+                                        {
+                                            "label": "Location",
+                                            "value": "Mumbai, India"
+                                        }
+                                    ]
+                                },
+                                "ourServices": {
+                                    "title": "Our Services",
+                                    "items": [
+                                        {
+                                            "name": "POS Camera Sync",
+                                            "desc": "Receipt overlay synced with video timestamps"
+                                        },
+                                        {
+                                            "name": "Cloud NVR Management",
+                                            "desc": "Centralized video storage with zero local loss"
+                                        },
+                                        {
+                                            "name": "Loss Prevention Analytics",
+                                            "desc": "Automated dwell-time and theft alert algorithms"
+                                        },
+                                        {
+                                            "name": "Annual SLA Support",
+                                            "desc": "Guaranteed 4-hour on-site replacement SLA"
+                                        }
+                                    ]
+                                }
                             }
                         ]
                     }
@@ -648,6 +1436,61 @@
                                 "company": "HORIZON HEALTHCARE",
                                 "content": "Professional installation and rapid post-service support. SecureView's integrated alarm and access system exceeded our expectations.",
                                 "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=300&auto=format&fit=crop"
+                            }
+                        ]
+                    }
+                }
+            },
+            "installationProcess": {
+                "variants": {
+                    "SecureViewInstallationProcess1": {
+                        "badge": "INSTALLATION PROCESS",
+                        "titlePart1": "Simple Steps to",
+                        "titleHighlight": "Secure Your Property",
+                        "description": "Our seamless and transparent 4-step CCTV installation workflow ensures maximum protection with zero hassle.",
+                        "navigationTitle": "Installation Steps",
+                        "steps": [
+                            {
+                                "title": "Site Survey & Planning",
+                                "icon": "FileSearch"
+                            },
+                            {
+                                "title": "Professional Installation",
+                                "icon": "Wrench"
+                            },
+                            {
+                                "title": "System Configuration",
+                                "icon": "SlidersHorizontal"
+                            },
+                            {
+                                "title": "Testing & Handover",
+                                "icon": "CheckCircle2"
+                            }
+                        ],
+                        "featureCards": [
+                            {
+                                "id": "site-survey",
+                                "title": "Site Survey & Planning",
+                                "description": "Our certified security engineers conduct a detailed on-site assessment to eliminate blind spots.",
+                                "image": "/images/installation/site-survey.jpg",
+                                "icon": "FileSearch",
+                                "features": [
+                                    "Comprehensive property vulnerability assessment",
+                                    "Camera positioning and angle optimization",
+                                    "Transparent custom cost quote"
+                                ]
+                            },
+                            {
+                                "id": "pro-installation",
+                                "title": "Professional Installation",
+                                "description": "Precision setup with clean conduit wiring, weatherproofing, and calibrated camera mounting.",
+                                "image": "/images/installation/pro-install.jpg",
+                                "icon": "Wrench",
+                                "features": [
+                                    "Neat, discreet, and concealed cabling",
+                                    "Heavy-duty tamper-proof camera mounts",
+                                    "Full NVR storage and cloud sync setup"
+                                ]
                             }
                         ]
                     }

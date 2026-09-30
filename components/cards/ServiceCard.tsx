@@ -15,6 +15,8 @@ export interface ServiceCardProps {
         slug?: string;
         isHighlighted?: boolean;
         icon?: any;
+        theme?: "dark" | "light";
+        cardBg?: "white" | "black";
     };
     title?: string;
     description?: string;
@@ -23,6 +25,9 @@ export interface ServiceCardProps {
     index?: number;
     isHighlighted?: boolean;
     IconComponent?: any;
+    theme?: "dark" | "light";
+    cardBg?: "white" | "black";
+    className?: string;
 }
 
 export default function ServiceCard({
@@ -34,6 +39,9 @@ export default function ServiceCard({
     index = 0,
     isHighlighted,
     IconComponent,
+    theme = "dark",
+    cardBg,
+    className = "",
 }: ServiceCardProps) {
     const cardTitle = title || service?.title || "";
     const cardDesc = description || service?.description || "";
@@ -41,6 +49,7 @@ export default function ServiceCard({
     const cardHref = href || (service?.slug ? `/services/${service.slug}` : "#");
     const highlighted = isHighlighted ?? service?.isHighlighted ?? false;
     const rawIcon = IconComponent || service?.icon || Video;
+    const isLight = cardBg === "white" || theme === "light" || service?.cardBg === "white" || service?.theme === "light";
 
     return (
         <motion.div
@@ -50,15 +59,28 @@ export default function ServiceCard({
             viewport={{ once: true, amount: 0.1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ y: -8 }}
-            className={`group relative w-full rounded-sm bg-black border overflow-hidden flex flex-col justify-between shadow-2xl transition-all duration-300 ${highlighted
-                ? "border-[#84cc16] shadow-[#84cc16]/10"
-                : "border-neutral-800 hover:border-[#84cc16]/50"
-                }`}
+            className={`group relative w-full rounded-sm border overflow-hidden flex flex-col justify-between transition-all duration-300 ${
+                isLight
+                    ? "bg-white text-black shadow-lg hover:shadow-2xl " +
+                      (highlighted
+                          ? "border-[#84cc16] shadow-[#84cc16]/15"
+                          : "border-neutral-200 hover:border-[#84cc16]/60")
+                    : "bg-black text-white shadow-2xl " +
+                      (highlighted
+                          ? "border-[#84cc16] shadow-[#84cc16]/10"
+                          : "border-neutral-800 hover:border-[#84cc16]/50")
+            } ${className}`}
         >
             {/* Top Image Container with floating unclipped icon */}
             <div className="relative p-2">
                 <div className="relative h-56 w-full overflow-hidden rounded-sm">
-                    <div className="absolute inset-0 bg-black/30 z-10 transition-opacity duration-300 group-hover:bg-black/15" />
+                    <div
+                        className={`absolute inset-0 z-10 transition-opacity duration-300 ${
+                            isLight
+                                ? "bg-black/10 group-hover:bg-transparent"
+                                : "bg-black/30 group-hover:bg-black/15"
+                        }`}
+                    />
                     <motion.img
                         src={cardImage}
                         alt={cardTitle}
@@ -90,10 +112,18 @@ export default function ServiceCard({
             {/* Card Content */}
             <div className="pt-6 p-4 space-y-3 flex-1 flex flex-col justify-between">
                 <div className="space-y-2">
-                    <h3 className="text-2xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#84cc16]">
+                    <h3
+                        className={`text-2xl font-bold tracking-tight transition-colors duration-300 group-hover:text-[#84cc16] ${
+                            isLight ? "text-neutral-900" : "text-white"
+                        }`}
+                    >
                         {cardTitle}
                     </h3>
-                    <p className="text-sm text-neutral-400 leading-relaxed">
+                    <p
+                        className={`text-sm leading-relaxed ${
+                            isLight ? "text-neutral-600" : "text-neutral-400"
+                        }`}
+                    >
                         {cardDesc}
                     </p>
                 </div>

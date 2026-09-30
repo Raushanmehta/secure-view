@@ -61,7 +61,7 @@ export default function CaseStudiesSection({ data, className }: CaseStudiesSecti
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.05 }}
                         className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {caseStudies.map((study, index) => (
+                        {caseStudies.slice(0, 3).map((study, index) => (
                             <CaseSturdiesCard
                                 key={study.title + index}
                                 study={study}
