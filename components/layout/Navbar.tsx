@@ -40,7 +40,7 @@ export default function Navbar({ data, className }: NavbarProps = {}) {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className={`sticky top-0 z-50 w-full bg-black backdrop-blur-md border-b border-neutral-900 text-white ${className || ""}`}
+            className={`sticky top-0 z-50 w-full bg-black/95 backdrop-blur-md border-b border-neutral-900 text-white ${className || ""}`}
         >
             <div className="max-w-[1400px] mx-auto px-4 h-16 sm:h-20 lg:h-20 flex items-center justify-between">
 
@@ -116,26 +116,32 @@ export default function Navbar({ data, className }: NavbarProps = {}) {
                                     <AnimatePresence>
                                         {servicesDropdownOpen && (
                                             <motion.div
-                                                initial={{ opacity: 0, y: 8, scale: 0.96 }}
+                                                initial={{ opacity: 0, y: 6, scale: 0.97 }}
                                                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                                                exit={{ opacity: 0, y: 8, scale: 0.96 }}
-                                                transition={{ duration: 0.2, ease: "easeOut" }}
-                                                className="absolute top-full left-0 w-56 bg-black py-2 mt-5 overflow-hidden"
+                                                exit={{ opacity: 0, y: 6, scale: 0.97 }}
+                                                transition={{ duration: 0.18, ease: "easeOut" }}
+                                                className="absolute top-full left-0 pt-2 z-50 min-w-[240px]"
                                             >
-                                                {item.dropdownItems.map((service) => (
-                                                    <motion.div
-                                                        key={service.href}
-                                                        whileHover={{ x: 4 }}
-                                                        transition={{ duration: 0.15 }}
-                                                    >
-                                                        <Link
-                                                            href={service.href}
-                                                            className="block px-4 py-2.5 text-sm text-neutral-300 hover:text-white hover:bg-neutral-900 transition-colors"
+                                                <div className="bg-neutral-950/95 backdrop-blur-xl border border-neutral-800 rounded-xl p-1.5 shadow-2xl shadow-black/80">
+                                                    {item.dropdownItems.map((service) => (
+                                                        <motion.div
+                                                            key={service.href}
+                                                            whileHover={{ x: 3 }}
+                                                            transition={{ duration: 0.12 }}
                                                         >
-                                                            {service.name}
-                                                        </Link>
-                                                    </motion.div>
-                                                ))}
+                                                            <Link
+                                                                href={service.href}
+                                                                onClick={() => {
+                                                                    setServicesDropdownOpen(false);
+                                                                    setActiveTab(item.name);
+                                                                }}
+                                                                className="block px-3.5 py-2.5 rounded-lg text-sm text-neutral-300 hover:text-[#84cc16] hover:bg-neutral-900 transition-colors"
+                                                            >
+                                                                {service.name}
+                                                            </Link>
+                                                        </motion.div>
+                                                    ))}
+                                                </div>
                                             </motion.div>
                                         )}
                                     </AnimatePresence>

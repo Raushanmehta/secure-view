@@ -11,13 +11,20 @@ export interface TestimonialItem {
     image: string;
 }
 
+const defaultItem: TestimonialItem = {
+    name: "Client Feedback",
+    role: "Verified Client",
+    company: "Commercial Partner",
+    content: "Excellent service and high-quality surveillance installation. Highly recommended!",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=300&auto=format&fit=crop",
+};
+
 export interface TestimonialCardProps {
-    item: TestimonialItem;
+    item?: TestimonialItem;
     index?: number;
 }
 
-export default function TestimonialCard({ item, index = 0 }: TestimonialCardProps) {
-    if (!item) return null;
+export default function TestimonialCard({ item = defaultItem, index = 0 }: TestimonialCardProps = {}) {
 
     return (
         <motion.div

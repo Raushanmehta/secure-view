@@ -3,7 +3,9 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import SmoothScroll from "@/components/common/SmoothScroll";
 import { site } from "@/data";
+
 
 const calSans = localFont({
   src: "../public/fonts/CalSansVF.woff2",
@@ -22,11 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${calSans.variable} ${calSans.className} h-full antialiased`}>
-      <body className="min-h-full flex flex-col font-sans">
-        <Navbar data={site.navbar} />
-        {children}
-        <Footer data={site.footer} />
+    <html lang="en" className={`${calSans.variable} ${calSans.className} antialiased`}>
+      <body className="min-h-screen flex flex-col font-sans">
+        <SmoothScroll>
+          <Navbar data={site.navbar} />
+          <main className="flex-1">{children}</main>
+          <Footer data={site.footer} />
+        </SmoothScroll>
       </body>
     </html>
   );
