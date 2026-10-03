@@ -6,7 +6,7 @@ import { fadeInUp } from "@/utils/animations";
 import { motion } from "framer-motion";
 import { site, SecureViewBrandsData, SectionProps, BrandItem } from "@/data";
 
-export interface BrandsPageProps extends SectionProps<SecureViewBrandsData> {}
+export type BrandsPageProps = SectionProps<SecureViewBrandsData>;
 
 export default function BrandsPage({
     data = site.brands,

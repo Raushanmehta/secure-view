@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 
@@ -24,22 +25,22 @@ export interface TestimonialCardProps {
     index?: number;
 }
 
-export default function TestimonialCard({ item = defaultItem, index = 0 }: TestimonialCardProps = {}) {
+export default function TestimonialCard({ item = defaultItem }: TestimonialCardProps = {}) {
 
     return (
         <motion.div
-
-
             className="w-full group relative bg-white border border-[#bbf7d0] hover:border-[#84cc16] rounded-2xl px-6 sm:px-8 py-6 shadow-lg shadow-[#84cc16]/5 hover:shadow-2xl hover:shadow-[#84cc16]/15 transition-all duration-300 flex flex-col justify-between"
         >
             {/* Top Floating Avatar & Large Quote Icon */}
             <div className="flex items-start justify-between mb-4 -mt-14 sm:-mt-16">
                 {/* Avatar with Lime-Green Ring & subtle spring hover */}
                 <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 border-2 border-[#84cc16] bg-white overflow-hidden shadow-md transition-all duration-500 group-hover:ring-4 group-hover:ring-[#84cc16]/25 group-hover:scale-105">
-                    <img
+                    <Image
                         src={item.image}
                         alt={item.name}
-                        className="w-full h-full object-cover rounded-full transition-transform duration-500 group-hover:scale-110"
+                        fill
+                        sizes="112px"
+                        className="object-cover rounded-full transition-transform duration-500 group-hover:scale-110"
                     />
                 </div>
 

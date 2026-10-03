@@ -9,7 +9,7 @@ import Image from "next/image";
 import { site, SecureViewNavbarData, SectionProps } from "@/data";
 import { renderIcon } from "@/utils/icons";
 
-export interface NavbarProps extends SectionProps<SecureViewNavbarData> { }
+export type NavbarProps = SectionProps<SecureViewNavbarData>;
 
 export default function Navbar({ data, className }: NavbarProps = {}) {
     const navbar = data || site.navbar;
@@ -20,11 +20,15 @@ export default function Navbar({ data, className }: NavbarProps = {}) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
     const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+    const prevPathRef = React.useRef(pathname);
 
     // Close mobile menu on route change
     useEffect(() => {
-        setMobileMenuOpen(false);
-        setMobileServicesOpen(false);
+        if (prevPathRef.current !== pathname) {
+            prevPathRef.current = pathname;
+            setMobileMenuOpen(false);
+            setMobileServicesOpen(false);
+        }
     }, [pathname]);
 
     const isItemActive = (item: (typeof navItems)[number]) => {

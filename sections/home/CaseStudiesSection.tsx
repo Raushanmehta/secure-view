@@ -5,7 +5,7 @@ import { fadeInUp, staggerContainer, containerVariants, } from "@/utils/animatio
 import CaseSturdiesCard from "@/components/cards/CaseSturdiesCard";
 import { site, SecureViewCaseStudiesData, SectionProps } from "@/data";
 
-export interface CaseStudiesSectionProps extends SectionProps<SecureViewCaseStudiesData> { }
+export type CaseStudiesSectionProps = SectionProps<SecureViewCaseStudiesData>;
 
 export default function CaseStudiesSection({ data, className }: CaseStudiesSectionProps = {}) {
     const caseStudiesData = data || site.caseStudies;

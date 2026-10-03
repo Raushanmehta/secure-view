@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 import ServiceCard from "@/components/cards/ServiceCard";
 import { fadeInUp, staggerContainer, containerVariants, } from "@/utils/animations";
-import { site, SecureViewServicesData, SectionProps } from "@/data";
+import { site, SecureViewServicesData, SectionProps, ServiceItem } from "@/data";
 
-export interface ServiceSectionProps extends SectionProps<SecureViewServicesData> { }
+export type ServiceSectionProps = SectionProps<SecureViewServicesData>;
 
 export default function ServiceSection({ data, className }: ServiceSectionProps = {}) {
     const servicesData = data || site.services;
@@ -14,9 +14,9 @@ export default function ServiceSection({ data, className }: ServiceSectionProps 
         titlePart1,
         titleHighlight,
         description,
-        services = [],
-    } = (servicesData as any) || {};
-    const items: any[] = (servicesData as any)?.servicesList || services || [];
+        servicesList = [],
+    } = servicesData || {};
+    const items: ServiceItem[] = servicesList;
 
     return (
         <section className={`relative w-full py-8 lg:py-14 bg-black text-white overflow-hidden ${className || ""}`}>

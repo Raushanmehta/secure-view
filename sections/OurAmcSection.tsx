@@ -4,9 +4,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
 import { fadeInLeft, staggerContainer, staggerItem, transitions } from "@/utils/animations";
-import { site, SectionProps, SecureViewOurAmcData } from "@/data";
+import { site, SectionProps, SecureViewOurAmcData, AmcPlanItem } from "@/data";
 
-export interface OurAmcSectionProps extends SectionProps<SecureViewOurAmcData> { }
+export type OurAmcSectionProps = SectionProps<SecureViewOurAmcData>;
 
 export default function OurAmcSection({ data, className = "" }: OurAmcSectionProps = {}) {
     const ourAmcData = data || site.ourAmcData || {};
@@ -63,7 +63,7 @@ export default function OurAmcSection({ data, className = "" }: OurAmcSectionPro
                         whileInView="visible"
                         viewport={{ once: true }}
                         className="lg:col-span-8 xl:col-span-9 grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-4">
-                        {amcPlans.map((plan: any) => (
+                        {amcPlans.map((plan: AmcPlanItem) => (
                             <motion.div
                                 key={plan.id || plan.name}
                                 variants={staggerItem}
@@ -85,7 +85,7 @@ export default function OurAmcSection({ data, className = "" }: OurAmcSectionPro
                                             {plan.name}
                                         </h3>
                                         <p className="text-neutral-600 text-xs leading-relaxed min-h-[32px]">
-                                            {plan.description || plan.target}
+                                            {plan.target}
                                         </p>
                                     </div>
 

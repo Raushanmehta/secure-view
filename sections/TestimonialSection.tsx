@@ -4,16 +4,9 @@ import React from "react";
 import { motion } from "framer-motion";
 import TestimonialCard from "@/components/cards/TestimonialCard";
 import { site, SecureViewTestimonialData, SectionProps } from "@/data";
-import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-    type CarouselApi,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi, } from "@/components/ui/carousel";
 
-export interface TestimonialSectionProps extends SectionProps<SecureViewTestimonialData> { }
+export type TestimonialSectionProps = SectionProps<SecureViewTestimonialData>;
 
 export default function TestimonialSection({
     data,
@@ -35,12 +28,16 @@ export default function TestimonialSection({
     React.useEffect(() => {
         if (!api) return;
 
-        setCount(api.scrollSnapList().length);
-        setCurrent(api.selectedScrollSnap());
+        const updateCarouselState = () => {
+            setCount(api.scrollSnapList().length);
+            setCurrent(api.selectedScrollSnap());
+        };
 
+        updateCarouselState();
         api.on("select", () => {
             setCurrent(api.selectedScrollSnap());
         });
+        api.on("reInit", updateCarouselState);
     }, [api]);
 
     return (

@@ -1,11 +1,10 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
     fadeInUp,
-    fadeInLeft,
-    fadeInRight,
     staggerContainer,
     staggerItem,
     scaleIn,
@@ -199,14 +198,14 @@ export default function CaseSturdiesDetailSection({
                                 variants={scaleIn}
                                 whileHover={{ y: -4 }}
                                 transition={transitions.smooth}
-                                className="rounded-xl overflow-hidden shadow-sm aspect-[16/10] bg-neutral-100 border border-neutral-200/80 group cursor-pointer"
+                                className="relative rounded-xl overflow-hidden shadow-sm aspect-[16/10] bg-neutral-100 border border-neutral-200/80 group cursor-pointer"
                             >
-                                <motion.img
+                                <Image
                                     src={study.image}
                                     alt={study.imageAlt || "Case Study Hero"}
-                                    whileHover={{ scale: 1.04 }}
-                                    transition={{ duration: 0.5, ease: "easeOut" }}
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    sizes="(max-width: 1024px) 100vw, 50vw"
+                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                                 />
                             </motion.div>
                         )}

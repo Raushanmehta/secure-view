@@ -2,7 +2,13 @@ import { motion } from "framer-motion";
 import { Phone, Headphones } from "lucide-react";
 
 
-export default function NeedHelpCard({ helpCta }: { helpCta?: any }) {
+export interface HelpCtaData {
+    title?: string;
+    description?: string;
+    phoneNumber?: string;
+}
+
+export default function NeedHelpCard({ helpCta }: { helpCta?: HelpCtaData }) {
     const data = {
         title: helpCta?.title || "Need Help With Your Installation?",
         description: helpCta?.description || "Our experts are here to guide you at every step, from planning to installation and beyond.",

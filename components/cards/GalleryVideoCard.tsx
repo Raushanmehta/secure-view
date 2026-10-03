@@ -1,20 +1,29 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Play } from "lucide-react";
 import { renderIcon } from "@/utils/icons";
+import { GalleryVideoItem } from "@/data";
 
-export default function GalleryVideoCard({ vid, idx }: { vid: any, idx: any }) {
+export interface GalleryVideoCardProps {
+    vid: GalleryVideoItem;
+    idx?: number;
+}
+
+export default function GalleryVideoCard({ vid, idx }: GalleryVideoCardProps) {
     return (
         <motion.div
             key={idx}
             whileHover={{ y: -4 }}
             className=" rounded-2xl overflow-hidden  transition-all flex flex-col justify-between">
             <div className="relative h-44 w-full bg-neutral-900 overflow-hidden">
-                <img
+                <Image
                     src={vid.image}
                     alt={vid.alt || vid.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-300 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/30" />
 

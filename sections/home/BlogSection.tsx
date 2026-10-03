@@ -5,7 +5,7 @@ import BlogCard from "@/components/cards/BlogCard";
 import { fadeInUp, staggerContainer, containerVariants, } from "@/utils/animations";
 import { site, SecureViewBlogData, SectionProps } from "@/data";
 
-export interface BlogSectionProps extends SectionProps<SecureViewBlogData> { }
+export type BlogSectionProps = SectionProps<SecureViewBlogData>;
 
 export default function BlogSection({ data, className }: BlogSectionProps = {}) {
     const blogData = data || site.blog;

@@ -5,16 +5,11 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
-import {
-    containerVariants,
-    columnVariants,
-    linkContainerVariants,
-    linkItemVariants,
-} from "@/utils/animations";
-import { site, SecureViewFooterData, SectionProps } from "@/data";
+import { containerVariants, columnVariants, linkContainerVariants, linkItemVariants } from "@/utils/animations";
+import { site, SecureViewFooterData, SectionProps, FooterLinkItem, FooterSocialItem } from "@/data";
 import { renderIcon } from "@/utils/icons";
 
-export interface FooterProps extends SectionProps<SecureViewFooterData> {}
+export type FooterProps = SectionProps<SecureViewFooterData>;
 
 export default function Footer({ data, className }: FooterProps = {}) {
     const footer = data || site.footer;
@@ -24,9 +19,8 @@ export default function Footer({ data, className }: FooterProps = {}) {
         quickLinks,
         servicesLinks,
         otherPagesLinks,
-        legalLinks,
         bottomBar,
-    } = (footer || {}) as any;
+    } = footer || {};
 
     return (
         <footer className={`w-full bg-black text-neutral-400 pt-10 lg:pt-16 pb-8 border-t border-neutral-900 relative overflow-hidden ${className || ""}`}>
@@ -39,8 +33,7 @@ export default function Footer({ data, className }: FooterProps = {}) {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, amount: 0.1 }}
                         transition={{ duration: 0.7, ease: "easeOut" }}
-                        className="relative bg-black border border-neutral-800 rounded-xl px-6 lg:px-10 py-6 lg:py-8 mb-8 lg:mb-10 overflow-hidden shadow-2xl"
-                    >
+                        className="relative bg-black border border-neutral-800 rounded-xl px-6 lg:px-10 py-6 lg:py-8 mb-8 lg:mb-10 overflow-hidden shadow-2xl">
                         {/* Background Image on Right with Left Black Gradient */}
                         {ctaBanner.image && (
                             <div className="absolute inset-0 pointer-events-none">
@@ -92,12 +85,11 @@ export default function Footer({ data, className }: FooterProps = {}) {
 
                 {/* Main Footer Links & Info Grid with Staggered Container Animation */}
                 <motion.div
-                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 lg:gap-8 pb-4 lg:pb-10 border-b border-neutral-900"
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8 pb-4 lg:pb-10 border-b border-neutral-900"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, amount: 0.05 }}
-                >
+                    viewport={{ once: true, amount: 0.05 }}>
 
                     {/* Brand Info & Socials (Spans 2 columns on lg, 4 on md, 2 on sm) */}
                     {brand && (
@@ -126,7 +118,7 @@ export default function Footer({ data, className }: FooterProps = {}) {
                             {/* Social Icons */}
                             {brand.socials && brand.socials.length > 0 && (
                                 <div className="flex items-center gap-3 pt-2">
-                                    {brand.socials.map((social: any, index: number) => (
+                                    {brand.socials.map((social: FooterSocialItem, index: number) => (
                                         <motion.a
                                             key={index}
                                             href={social.href}
@@ -152,7 +144,7 @@ export default function Footer({ data, className }: FooterProps = {}) {
                                 <span className="absolute bottom-[-8px] left-0 w-8 h-[2px] bg-[#84cc16]" />
                             </h3>
                             <motion.ul variants={linkContainerVariants} className="space-y-3 text-sm mt-4 lg:mt-3">
-                                {quickLinks.links?.map((item: any, idx: number) => (
+                                {quickLinks.links?.map((item: FooterLinkItem, idx: number) => (
                                     <motion.li
                                         key={idx}
                                         variants={linkItemVariants}
@@ -179,7 +171,7 @@ export default function Footer({ data, className }: FooterProps = {}) {
                                 <span className="absolute bottom-[-8px] left-0 w-8 h-[2px] bg-[#84cc16]" />
                             </h3>
                             <motion.ul variants={linkContainerVariants} className="space-y-3 text-sm mt-4 lg:mt-3">
-                                {servicesLinks.links?.map((service: any, idx: number) => (
+                                {servicesLinks.links?.map((service: FooterLinkItem, idx: number) => (
                                     <motion.li
                                         key={idx}
                                         variants={linkItemVariants}
@@ -203,7 +195,7 @@ export default function Footer({ data, className }: FooterProps = {}) {
                                 <span className="absolute bottom-[-8px] left-0 w-8 h-[2px] bg-[#84cc16]" />
                             </h3>
                             <motion.ul variants={linkContainerVariants} className="space-y-3 text-sm mt-4 lg:mt-3">
-                                {otherPagesLinks.links?.map((page: any, idx: number) => (
+                                {otherPagesLinks.links?.map((page: FooterLinkItem, idx: number) => (
                                     <motion.li
                                         key={idx}
                                         variants={linkItemVariants}
@@ -218,31 +210,6 @@ export default function Footer({ data, className }: FooterProps = {}) {
                             </motion.ul>
                         </motion.div>
                     )}
-
-                    {/* Legal & Policies */}
-                    {legalLinks && (
-                        <motion.div variants={columnVariants} className="space-y-4">
-                            <h3 className="text-white font-semibold text-base relative inline-block">
-                                {legalLinks.title}
-                                <span className="absolute bottom-[-8px] left-0 w-8 h-[2px] bg-[#84cc16]" />
-                            </h3>
-                            <motion.ul variants={linkContainerVariants} className="space-y-3 text-sm mt-4 lg:mt-3">
-                                {legalLinks.links?.map((page: any, idx: number) => (
-                                    <motion.li
-                                        key={idx}
-                                        variants={linkItemVariants}
-                                        whileHover={{ x: 5 }}
-                                        transition={{ duration: 0.2 }}
-                                    >
-                                        <Link href={page.href} className="hover:text-[#84cc16] transition-colors inline-block">
-                                            {page.name}
-                                        </Link>
-                                    </motion.li>
-                                ))}
-                            </motion.ul>
-                        </motion.div>
-                    )}
-
                 </motion.div>
 
                 {/* Bottom Bar Copyright & Legal Links */}
@@ -257,7 +224,7 @@ export default function Footer({ data, className }: FooterProps = {}) {
                         <p>{bottomBar.copyright}</p>
                         {bottomBar.links && bottomBar.links.length > 0 && (
                             <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
-                                {bottomBar.links.map((link: any, idx: number) => (
+                                {bottomBar.links.map((link: FooterLinkItem, idx: number) => (
                                     <React.Fragment key={link.href + idx}>
                                         <Link href={link.href} className="hover:text-neutral-300 transition-colors">
                                             {link.name}

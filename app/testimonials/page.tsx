@@ -6,7 +6,7 @@ import { fadeInUp } from "@/utils/animations";
 import { motion } from "framer-motion";
 import { site, SecureViewTestimonialData, SectionProps, TestimonialItem } from "@/data";
 
-export interface TestimonialsPageProps extends SectionProps<SecureViewTestimonialData> { }
+export type TestimonialsPageProps = SectionProps<SecureViewTestimonialData>;
 
 export default function TestimonialsPage({
     data = site.testimonial,

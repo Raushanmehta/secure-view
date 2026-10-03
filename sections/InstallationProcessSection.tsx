@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { FileSearch, Wrench, ArrowRight, CheckCircle2 } from "lucide-react";
 import { fadeInUp, fadeInLeft } from "@/utils/animations";
@@ -8,16 +9,14 @@ import { renderIcon } from "@/utils/icons";
 import { site, InstallationProcessData, SectionProps } from "@/data";
 import NeedHelpCard from "@/components/cards/NeedHelpCard";
 
-export interface InstallationProcessSectionProps extends SectionProps<InstallationProcessData> {
-    data?: InstallationProcessData;
-}
+export type InstallationProcessSectionProps = SectionProps<InstallationProcessData>;
 
 export default function InstallationProcessSection({ data }: InstallationProcessSectionProps = {}) {
-    const processData = (data || site.installationProcess) as any;
+    const processData = data || site.installationProcess;
     const [activeStep, setActiveStep] = useState(0);
 
-    const steps: any[] = processData?.steps || [];
-    const featureCards: any[] = processData?.featureCards || [];
+    const steps = processData?.steps || [];
+    const featureCards = processData?.featureCards || [];
 
     return (
         <section className="relative w-full py-8 lg:py-14 bg-white text-neutral-900 overflow-hidden">
@@ -75,7 +74,7 @@ export default function InstallationProcessSection({ data }: InstallationProcess
                         </div>
 
                         {/* 2. Need Help With Your Installation? CTA Box */}
-                        <NeedHelpCard helpCta={processData?.helpCta} />
+                        <NeedHelpCard />
                     </motion.div>
 
                     {/* Right Column (8 cols): Hero Image, Titles, 2 Feature Cards Grid */}
@@ -87,14 +86,14 @@ export default function InstallationProcessSection({ data }: InstallationProcess
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.6 }}
-                            className="relative rounded-3xl overflow-hidden shadow-sm group"
+                            className="relative w-full h-[260px] sm:h-[340px] md:h-[400px] rounded-3xl overflow-hidden shadow-sm group"
                         >
-                            <motion.img
-                                src={processData?.heroImage || "/images/installation/hero-installation.png"}
-                                alt={processData?.heading?.highlight || "CCTV Installation Process"}
-                                whileHover={{ scale: 1.02 }}
-                                transition={{ duration: 0.5, ease: "easeOut" }}
-                                className="w-full h-auto object-cover"
+                            <Image
+                                src="/images/installation/site-survey.jpg"
+                                alt={processData?.titleHighlight || "CCTV Installation Process"}
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 66vw"
+                                className="object-cover group-hover:scale-105 transition-transform duration-500"
                             />
                         </motion.div>
 
@@ -109,15 +108,11 @@ export default function InstallationProcessSection({ data }: InstallationProcess
                             <div className="w-16 h-1 bg-[#84cc16] rounded-full mb-3" />
 
                             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0B132A] tracking-tight">
-                                {processData?.heading?.prefix || "CCTV"}{" "}
-                                <span className="text-[#84cc16]">{processData?.heading?.highlight || "Installation Process"}</span>
+                                {processData?.titlePart1 || "CCTV"}{" "}
+                                <span className="text-[#84cc16]">{processData?.titleHighlight || "Installation Process"}</span>
                             </h2>
 
                             <p className="text-base sm:text-lg font-medium text-neutral-600 leading-relaxed pt-1">
-                                {processData?.leadText}
-                            </p>
-
-                            <p className="text-sm sm:text-base text-neutral-500 leading-relaxed">
                                 {processData?.description}
                             </p>
                         </motion.div>
@@ -159,7 +154,7 @@ export default function InstallationProcessSection({ data }: InstallationProcess
                                     </div>
 
                                     <div className="space-y-2.5 pt-1">
-                                        {card.features?.map((item: any, itemIdx: number) => (
+                                        {card.features?.map((item: string, itemIdx: number) => (
                                             <div key={itemIdx} className="flex items-center gap-2.5">
                                                 <CheckCircle2 className="w-7 h-7 text-white fill-[#84cc16] shrink-0" />
                                                 <span className="text-sm font-semibold text-[#0B132A]/85">

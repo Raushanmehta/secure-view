@@ -1,52 +1,17 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { ChevronRight, CheckCircle2, Phone, Monitor, ShieldCheck, Headphones } from "lucide-react";
+import { ChevronRight, CheckCircle2, Monitor, ShieldCheck } from "lucide-react";
 import { fadeInUp, fadeInLeft } from "@/utils/animations";
-import { site } from "@/data";
+import { site, ServiceItem } from "@/data";
 import { renderIcon } from "@/utils/icons";
 import NeedHelpCard from "@/components/cards/NeedHelpCard";
 
 interface ServiceDetailSectionProps {
     initialSlug?: string;
-}
-
-interface FeatureHighlightItem {
-    title: string;
-    description: string;
-    icon?: string;
-    image: string;
-    points?: string[];
-}
-
-interface BenefitCardItem {
-    titleLine1: string;
-    titleLine2: string;
-    icon?: string;
-}
-
-interface ServiceDetailItem {
-    title: string;
-    slug: string;
-    description: string;
-    icon?: string;
-    image?: string;
-    heroImage?: string;
-    heroImageAlt?: string;
-    overview?: {
-        title?: string;
-        titleHighlight?: string;
-        description?: string;
-    };
-    featureHighlights?: FeatureHighlightItem[];
-    benefits?: {
-        title?: string;
-        titleHighlight?: string;
-        description?: string;
-        benefitsList?: BenefitCardItem[];
-    };
 }
 
 function Surveillance24Icon({ className = "w-14 h-14 text-[#84cc16]" }: { className?: string }) {
@@ -97,35 +62,26 @@ function Surveillance24Icon({ className = "w-14 h-14 text-[#84cc16]" }: { classN
 export default function ServiceDetailSection({ initialSlug }: ServiceDetailSectionProps = {}) {
     const router = useRouter();
     const servicesData = site.services;
-    const servicesList: any[] = (servicesData as any)?.servicesList || (servicesData as any)?.services || [];
+    const servicesList: ServiceItem[] = servicesData.servicesList;
 
-    // Select default active service based on initialSlug or first item
-    const initialActive =
-        servicesList.find((s) => s.slug === initialSlug) ||
-        servicesList.find((s) => s.slug === "remote-monitoring") ||
-        servicesList[0];
+    // Use initialSlug or fallback to first slug
+    const fallbackSlug = servicesList[0]?.slug || "";
+    const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
+    const activeSlug = selectedSlug ?? (initialSlug || fallbackSlug);
 
-    const [activeSlug, setActiveSlug] = useState<string>(initialActive?.slug || "");
+    const activeService = servicesList.find((s) => s.slug === activeSlug) || servicesList[0];
 
-    useEffect(() => {
-        if (initialSlug) {
-            setActiveSlug(initialSlug);
-        }
-    }, [initialSlug]);
-
-    const activeService = (servicesList.find((s) => s.slug === activeSlug) || initialActive) as ServiceDetailItem | undefined;
-
-    const sidebarTitle = (servicesData as any)?.sidebarTitle || "Our Services";
-    const helpCta = (servicesData as any)?.helpCta;
+    const sidebarTitle = servicesData?.sidebarTitle || "Our Services";
+    const helpCta = servicesData?.helpCta;
     const heroImage = activeService?.heroImage || activeService?.image || "";
     const heroImageAlt = activeService?.heroImageAlt || activeService?.title || "Service Hero";
     const overview = activeService?.overview;
-    const featureHighlights: FeatureHighlightItem[] = activeService?.featureHighlights || [];
-    const benefits = activeService?.benefits || (servicesData as any)?.benefits;
-    const benefitsList: BenefitCardItem[] = benefits?.benefitsList || [];
+    const featureHighlights = activeService?.featureHighlights || [];
+    const benefits = activeService?.benefits;
+    const benefitsList = benefits?.benefitsList || [];
 
     const handleTabClick = (slug: string) => {
-        setActiveSlug(slug);
+        setSelectedSlug(slug);
         router.push(`/services/${slug}`, { scroll: false });
     };
 
@@ -193,14 +149,15 @@ export default function ServiceDetailSection({ initialSlug }: ServiceDetailSecti
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.2 }}
                                 transition={{ duration: 0.6 }}
-                                className="relative rounded-2xl overflow-hidden group shadow-lg"
+                                className="relative w-full h-[320px] sm:h-[400px] rounded-2xl overflow-hidden group shadow-lg"
                             >
-                                <motion.img
+                                <Image
                                     src={heroImage}
                                     alt={heroImageAlt}
-                                    whileHover={{ scale: 1.03 }}
-                                    transition={{ duration: 0.5, ease: "easeOut" }}
-                                    className="w-full h-[400px] object-cover"
+                                    fill
+                                    priority
+                                    sizes="(max-width: 1024px) 100vw, 66vw"
+                                    className="object-cover group-hover:scale-105 transition-transform duration-700"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                             </motion.div>
@@ -228,7 +185,7 @@ export default function ServiceDetailSection({ initialSlug }: ServiceDetailSecti
                         {/* Two Feature Highlights Grid */}
                         {featureHighlights && featureHighlights.length > 0 && (
                             <div className="flex flex-col gap-6">
-                                {featureHighlights.map((feature: FeatureHighlightItem, idx: number) => {
+                                {featureHighlights.map((feature, idx: number) => {
                                     const isEven = idx % 2 === 0;
 
                                     return (
@@ -302,15 +259,15 @@ export default function ServiceDetailSection({ initialSlug }: ServiceDetailSecti
                                                     whileInView={{ opacity: 1, x: 0 }}
                                                     viewport={{ once: true, amount: 0.2 }}
                                                     transition={{ duration: 0.6 }}
-                                                    className={`md:col-span-6 rounded-3xl overflow-hidden h-72 sm:h-80 md:h-[300px] shadow-xl group ${isEven ? "" : "order-2 md:order-1"
+                                                    className={`relative md:col-span-6 rounded-3xl overflow-hidden h-72 sm:h-80 md:h-[300px] shadow-xl group ${isEven ? "" : "order-2 md:order-1"
                                                         }`}
                                                 >
-                                                    <motion.img
+                                                    <Image
                                                         src={feature.image}
                                                         alt={feature.title}
-                                                        whileHover={{ scale: 1.05 }}
-                                                        transition={{ duration: 0.4 }}
-                                                        className="w-full h-full object-cover"
+                                                        fill
+                                                        sizes="(max-width: 768px) 100vw, 40vw"
+                                                        className="object-cover group-hover:scale-105 transition-transform duration-500"
                                                     />
                                                 </motion.div>
                                             </div>
@@ -347,7 +304,7 @@ export default function ServiceDetailSection({ initialSlug }: ServiceDetailSecti
                                 {benefitsList && benefitsList.length > 0 && (
                                     <div className="pt-3">
                                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                            {benefitsList.map((benefit: BenefitCardItem, idx: number) => {
+                                            {benefitsList.map((benefit, idx: number) => {
                                                 const isCustom24 = benefit.icon === "Surveillance24";
 
                                                 return (

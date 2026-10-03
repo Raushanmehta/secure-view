@@ -8,7 +8,7 @@ import { fadeInUp, fadeInLeft, staggerContainer, staggerItem, buttonHoverTap } f
 import { site, SecureViewHeroData, SectionProps } from "@/data";
 import { renderIcon } from "@/utils/icons";
 
-export interface HeroSectionProps extends SectionProps<SecureViewHeroData> { }
+export type HeroSectionProps = SectionProps<SecureViewHeroData>;
 
 export default function HeroSection({ data, className }: HeroSectionProps = {}) {
     const hero = data || site.hero;

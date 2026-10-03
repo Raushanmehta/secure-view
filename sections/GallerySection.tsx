@@ -1,27 +1,26 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Play, ArrowRight } from "lucide-react";
 import { fadeInUp, fadeInRight, staggerContainer } from "@/utils/animations";
 import { renderIcon } from "@/utils/icons";
-import { site, SecureViewGalleryData, SectionProps } from "@/data";
+import { site, SecureViewGalleryData, SectionProps, GalleryImageItem, GalleryVideoItem } from "@/data";
 import GalleryImageCard from "@/components/cards/GalleryImageCard";
 import GalleryVideoCard from "@/components/cards/GalleryVideoCard";
 
-export interface GallerySectionProps extends SectionProps<SecureViewGalleryData> {
-    data?: SecureViewGalleryData;
-}
+export type GallerySectionProps = SectionProps<SecureViewGalleryData>;
 
 export default function GallerySection({ data }: GallerySectionProps = {}) {
-    const galleryData = (data || site.gallery) as any;
+    const galleryData = data || site.gallery;
 
     const galleryHeader = galleryData?.galleryHeader;
-    const galleryImages: any[] = galleryData?.galleryImages || [];
+    const galleryImages: GalleryImageItem[] = galleryData?.galleryImages || [];
     const videoSection = galleryData?.videoSection;
     const featuredVideo = videoSection?.featuredVideo;
     const moreVideosSection = videoSection?.moreVideos;
-    const videoThumbnails: any[] = moreVideosSection?.videoThumbnails || [];
+    const videoThumbnails: GalleryVideoItem[] = moreVideosSection?.videoThumbnails || [];
 
     return (
         <section className="relative w-full py-8 lg:py-14 bg-white text-neutral-900 overflow-hidden">
@@ -84,7 +83,7 @@ export default function GallerySection({ data }: GallerySectionProps = {}) {
                         viewport={{ once: true, amount: 0.1 }}
                         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
                     >
-                        {galleryImages.map((item: any, index: number) => (
+                        {galleryImages.map((item: GalleryImageItem, index: number) => (
                             <GalleryImageCard
                                 key={item.id || item.title || index}
                                 index={index}
@@ -96,7 +95,6 @@ export default function GallerySection({ data }: GallerySectionProps = {}) {
                                 icon={item.icon}
                                 buttonText={item.buttonText}
                                 buttonHref={item.buttonHref}
-                                isOverlay={item.isOverlay}
                             />
                         ))}
                     </motion.div>
@@ -152,12 +150,14 @@ export default function GallerySection({ data }: GallerySectionProps = {}) {
                             viewport={{ once: true, amount: 0.2 }}
                             className="lg:col-span-7"
                         >
-                            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-neutral-100 bg-neutral-900 group">
+                            <div className="relative w-full h-[380px] sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl border-4 border-neutral-100 bg-neutral-900 group">
                                 <div className="absolute inset-0 bg-neutral-950/40 z-10" />
-                                <img
+                                <Image
                                     src={featuredVideo?.image || "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1000&auto=format&fit=crop"}
                                     alt={featuredVideo?.alt || featuredVideo?.title || "Featured CCTV Installation Video"}
-                                    className="w-full h-[380px] sm:h-[420px] object-cover transition-transform duration-700 group-hover:scale-105"
+                                    fill
+                                    sizes="(max-width: 1024px) 100vw, 60vw"
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
 
                                 {/* Central Play Button Overlay with Pulsing Ring */}
@@ -244,7 +244,7 @@ export default function GallerySection({ data }: GallerySectionProps = {}) {
                             viewport={{ once: true, amount: 0.1 }}
                             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
                         >
-                            {videoThumbnails.map((vid: any, idx: number) => (
+                            {videoThumbnails.map((vid: GalleryVideoItem, idx: number) => (
                                 <motion.div key={vid.id || vid.title || idx} variants={fadeInUp}>
                                     <GalleryVideoCard vid={vid} idx={idx} />
                                 </motion.div>

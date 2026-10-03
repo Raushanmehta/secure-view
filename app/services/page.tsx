@@ -4,7 +4,7 @@ import ServiceCard from "@/components/cards/ServiceCard";
 import PageTopSection from "@/components/common/PageTopSection";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer } from "@/utils/animations";
-import { site } from "@/data";
+import { site, ServiceItem } from "@/data";
 
 export default function ServicePage() {
     const servicesData = site.services;
@@ -13,9 +13,9 @@ export default function ServicePage() {
         titlePart1,
         titleHighlight,
         description,
-        services = [],
-    } = (servicesData as any) || {};
-    const items: any[] = (servicesData as any)?.servicesList || services || [];
+        servicesList = [],
+    } = servicesData || {};
+    const items: ServiceItem[] = servicesList;
 
     return (
         <main>

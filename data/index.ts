@@ -59,8 +59,12 @@ export type BlogPost = SecureViewBlogData["blogPosts"][number];
 export type WhyChooseUsFeature = SecureViewWhyChooseUsData["features"][number];
 export type TestimonialItem = SecureViewTestimonialData["testimonials"][number];
 export type GalleryImageItem = SecureViewGalleryData["galleryImages"][number];
+export type GalleryVideoItem = SecureViewGalleryData["videoSection"]["moreVideos"]["videoThumbnails"][number];
 export type BrandItem = SecureViewBrandsData["brandsList"][number];
 export type PricingPlanItem = SecureViewPricingData["plans"][number];
+export type AmcPlanItem = SecureViewOurAmcData["plans"][number];
+export type FooterLinkItem = SecureViewFooterData["quickLinks"]["links"][number];
+export type FooterSocialItem = SecureViewFooterData["brand"]["socials"][number];
 export type PolicyPageData = SecureViewLegalData["privacyPolicy"];
 export type PolicySectionItem = PolicyPageData["sections"][number];
 

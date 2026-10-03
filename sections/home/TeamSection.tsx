@@ -5,7 +5,7 @@ import TeamCard from "@/components/cards/TeamCard";
 import { fadeInUp, staggerContainer, containerVariants, } from "@/utils/animations";
 import { site, SecureViewTeamData, SectionProps } from "@/data";
 
-export interface TeamSectionProps extends SectionProps<SecureViewTeamData> { }
+export type TeamSectionProps = SectionProps<SecureViewTeamData>;
 
 export default function TeamSection({ data, className }: TeamSectionProps = {}) {
     const teamData = data || site.team;

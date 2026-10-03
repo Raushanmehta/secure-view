@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck } from "lucide-react";
@@ -129,10 +130,12 @@ export default function GalleryImageCard({
             <GreenInnerCurveAccent className="absolute bottom-0 right-0 w-24 h-24 sm:w-28 sm:h-28 z-30" />
 
             {/* 3. Main Background Image */}
-            <img
+            <Image
                 src={image}
                 alt={title || alt}
-                className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-108"
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
             />
 
             {/* 4. Subtle hover gradient overlay */}

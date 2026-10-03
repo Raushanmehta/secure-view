@@ -1,12 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, ArrowRight, ChevronDown } from "lucide-react";
 import { fadeInLeft, fadeInRight, scaleIn, transitions } from "@/utils/animations";
 import { site, SectionProps, SecureViewAmcEnquiryData } from "@/data";
 
-export interface EnquirySectionProps extends SectionProps<SecureViewAmcEnquiryData> { }
+export type EnquirySectionProps = SectionProps<SecureViewAmcEnquiryData>;
 
 export default function EnquirySection({ data, className = "" }: EnquirySectionProps = {}) {
     const amcEnquiryData = data || site.amcEnquiryData || {};
@@ -200,11 +201,13 @@ export default function EnquirySection({ data, className = "" }: EnquirySectionP
                                 variants={scaleIn}
                                 whileHover={{ scale: 1.03 }}
                                 transition={transitions.smooth}
-                                className="overflow-hidden h-48 sm:h-56 bg-neutral-100">
-                                <img
+                                className="relative overflow-hidden h-48 sm:h-56 bg-neutral-100">
+                                <Image
                                     src={assistance.image}
                                     alt={assistance.imageAlt}
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    sizes="(max-width: 1024px) 100vw, 33vw"
+                                    className="object-cover"
                                 />
                             </motion.div>
                             <div className="p-6 sm:p-7 space-y-4">

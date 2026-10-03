@@ -1,11 +1,12 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Check, ArrowRight } from "lucide-react";
 import { fadeInLeft, fadeInRight, scaleIn, transitions } from "@/utils/animations";
 import { site, SectionProps, SecureViewAmcData } from "@/data";
 
-export interface AmcSectionProps extends SectionProps<SecureViewAmcData> { }
+export type AmcSectionProps = SectionProps<SecureViewAmcData>;
 
 export default function AmcSection({ data, className = "" }: AmcSectionProps = {}) {
     const amcData = data || site.amcData || {};
@@ -123,11 +124,13 @@ export default function AmcSection({ data, className = "" }: AmcSectionProps = {
                             variants={scaleIn}
                             whileHover={{ y: -4 }}
                             transition={transitions.smooth}
-                            className="relative rounded-xl overflow-hidden shadow-md bg-neutral-900 border border-neutral-200/70">
-                            <img
+                            className="relative w-full h-[400px] sm:h-[460px] rounded-xl overflow-hidden shadow-md bg-neutral-900 border border-neutral-200/70">
+                            <Image
                                 src={image}
                                 alt={imageAlt}
-                                className="w-full h-[400px] sm:h-[460px] object-cover hover:scale-105 transition-transform duration-500"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 50vw"
+                                className="object-cover hover:scale-105 transition-transform duration-500"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
                         </motion.div>

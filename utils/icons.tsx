@@ -14,13 +14,13 @@ export function renderIcon(
   }
 
   // Check Lucide Icons
-  const LucideComponent = (LucideIcons as Record<string, any>)[icon];
+  const LucideComponent = (LucideIcons as unknown as Record<string, React.ElementType>)[icon];
   if (LucideComponent) {
     return <LucideComponent className={className} />;
   }
 
   // Check React Icons FontAwesome 6
-  const FaComponent = (Fa6Icons as Record<string, any>)[icon];
+  const FaComponent = (Fa6Icons as unknown as Record<string, React.ElementType>)[icon];
   if (FaComponent) {
     return <FaComponent className={className} />;
   }

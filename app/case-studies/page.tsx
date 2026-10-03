@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { containerVariants, fadeInUp, staggerContainer } from "@/utils/animations";
 import { site, SecureViewCaseStudiesData, SectionProps } from "@/data";
 
-export interface CaseStudiesPageProps extends SectionProps<SecureViewCaseStudiesData> { }
+export type CaseStudiesPageProps = SectionProps<SecureViewCaseStudiesData>;
 
 export default function CaseStudiesPage({
     data = site.caseStudies,

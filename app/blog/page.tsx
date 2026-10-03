@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion";
 import PageTopSection from "@/components/common/PageTopSection";
-import { site } from "@/data";
 import { staggerContainer, fadeInUp, containerVariants } from "@/utils/animations";
 import BlogCard from "@/components/cards/BlogCard";
+import { site } from "@/data";
+import { BlogPost } from "@/data";
 
 export default function BlogPage() {
     const { titlePart1, titleHighlight, badge, description, blogPosts = [] } = site.blog || {};
@@ -59,7 +60,7 @@ export default function BlogPage() {
                             viewport={{ once: true, amount: 0.05 }}
                             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
                         >
-                            {blogPosts.map((post: any, index: number) => (
+                            {blogPosts.map((post: BlogPost, index: number) => (
                                 <BlogCard
                                     key={post.title + index}
                                     post={post}

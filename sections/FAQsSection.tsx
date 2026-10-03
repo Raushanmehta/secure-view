@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronUp, ChevronDown } from "lucide-react";
 import {
@@ -124,11 +125,13 @@ export default function FAQsSection({ data = site.faq, className = "" }: FAQsSec
                         <div className="absolute top-8 left-8 right-0 bottom-0 bg-[#f7fee7] rounded-[3rem] -z-10" />
 
                         {/* Main Technician Image Container */}
-                        <div className="relative overflow-hidden rounded-r-4xl rounded-l-[80px] shadow-xl border border-neutral-100">
-                            <img
+                        <div className="relative overflow-hidden rounded-r-4xl rounded-l-[80px] shadow-xl border border-neutral-100 w-full h-[400px]">
+                            <Image
                                 src={image}
                                 alt="Security CCTV Cameras"
-                                className="w-full h-[400px] object-cover"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 40vw"
+                                className="object-cover"
                             />
                         </div>
 

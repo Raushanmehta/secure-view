@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Users, ArrowRight } from "lucide-react";
@@ -10,7 +11,7 @@ import { renderIcon } from "@/utils/icons";
 export interface CaseStudyItem {
     title: string;
     description: string;
-    icon: any;
+    icon: string | React.ElementType;
     image: string;
     slug?: string;
 }
@@ -18,7 +19,7 @@ export interface CaseStudyItem {
 interface CaseSturdiesCardProps {
     study: CaseStudyItem;
     index?: number;
-    IconComponent?: any;
+    IconComponent?: string | React.ElementType;
 }
 
 export default function CaseSturdiesCard({ study, index = 0, IconComponent }: CaseSturdiesCardProps) {
@@ -39,22 +40,22 @@ export default function CaseSturdiesCard({ study, index = 0, IconComponent }: Ca
                 <div className="relative h-60 w-full overflow-hidden rounded-sm">
                     <div className="absolute inset-0 bg-neutral-900/10 z-10 rounded-sm transition-opacity duration-300 group-hover:bg-neutral-900/5" />
                     {study.slug ? (
-                        <Link href={`/case-studies/${study.slug}`}>
-                            <motion.img
+                        <Link href={`/case-studies/${study.slug}`} className="block relative w-full h-full">
+                            <Image
                                 src={study.image}
                                 alt={study.title}
-                                whileHover={{ scale: 1.06 }}
-                                transition={{ duration: 0.4, ease: "easeOut" }}
-                                className="w-full h-full object-cover rounded-sm cursor-pointer"
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className="object-cover rounded-sm transition-transform duration-500 group-hover:scale-105 cursor-pointer"
                             />
                         </Link>
                     ) : (
-                        <motion.img
+                        <Image
                             src={study.image}
                             alt={study.title}
-                            whileHover={{ scale: 1.06 }}
-                            transition={{ duration: 0.4, ease: "easeOut" }}
-                            className="w-full h-full object-cover rounded-sm"
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            className="object-cover rounded-sm transition-transform duration-500 group-hover:scale-105"
                         />
                     )}
                 </div>

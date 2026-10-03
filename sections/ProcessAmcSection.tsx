@@ -2,11 +2,12 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { Plus, Minus, ArrowRight } from "lucide-react";
 import { fadeInLeft, fadeInRight, scaleIn, staggerContainer, staggerItem, transitions } from "@/utils/animations";
 import { site, SectionProps, SecureViewAmcProcessData } from "@/data";
 
-export interface ProcessAmcSectionProps extends SectionProps<SecureViewAmcProcessData> { }
+export type ProcessAmcSectionProps = SectionProps<SecureViewAmcProcessData>;
 
 export default function ProcessAmcSection({ data, className = "" }: ProcessAmcSectionProps = {}) {
     const amcProcessData = data || site.amcProcessData || {};
@@ -116,11 +117,13 @@ export default function ProcessAmcSection({ data, className = "" }: ProcessAmcSe
                             variants={scaleIn}
                             whileHover={{ y: -4 }}
                             transition={transitions.smooth}
-                            className="rounded-xl overflow-hidden shadow-md border border-neutral-200/70 bg-neutral-900">
-                            <img
+                            className="relative w-full h-[360px] sm:h-[420px] rounded-xl overflow-hidden shadow-md border border-neutral-200/70 bg-neutral-900">
+                            <Image
                                 src={image}
                                 alt={imageAlt}
-                                className="w-full h-[360px] sm:h-[420px] object-cover hover:scale-105 transition-transform duration-500" />
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 40vw"
+                                className="object-cover hover:scale-105 transition-transform duration-500" />
                         </motion.div>
                     </motion.div>
 

@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Video, ArrowRight } from "lucide-react";
 import { columnVariants } from "@/utils/animations";
 import { renderIcon } from "@/utils/icons";
@@ -14,7 +15,7 @@ export interface ServiceCardProps {
         image: string;
         slug?: string;
         isHighlighted?: boolean;
-        icon?: any;
+        icon?: string | React.ElementType;
         theme?: "dark" | "light";
         cardBg?: "white" | "black";
     };
@@ -24,7 +25,7 @@ export interface ServiceCardProps {
     href?: string;
     index?: number;
     isHighlighted?: boolean;
-    IconComponent?: any;
+    IconComponent?: string | React.ElementType;
     theme?: "dark" | "light";
     cardBg?: "white" | "black";
     className?: string;
@@ -81,12 +82,12 @@ export default function ServiceCard({
                                 : "bg-black/30 group-hover:bg-black/15"
                         }`}
                     />
-                    <motion.img
+                    <Image
                         src={cardImage}
                         alt={cardTitle}
-                        whileHover={{ scale: 1.06 }}
-                        transition={{ duration: 0.4, ease: "easeOut" }}
-                        className="w-full h-full object-cover rounded-sm"
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                        className="object-cover rounded-sm transition-transform duration-500 group-hover:scale-105"
                     />
                 </div>
 

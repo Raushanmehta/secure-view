@@ -8,7 +8,7 @@ import { fadeInUp, fadeInLeft, staggerContainer, staggerItem, buttonHoverTap, } 
 import { site, SecureViewAboutData, SectionProps } from "@/data";
 import { renderIcon } from "@/utils/icons";
 
-export interface AboutSectionProps extends SectionProps<SecureViewAboutData> { }
+export type AboutSectionProps = SectionProps<SecureViewAboutData>;
 
 export default function AboutSection({ data, className }: AboutSectionProps = {}) {
     const about = data || site.about;
@@ -177,12 +177,15 @@ export default function AboutSection({ data, className }: AboutSectionProps = {}
                                         transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
                                         whileHover={{ y: -6, scale: 1.02 }}
                                         className="absolute -bottom-8 sm:-bottom-10 -right-0 md:-right-2 w-64 md:w-64 overflow-hidden shadow-2xl border-4 border-white bg-white z-20 cursor-pointer">
-                                        <div className="absolute bottom-0 left-0 right-0 h-3 bg-[#84cc16] z-10" />
-                                        <img
-                                            src={images.secondary.src}
-                                            alt={images.secondary.alt || "Secondary Image"}
-                                            className="w-full h-44 sm:h-52 object-cover"
-                                        />
+                                        <div className="relative w-full h-44 sm:h-52">
+                                            <Image
+                                                src={images.secondary.src}
+                                                alt={images.secondary.alt || "Secondary Image"}
+                                                fill
+                                                sizes="(max-width: 640px) 16rem, 16rem"
+                                                className="object-cover"
+                                            />
+                                        </div>
                                     </motion.div>
                                 )}
 

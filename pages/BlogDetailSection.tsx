@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowRight, CalendarDays, ChevronRight, HelpCircle, Rss } from "lucide-react";
+import { ArrowRight, CalendarDays, ChevronRight, HelpCircle } from "lucide-react";
 import { site } from "@/data";
 import {
     fadeInUp, fadeInRight, scaleIn, staggerContainer, staggerItem, transitions,
@@ -172,14 +173,15 @@ export default function BlogDetailSection({
                                 variants={scaleIn}
                                 whileHover={{ y: -4 }}
                                 transition={transitions.smooth}
-                                className="rounded-xl overflow-hidden w-full h-[30vh] lg:h-[60vh] bg-neutral-100 shadow-md group border border-neutral-200/70"
+                                className="relative rounded-xl overflow-hidden w-full h-[30vh] lg:h-[60vh] bg-neutral-100 shadow-md group border border-neutral-200/70"
                             >
-                                <motion.img
+                                <Image
                                     src={resolvedPost.image}
                                     alt={resolvedPost.title || "Blog Featured Image"}
-                                    whileHover={{ scale: 1.05 }}
-                                    transition={{ duration: 0.6, ease: "easeOut" }}
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    priority
+                                    sizes="(max-width: 1024px) 100vw, 66vw"
+                                    className="object-cover group-hover:scale-105 transition-transform duration-700"
                                 />
                             </motion.div>
                         )}
@@ -256,13 +258,13 @@ export default function BlogDetailSection({
                                                 className="group flex items-start gap-4"
                                             >
                                                 {recentItem.image && (
-                                                    <div className="w-20 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm border border-neutral-200/60">
-                                                        <motion.img
+                                                    <div className="relative w-20 h-16 rounded-xl overflow-hidden shrink-0 shadow-sm border border-neutral-200/60">
+                                                        <Image
                                                             src={recentItem.image}
                                                             alt={recentItem.title || "Recent post"}
-                                                            whileHover={{ scale: 1.1 }}
-                                                            transition={transitions.smooth}
-                                                            className="w-full h-full object-cover"
+                                                            fill
+                                                            sizes="80px"
+                                                            className="object-cover group-hover:scale-110 transition-transform duration-300"
                                                         />
                                                     </div>
                                                 )}

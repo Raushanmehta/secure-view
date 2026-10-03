@@ -502,29 +502,12 @@
                                     "href": "/faqs"
                                 },
                                 {
+                                    "name": "Gallery",
+                                    "href": "/gallery"
+                                },
+                                {
                                     "name": "Get a Free Quote",
                                     "href": "/get-a-quote"
-                                }
-                            ]
-                        },
-                        "legalLinks": {
-                            "title": "Legal & Policies",
-                            "links": [
-                                {
-                                    "name": "Privacy Policy",
-                                    "href": "/privacy-policy"
-                                },
-                                {
-                                    "name": "Terms & Conditions",
-                                    "href": "/terms-conditions"
-                                },
-                                {
-                                    "name": "Disclaimer",
-                                    "href": "/disclaimer"
-                                },
-                                {
-                                    "name": "Warranty Policy",
-                                    "href": "/warranty-policy"
                                 }
                             ]
                         },
@@ -632,11 +615,11 @@
                         },
                         "images": {
                             "primary": {
-                                "src": "https://i.pinimg.com/736x/0b/99/14/0b9914a7d8ea3d05051c1e74111ef068.jpg",
+                                "src": "/images/about/about-man.png",
                                 "alt": "Technician installing CCTV camera"
                             },
                             "secondary": {
-                                "src": "https://i.pinimg.com/736x/9e/a4/3f/9ea43f42645c5d66ae749b0d954d9a3f.jpg",
+                                "src": "/images/about/about-camera.jpg",
                                 "alt": "Security camera outdoor view"
                             }
                         }
@@ -663,8 +646,8 @@
                                 "slug": "cctv-installation",
                                 "description": "Professional installation of high-quality CCTV for homes, offices and commercial spaces.",
                                 "icon": "Video",
-                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop",
-                                "heroImage": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop",
+                                "image": "/images/services/cctv-installation.jpg",
+                                "heroImage": "/images/services/cctv-installation.jpg",
                                 "heroImageAlt": "Technician installing CCTV camera",
                                 "overview": {
                                     "title": "Reliable & High Performance",
@@ -675,7 +658,7 @@
                                     {
                                         "title": "HD & 4K Resolution Cameras",
                                         "description": "Crystal clear imaging with wide-angle field of view and ultra-low light ColorVu night vision.",
-                                        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+                                        "image": "/images/services/4k-resolution-camera.jpg",
                                         "icon": "Video",
                                         "points": [
                                             "Real-time 30fps smooth streaming",
@@ -686,7 +669,7 @@
                                     {
                                         "title": "Discreet & Conduit Concealed Cabling",
                                         "description": "Professional cabling infrastructure designed to resist wear, tampering, and harsh weather conditions.",
-                                        "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop",
+                                        "image": "/images/services/discreet-conduit-concealed-cabling.jpg",
                                         "icon": "Wrench",
                                         "points": [
                                             "Zero exposed wiring in customer areas",
@@ -2933,23 +2916,23 @@
                             {
                                 "name": "David Luponis",
                                 "role": "Founder",
-                                "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop"
+                                "image": "/images/team/team1.png"
                             },
                             {
                                 "name": "David Luponis",
                                 "role": "Founder",
-                                "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
+                                "image": "/images/team/team2.png",
                                 "isHighlighted": true
                             },
                             {
                                 "name": "David Luponis",
                                 "role": "Founder",
-                                "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=400&auto=format&fit=crop"
+                                "image": "/images/team/team3.png"
                             },
                             {
                                 "name": "David Luponis",
                                 "role": "Founder",
-                                "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop"
+                                "image": "/images/team/team4.png"
                             }
                         ]
                     }
@@ -3322,7 +3305,6 @@
                         "breadcrumbPath": "About Us",
                         "homeLabel": "Home",
                         "homeHref": "/",
-                        "backgroundImage": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1920&auto=format&fit=crop",
                         "backgroundAlt": "High tech CCTV surveillance security background"
                     }
                 }
@@ -3335,7 +3317,7 @@
                         "titleHighlight": "SecureView?",
                         "description": "We provide reliable, high-quality CCTV solutions with a focus on security, service and complete customer satisfaction.",
                         "image": {
-                            "src": "/images/why-choose-uss.jpg",
+                            "src": "/images/why-choose-us/why-choose-uss.jpg",
                             "alt": "Employee holding an access card to a door reader"
                         },
                         "features": [

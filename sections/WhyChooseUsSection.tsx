@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ShieldCheck } from "lucide-react";
-import { site, SecureViewWhyChooseUsData, SectionProps } from "@/data";
+import { site, SecureViewWhyChooseUsData, SectionProps, WhyChooseUsFeature } from "@/data";
 import { renderIcon } from "@/utils/icons";
 
 export interface WhyChooseUsSectionProps extends SectionProps<SecureViewWhyChooseUsData> {
@@ -170,8 +170,8 @@ export default function WhyChooseUsSection({
                                 }}
                                 className="grid grid-cols-1 sm:grid-cols-2 gap-4"
                             >
-                                {features.map((feature, idx) => {
-                                    const isHighlighted = (feature as any).isHighlighted;
+                                {features.map((feature: WhyChooseUsFeature, idx: number) => {
+                                    const isHighlighted = Boolean(feature.isHighlighted);
 
                                     return (
                                         <motion.div
