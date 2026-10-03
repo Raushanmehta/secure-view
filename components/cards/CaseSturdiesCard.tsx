@@ -2,7 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Users } from "lucide-react";
+import Link from "next/link";
+import { Users, ArrowRight } from "lucide-react";
 import { columnVariants } from "@/utils/animations";
 import { renderIcon } from "@/utils/icons";
 
@@ -11,6 +12,7 @@ export interface CaseStudyItem {
     description: string;
     icon: any;
     image: string;
+    slug?: string;
 }
 
 interface CaseSturdiesCardProps {
@@ -36,13 +38,25 @@ export default function CaseSturdiesCard({ study, index = 0, IconComponent }: Ca
             <div className="relative">
                 <div className="relative h-60 w-full overflow-hidden rounded-sm">
                     <div className="absolute inset-0 bg-neutral-900/10 z-10 rounded-sm transition-opacity duration-300 group-hover:bg-neutral-900/5" />
-                    <motion.img
-                        src={study.image}
-                        alt={study.title}
-                        whileHover={{ scale: 1.06 }}
-                        transition={{ duration: 0.4, ease: "easeOut" }}
-                        className="w-full h-full object-cover rounded-sm"
-                    />
+                    {study.slug ? (
+                        <Link href={`/case-studies/${study.slug}`}>
+                            <motion.img
+                                src={study.image}
+                                alt={study.title}
+                                whileHover={{ scale: 1.06 }}
+                                transition={{ duration: 0.4, ease: "easeOut" }}
+                                className="w-full h-full object-cover rounded-sm cursor-pointer"
+                            />
+                        </Link>
+                    ) : (
+                        <motion.img
+                            src={study.image}
+                            alt={study.title}
+                            whileHover={{ scale: 1.06 }}
+                            transition={{ duration: 0.4, ease: "easeOut" }}
+                            className="w-full h-full object-cover rounded-sm"
+                        />
+                    )}
                 </div>
 
                 {/* Floating CCTV Icon Badge & Indicator Line */}
@@ -65,15 +79,33 @@ export default function CaseSturdiesCard({ study, index = 0, IconComponent }: Ca
             </div>
 
             {/* Card Text Content with top padding so floating icon does not overlap text */}
-            <div className="pt-8 p-4 space-y-2 lg:space-y-3 flex-1 flex flex-col justify-between">
+            <div className="pt-8 p-4 space-y-3 flex-1 flex flex-col justify-between">
                 <div className="space-y-2">
                     <h3 className="text-2xl font-bold text-neutral-900 transition-colors duration-300 group-hover:text-[#84cc16]">
-                        {study.title}
+                        {study.slug ? (
+                            <Link href={`/case-studies/${study.slug}`}>
+                                {study.title}
+                            </Link>
+                        ) : (
+                            study.title
+                        )}
                     </h3>
                     <p className="text-sm sm:text-base text-neutral-600 leading-relaxed">
                         {study.description}
                     </p>
                 </div>
+
+                {study.slug && (
+                    <div className="pt-2">
+                        <Link
+                            href={`/case-studies/${study.slug}`}
+                            className="inline-flex items-center gap-2 text-sm font-semibold text-[#65a30d] hover:text-[#4d7c0f] group/link transition-colors"
+                        >
+                            <span>Read Case Study</span>
+                            <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover/link:translate-x-1" />
+                        </Link>
+                    </div>
+                )}
             </div>
         </motion.div>
     );

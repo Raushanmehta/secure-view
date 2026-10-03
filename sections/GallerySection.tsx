@@ -130,7 +130,7 @@ export default function GallerySection({ data }: GallerySectionProps = {}) {
                                 </span>
                             </motion.div>
 
-                            <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight">
+                            <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-wide">
                                 {videoSection?.titlePart1 || "Watch Our Work"} <br />
                                 <span className="text-[#84cc16]">
                                     {videoSection?.titleHighlight || "in Action"}

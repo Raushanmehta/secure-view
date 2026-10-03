@@ -35,6 +35,7 @@ export default function AboutSection({ data, className }: AboutSectionProps = {}
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.1 }}
                         className="lg:col-span-7 space-y-4">
+
                         {/* Top Subtitle Badge */}
                         {badge && (
                             <motion.div variants={fadeInLeft} className="inline-flex items-center gap-3">

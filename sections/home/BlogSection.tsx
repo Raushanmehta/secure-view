@@ -61,7 +61,7 @@ export default function BlogSection({ data, className }: BlogSectionProps = {}) 
                         whileInView="visible"
                         viewport={{ once: true, amount: 0.05 }}
                         className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {blogPosts.map((post, index) => (
+                        {blogPosts.slice(0, 3).map((post, index) => (
                             <BlogCard
                                 key={post.title + index}
                                 post={post}

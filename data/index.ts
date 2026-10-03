@@ -18,6 +18,7 @@ export interface SectionProps<T = unknown> {
 
 // ── Strongly Typed Section Variant Data Models ──
 export type SecureViewNavbarData = SecureViewSections["navbar"]["variants"]["SecureViewNavbar1"];
+export type SecureViewNavItemsData = SecureViewNavbarData["navItems"];
 export type SecureViewFooterData = SecureViewSections["footer"]["variants"]["SecureViewFooter1"];
 export type SecureViewHeroData = SecureViewSections["hero"]["variants"]["SecureViewHero1"];
 export type SecureViewAboutData = SecureViewSections["about"]["variants"]["SecureViewAbout1"];
@@ -33,16 +34,25 @@ export type SecureViewInstallationProcessData = SecureViewSections["installation
 export type SecureViewGalleryData = SecureViewSections["gallery"]["variants"]["SecureViewGallery1"];
 export type SecureViewBrandsData = SecureViewSections["brands"]["variants"]["SecureViewBrands1"];
 export type SecureViewPricingData = SecureViewSections["pricing"]["variants"]["SecureViewPricing1"];
-export type SecureViewContactData = any;
-export type SecureViewGetAQuoteData = any;
+export type SecureViewContactData = SecureViewSections["contact"]["variants"]["SecureViewContact1"];
+export type SecureViewGetAQuoteData = SecureViewSections["getAQuote"]["variants"]["SecureViewGetAQuote1"];
+export type SecureViewFaqData = SecureViewSections["faq"]["variants"]["SecureViewFaq1"];
+export type SecureViewLegalData = SecureViewSections["legal"];
+export type SecureViewNotFoundData = SecureViewSections["notFound"]["variants"]["SecureViewNotFound1"];
+
+// AMC Maintenance Section Types
+export type SecureViewAmcData = SecureViewSections["amcMaintenance"]["variants"]["SecureViewAmc1"];
+export type SecureViewOurAmcData = SecureViewSections["amcMaintenance"]["variants"]["SecureViewOurAmc1"];
+export type SecureViewAmcEnquiryData = SecureViewSections["amcMaintenance"]["variants"]["SecureViewEnquiry1"];
+export type SecureViewAmcProcessData = SecureViewSections["amcMaintenance"]["variants"]["SecureViewProcessAmc1"];
 
 // ── Inferred Sub-item Data Models ──
-export type NavItem = SecureViewNavbarData["navItems"][number];
+export type NavItem = SecureViewNavItemsData[number];
 export type NavLink = NavItem;
 export type HeroBadge = SecureViewHeroData["badges"][number];
 export type AboutFeature = SecureViewAboutData["features"][number];
 export type AboutBulletPoint = SecureViewAboutData["bulletPoints"][number];
-export type ServiceItem = any;
+export type ServiceItem = SecureViewServicesData["servicesList"][number];
 export type CaseStudyItem = SecureViewCaseStudiesData["caseStudies"][number];
 export type TeamMember = SecureViewTeamData["teamMembers"][number];
 export type BlogPost = SecureViewBlogData["blogPosts"][number];
@@ -51,19 +61,8 @@ export type TestimonialItem = SecureViewTestimonialData["testimonials"][number];
 export type GalleryImageItem = SecureViewGalleryData["galleryImages"][number];
 export type BrandItem = SecureViewBrandsData["brandsList"][number];
 export type PricingPlanItem = SecureViewPricingData["plans"][number];
-export type ContactMethodItem = {
-  id: string;
-  title: string;
-  description: string;
-  icon: string;
-  iconBgColor: string;
-  iconBorderColor: string;
-  iconColor: string;
-  linkText: string;
-  linkHref: string;
-  linkColor: string;
-  linkHoverColor: string;
-};
+export type PolicyPageData = SecureViewLegalData["privacyPolicy"];
+export type PolicySectionItem = PolicyPageData["sections"][number];
 
 // ── Short Aliases ──
 export type NavbarData = SecureViewNavbarData;
@@ -84,57 +83,34 @@ export type BrandsData = SecureViewBrandsData;
 export type PricingData = SecureViewPricingData;
 export type ContactData = SecureViewContactData;
 export type GetAQuoteData = SecureViewGetAQuoteData;
+export type FaqData = SecureViewFaqData;
+export type LegalData = SecureViewLegalData;
+export type NotFoundData = SecureViewNotFoundData;
 
 // ── Canonical Mapped Site Data Object ──
 const sec = siteData.SecureView.sections;
 
-const defaultContact = {
-  badge: "CONTACT US",
-  titlePart1: "Get in Touch",
-  titleHighlight: "with Us",
-  contactDetails: [
-    {
-      icon: "Phone",
-      title: "Call Us",
-      value: "+1 (800) 732-8731",
-      subtitle: "Mon - Sat: 9:00 AM - 7:00 PM"
-    },
-    {
-      icon: "Mail",
-      title: "Email Us",
-      value: "support@secureview.com",
-      subtitle: "Direct response within 2 hours"
-    },
-    {
-      icon: "MapPin",
-      title: "Visit Our Experience Center",
-      value: "1200 Security Boulevard, Suite 400, New York, NY 10001, USA"
-    }
-  ],
-  formTitlePart1: "Send Us a",
-  formTitleHighlight: "Message",
-  formDescription: "Complete this quick inquiry form and our certified surveillance engineers will get back to you promptly.",
-  formButtonText: "Send Message",
-  services: [
-    "CCTV Installation & Setup",
-    "24/7 Remote Monitoring",
-    "Access Control & Enterprise Security",
-    "Maintenance & AMC Support",
-    "Smart AI & Cloud Surveillance",
-    "Other Security Inquiry"
-  ],
-  mapIframeSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763973046!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+const servicesVariant = sec.services.variants.SecureViewServices1;
+const servicesMapped = {
+  ...servicesVariant,
+  services: servicesVariant.servicesList,
+  servicesList: servicesVariant.servicesList,
+};
+
+// Legal mapping with case-insensitive / shortcut compatibility (disclaimer vs Disclaimer)
+const legalMapped = {
+  ...sec.legal,
+  disclaimer: sec.legal.Disclaimer,
 };
 
 const siteMap = {
   navbar: sec.navbar.variants.SecureViewNavbar1,
+  navItems: sec.navbar.variants.SecureViewNavbar1.navItems,
   footer: sec.footer.variants.SecureViewFooter1,
+
   hero: sec.hero.variants.SecureViewHero1,
   about: sec.about.variants.SecureViewAbout1,
-  services: {
-    ...sec.services.variants.SecureViewServices1,
-    servicesList: (sec.services.variants.SecureViewServices1 as any).servicesList || (sec.services.variants.SecureViewServices1 as any).services || [],
-  },
+  services: servicesMapped,
   caseStudies: sec.caseStudies.variants.SecureViewCaseStudies1,
   team: sec.team.variants.SecureViewTeam1,
   blog: sec.blog.variants.SecureViewBlog1,
@@ -144,54 +120,37 @@ const siteMap = {
   testimonial: sec.testimonial.variants.SecureViewTestimonial1,
   installationProcess: sec.installationProcess.variants.SecureViewInstallationProcess1,
   gallery: sec.gallery.variants.SecureViewGallery1,
-  brands: (sec as any)?.brands?.variants?.SecureViewBrands1 || {
-    badge: "Brand We Work With",
-    titlePart1: "Trusted Security",
-    titleHighlight: "Brands",
-    description: "We partner with leading CCTV and security brands to deliver reliable, high-performance solutions for your safety.",
-    brandsList: [],
-  },
-  pricing: (sec as any)?.pricing?.variants?.SecureViewPricing1 || {
-    badge: "PRICING PLANS",
-    titlePart1: "Simple Plans for Your",
-    titleHighlight: "Security Needs",
-    description: "Choose the right CCTV solution for your home or business. Transparent pricing, no hidden costs.",
-    plans: [],
-  },
-  contact: (sec as any)?.contact?.variants?.SecureViewContact1 || defaultContact,
-  getAQuote: (sec as any)?.getAQuote?.variants?.SecureViewGetAQuote1,
+  brands: sec.brands.variants.SecureViewBrands1,
+  pricing: sec.pricing.variants.SecureViewPricing1,
+  contact: sec.contact.variants.SecureViewContact1,
+  getAQuote: sec.getAQuote.variants.SecureViewGetAQuote1,
+  faq: sec.faq.variants.SecureViewFaq1,
+  legal: legalMapped,
+  privacyPolicy: sec.legal.privacyPolicy,
+  termsAndConditions: sec.legal.termsAndConditions,
+  disclaimer: sec.legal.Disclaimer,
+  warrantyPolicy: sec.legal.warrantyPolicy,
+  notFound: sec.notFound.variants.SecureViewNotFound1,
 
-  // Compatibility section shortcuts
-  navLinks: sec.navbar.variants.SecureViewNavbar1.navItems,
-  heroData: sec.hero.variants.SecureViewHero1,
-  aboutData: sec.about.variants.SecureViewAbout1,
-  servicesData: sec.services.variants.SecureViewServices1,
-  caseStudiesData: sec.caseStudies.variants.SecureViewCaseStudies1,
-  teamData: sec.team.variants.SecureViewTeam1,
-  blogData: sec.blog.variants.SecureViewBlog1,
-  footerData: sec.footer.variants.SecureViewFooter1,
-  whyChooseUsData: sec.whyChooseUs.variants.SecureViewWhyChooseUs1,
-  ctaData: sec.cta.variants.SecureViewCta1,
-  pageTopSectionData: sec.pageTopSection.variants.SecureViewPageTopSection1,
-  testimonialData: sec.testimonial.variants.SecureViewTestimonial1,
-  installationProcessData: sec.installationProcess.variants.SecureViewInstallationProcess1,
-  galleryData: sec.gallery.variants.SecureViewGallery1,
-  brandsData: (sec as any)?.brands?.variants?.SecureViewBrands1 || {
-    badge: "Brand We Work With",
-    titlePart1: "Trusted Security",
-    titleHighlight: "Brands",
-    description: "We partner with leading CCTV and security brands to deliver reliable, high-performance solutions for your safety.",
-    brandsList: [],
+  // AMC Maintenance Sections
+  amcMaintenance: sec.amcMaintenance.variants,
+  amcData: sec.amcMaintenance.variants.SecureViewAmc1,
+  ourAmcData: sec.amcMaintenance.variants.SecureViewOurAmc1,
+  amcEnquiryData: sec.amcMaintenance.variants.SecureViewEnquiry1,
+  amcProcessData: sec.amcMaintenance.variants.SecureViewProcessAmc1,
+
+  // Compatibility object so existing components importing `site.home.*` don't break
+  home: {
+    hero: sec.hero.variants.SecureViewHero1,
+    about: sec.about.variants.SecureViewAbout1,
+    services: servicesMapped,
+    caseStudies: sec.caseStudies.variants.SecureViewCaseStudies1,
+    team: sec.team.variants.SecureViewTeam1,
+    blog: sec.blog.variants.SecureViewBlog1,
+    whyChooseUs: sec.whyChooseUs.variants.SecureViewWhyChooseUs1,
+    cta: sec.cta.variants.SecureViewCta1,
+    testimonial: sec.testimonial.variants.SecureViewTestimonial1,
   },
-  pricingData: (sec as any)?.pricing?.variants?.SecureViewPricing1 || {
-    badge: "PRICING PLANS",
-    titlePart1: "Simple Plans for Your",
-    titleHighlight: "Security Needs",
-    description: "Choose the right CCTV solution for your home or business. Transparent pricing, no hidden costs.",
-    plans: [],
-  },
-  contactData: (sec as any)?.contact?.variants?.SecureViewContact1 || defaultContact,
-  getAQuoteData: (sec as any)?.getAQuote?.variants?.SecureViewGetAQuote1,
 
   // Root Tree
   SecureView: siteData.SecureView,
@@ -199,4 +158,4 @@ const siteMap = {
 
 export type SiteData = typeof siteMap;
 export const site = siteMap;
-export default Object.assign(siteMap, siteData);
+export default site;

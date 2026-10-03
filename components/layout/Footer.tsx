@@ -24,8 +24,9 @@ export default function Footer({ data, className }: FooterProps = {}) {
         quickLinks,
         servicesLinks,
         otherPagesLinks,
+        legalLinks,
         bottomBar,
-    } = footer || {};
+    } = (footer || {}) as any;
 
     return (
         <footer className={`w-full bg-black text-neutral-400 pt-10 lg:pt-16 pb-8 border-t border-neutral-900 relative overflow-hidden ${className || ""}`}>
@@ -91,16 +92,16 @@ export default function Footer({ data, className }: FooterProps = {}) {
 
                 {/* Main Footer Links & Info Grid with Staggered Container Animation */}
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-12 pb-4 lg:pb-10 border-b border-neutral-900"
+                    className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 lg:gap-8 pb-4 lg:pb-10 border-b border-neutral-900"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.05 }}
                 >
 
-                    {/* Brand Info & Socials (Spans 2 columns on lg) */}
+                    {/* Brand Info & Socials (Spans 2 columns on lg, 4 on md, 2 on sm) */}
                     {brand && (
-                        <motion.div variants={columnVariants} className="lg:col-span-2 space-y-4">
+                        <motion.div variants={columnVariants} className="sm:col-span-2 md:col-span-4 lg:col-span-2 space-y-4">
                             {brand.logo && (
                                 <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.3 }} className="inline-block w-fit">
                                     <Link href={brand.logo.href || "/"} className="flex items-center gap-3 group">
@@ -125,7 +126,7 @@ export default function Footer({ data, className }: FooterProps = {}) {
                             {/* Social Icons */}
                             {brand.socials && brand.socials.length > 0 && (
                                 <div className="flex items-center gap-3 pt-2">
-                                    {brand.socials.map((social, index) => (
+                                    {brand.socials.map((social: any, index: number) => (
                                         <motion.a
                                             key={index}
                                             href={social.href}
@@ -151,7 +152,7 @@ export default function Footer({ data, className }: FooterProps = {}) {
                                 <span className="absolute bottom-[-8px] left-0 w-8 h-[2px] bg-[#84cc16]" />
                             </h3>
                             <motion.ul variants={linkContainerVariants} className="space-y-3 text-sm mt-4 lg:mt-3">
-                                {quickLinks.links.map((item, idx) => (
+                                {quickLinks.links?.map((item: any, idx: number) => (
                                     <motion.li
                                         key={idx}
                                         variants={linkItemVariants}
@@ -178,7 +179,7 @@ export default function Footer({ data, className }: FooterProps = {}) {
                                 <span className="absolute bottom-[-8px] left-0 w-8 h-[2px] bg-[#84cc16]" />
                             </h3>
                             <motion.ul variants={linkContainerVariants} className="space-y-3 text-sm mt-4 lg:mt-3">
-                                {servicesLinks.links.map((service, idx) => (
+                                {servicesLinks.links?.map((service: any, idx: number) => (
                                     <motion.li
                                         key={idx}
                                         variants={linkItemVariants}
@@ -194,7 +195,7 @@ export default function Footer({ data, className }: FooterProps = {}) {
                         </motion.div>
                     )}
 
-                    {/* Other Pages */}
+                    {/* Explore More / Other Pages */}
                     {otherPagesLinks && (
                         <motion.div variants={columnVariants} className="space-y-4">
                             <h3 className="text-white font-semibold text-base relative inline-block">
@@ -202,7 +203,31 @@ export default function Footer({ data, className }: FooterProps = {}) {
                                 <span className="absolute bottom-[-8px] left-0 w-8 h-[2px] bg-[#84cc16]" />
                             </h3>
                             <motion.ul variants={linkContainerVariants} className="space-y-3 text-sm mt-4 lg:mt-3">
-                                {otherPagesLinks.links.map((page, idx) => (
+                                {otherPagesLinks.links?.map((page: any, idx: number) => (
+                                    <motion.li
+                                        key={idx}
+                                        variants={linkItemVariants}
+                                        whileHover={{ x: 5 }}
+                                        transition={{ duration: 0.2 }}
+                                    >
+                                        <Link href={page.href} className="hover:text-[#84cc16] transition-colors inline-block">
+                                            {page.name}
+                                        </Link>
+                                    </motion.li>
+                                ))}
+                            </motion.ul>
+                        </motion.div>
+                    )}
+
+                    {/* Legal & Policies */}
+                    {legalLinks && (
+                        <motion.div variants={columnVariants} className="space-y-4">
+                            <h3 className="text-white font-semibold text-base relative inline-block">
+                                {legalLinks.title}
+                                <span className="absolute bottom-[-8px] left-0 w-8 h-[2px] bg-[#84cc16]" />
+                            </h3>
+                            <motion.ul variants={linkContainerVariants} className="space-y-3 text-sm mt-4 lg:mt-3">
+                                {legalLinks.links?.map((page: any, idx: number) => (
                                     <motion.li
                                         key={idx}
                                         variants={linkItemVariants}
@@ -231,8 +256,8 @@ export default function Footer({ data, className }: FooterProps = {}) {
                     >
                         <p>{bottomBar.copyright}</p>
                         {bottomBar.links && bottomBar.links.length > 0 && (
-                            <div className="flex items-center gap-4">
-                                {bottomBar.links.map((link, idx) => (
+                            <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                                {bottomBar.links.map((link: any, idx: number) => (
                                     <React.Fragment key={link.href + idx}>
                                         <Link href={link.href} className="hover:text-neutral-300 transition-colors">
                                             {link.name}

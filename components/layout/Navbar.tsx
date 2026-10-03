@@ -9,7 +9,7 @@ import Image from "next/image";
 import { site, SecureViewNavbarData, SectionProps } from "@/data";
 import { renderIcon } from "@/utils/icons";
 
-export interface NavbarProps extends SectionProps<SecureViewNavbarData> {}
+export interface NavbarProps extends SectionProps<SecureViewNavbarData> { }
 
 export default function Navbar({ data, className }: NavbarProps = {}) {
     const navbar = data || site.navbar;
@@ -40,7 +40,7 @@ export default function Navbar({ data, className }: NavbarProps = {}) {
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
-            className={`sticky top-0 z-50 w-full bg-black/95 backdrop-blur-md border-b border-neutral-900 text-white ${className || ""}`}
+            className={`sticky top-0 z-50 w-full bg-black backdrop-blur-md border-b border-neutral-900 text-white ${className || ""}`}
         >
             <div className="max-w-[1400px] mx-auto px-4 h-16 sm:h-20 lg:h-20 flex items-center justify-between">
 
@@ -85,9 +85,8 @@ export default function Navbar({ data, className }: NavbarProps = {}) {
                                     <Link
                                         href={item.href}
                                         onClick={() => setActiveTab(item.name)}
-                                        className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-[#84cc16] ${
-                                            isActive ? "text-[#84cc16]" : "text-neutral-300"
-                                        }`}
+                                        className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-[#84cc16] ${isActive ? "text-[#84cc16]" : "text-neutral-300"
+                                            }`}
                                     >
                                         {item.name}
                                         {item.hasDropdown && (
@@ -120,9 +119,9 @@ export default function Navbar({ data, className }: NavbarProps = {}) {
                                                 animate={{ opacity: 1, y: 0, scale: 1 }}
                                                 exit={{ opacity: 0, y: 6, scale: 0.97 }}
                                                 transition={{ duration: 0.18, ease: "easeOut" }}
-                                                className="absolute top-full left-0 pt-2 z-50 min-w-[240px]"
+                                                className={`absolute top-full left-0 pt-2 z-50 mt-3 ${item.dropdownItems.length > 6 ? "min-w-[520px]" : "min-w-[240px]"}`}
                                             >
-                                                <div className="bg-neutral-950/95 backdrop-blur-xl border border-neutral-800 rounded-xl p-1.5 shadow-2xl shadow-black/80">
+                                                <div className={`bg-black backdrop-blur-xl p-2 shadow-2xl shadow-black/80 ${item.dropdownItems.length > 6 ? "grid grid-cols-2 gap-1" : ""}`}>
                                                     {item.dropdownItems.map((service) => (
                                                         <motion.div
                                                             key={service.href}
@@ -135,7 +134,7 @@ export default function Navbar({ data, className }: NavbarProps = {}) {
                                                                     setServicesDropdownOpen(false);
                                                                     setActiveTab(item.name);
                                                                 }}
-                                                                className="block px-3.5 py-2.5 rounded-lg text-sm text-neutral-300 hover:text-[#84cc16] hover:bg-neutral-900 transition-colors"
+                                                                className="block px-3.5 py-2.5 rounded-lg text-sm text-neutral-300 hover:text-[#84cc16] hover:bg-neutral-900 transition-colors whitespace-nowrap"
                                                             >
                                                                 {service.name}
                                                             </Link>
@@ -247,11 +246,10 @@ export default function Navbar({ data, className }: NavbarProps = {}) {
                                             className="space-y-1"
                                         >
                                             <div
-                                                className={`flex items-center justify-between px-3 py-2 rounded-lg text-base font-medium transition-colors ${
-                                                    isActive
-                                                        ? "bg-neutral-900 text-[#84cc16]"
-                                                        : "text-neutral-300 hover:bg-neutral-900/50 hover:text-white"
-                                                }`}
+                                                className={`flex items-center justify-between px-3 py-2 rounded-lg text-base font-medium transition-colors ${isActive
+                                                    ? "bg-neutral-900 text-[#84cc16]"
+                                                    : "text-neutral-300 hover:bg-neutral-900/50 hover:text-white"
+                                                    }`}
                                             >
                                                 <Link
                                                     href={item.href}
@@ -327,11 +325,10 @@ export default function Navbar({ data, className }: NavbarProps = {}) {
                                                 setActiveTab(item.name);
                                                 setMobileMenuOpen(false);
                                             }}
-                                            className={`block px-3 py-2 rounded-lg text-base font-medium transition-colors ${
-                                                isActive
-                                                    ? "bg-neutral-900 text-[#84cc16]"
-                                                    : "text-neutral-300 hover:bg-neutral-900/50 hover:text-white"
-                                            }`}
+                                            className={`block px-3 py-2 rounded-lg text-base font-medium transition-colors ${isActive
+                                                ? "bg-neutral-900 text-[#84cc16]"
+                                                : "text-neutral-300 hover:bg-neutral-900/50 hover:text-white"
+                                                }`}
                                         >
                                             {item.name}
                                         </Link>

@@ -94,8 +94,24 @@
                     "whyChooseUs": {
                         "components": [
                             {
+                                "key": "pageTopSection",
+                                "component": "SecureViewPageTopSection1"
+                            },
+                            {
                                 "key": "whyChooseUs",
                                 "component": "SecureViewWhyChooseUs1"
+                            },
+                            {
+                                "key": "testimonial",
+                                "component": "SecureViewTestimonial1"
+                            }
+                        ]
+                    },
+                    "testimonials": {
+                        "components": [
+                            {
+                                "key": "pageTopSection",
+                                "component": "SecureViewPageTopSection1"
                             },
                             {
                                 "key": "testimonial",
@@ -136,6 +152,118 @@
                             {
                                 "key": "pricing",
                                 "component": "SecureViewPricing1"
+                            }
+                        ]
+                    },
+                    "contact-us": {
+                        "components": [
+                            {
+                                "key": "pageTopSection",
+                                "component": "SecureViewPageTopSection1"
+                            },
+                            {
+                                "key": "contact",
+                                "component": "SecureViewContact1"
+                            }
+                        ]
+                    },
+                    "get-a-quote": {
+                        "components": [
+                            {
+                                "key": "pageTopSection",
+                                "component": "SecureViewPageTopSection1"
+                            },
+                            {
+                                "key": "getAQuote",
+                                "component": "SecureViewGetAQuote1"
+                            }
+                        ]
+                    },
+                    "faqs": {
+                        "components": [
+                            {
+                                "key": "pageTopSection",
+                                "component": "SecureViewPageTopSection1"
+                            },
+                            {
+                                "key": "faq",
+                                "component": "SecureViewFaq1"
+                            }
+                        ]
+                    },
+                    "installation-process": {
+                        "components": [
+                            {
+                                "key": "pageTopSection",
+                                "component": "SecureViewPageTopSection1"
+                            },
+                            {
+                                "key": "installationProcess",
+                                "component": "SecureViewInstallationProcess1"
+                            }
+                        ]
+                    },
+                    "amc-maintenance": {
+                        "components": [
+                            {
+                                "key": "pageTopSection",
+                                "component": "SecureViewPageTopSection1"
+                            },
+                            {
+                                "key": "amcMaintenance",
+                                "component": "SecureViewAmc1"
+                            },
+                            {
+                                "key": "amcMaintenance",
+                                "component": "SecureViewOurAmc1"
+                            },
+                            {
+                                "key": "amcMaintenance",
+                                "component": "SecureViewEnquiry1"
+                            },
+                            {
+                                "key": "amcMaintenance",
+                                "component": "SecureViewProcessAmc1"
+                            }
+                        ]
+                    },
+                    "privacy-policy": {
+                        "components": [
+                            {
+                                "key": "legal",
+                                "component": "privacyPolicy"
+                            }
+                        ]
+                    },
+                    "terms-conditions": {
+                        "components": [
+                            {
+                                "key": "legal",
+                                "component": "termsAndConditions"
+                            }
+                        ]
+                    },
+                    "disclaimer": {
+                        "components": [
+                            {
+                                "key": "legal",
+                                "component": "Disclaimer"
+                            }
+                        ]
+                    },
+                    "warranty-policy": {
+                        "components": [
+                            {
+                                "key": "legal",
+                                "component": "warrantyPolicy"
+                            }
+                        ]
+                    },
+                    "not-found": {
+                        "components": [
+                            {
+                                "key": "notFound",
+                                "component": "SecureViewNotFound1"
                             }
                         ]
                     }
@@ -180,6 +308,38 @@
                                     {
                                         "name": "Maintain & Support",
                                         "href": "/services/maintenance-support"
+                                    },
+                                    {
+                                        "name": "Home Security Systems",
+                                        "href": "/services/home-security-systems"
+                                    },
+                                    {
+                                        "name": "Office Security Systems",
+                                        "href": "/services/office-security-systems"
+                                    },
+                                    {
+                                        "name": "Retail Security Solutions",
+                                        "href": "/services/retail-security-solutions"
+                                    },
+                                    {
+                                        "name": "Industrial Surveillance",
+                                        "href": "/services/industrial-surveillance"
+                                    },
+                                    {
+                                        "name": "Access Control Integration",
+                                        "href": "/services/access-control-integration"
+                                    },
+                                    {
+                                        "name": "Night Vision Solutions",
+                                        "href": "/services/night-vision-solutions"
+                                    },
+                                    {
+                                        "name": "Mobile Viewing",
+                                        "href": "/services/mobile-viewing"
+                                    },
+                                    {
+                                        "name": "System Upgrades",
+                                        "href": "/services/system-upgrades"
                                     }
                                 ]
                             },
@@ -192,8 +352,8 @@
                                 "href": "/case-studies"
                             },
                             {
-                                "name": "Pricing",
-                                "href": "/pricing"
+                                "name": "Blog",
+                                "href": "/blog"
                             },
                             {
                                 "name": "Contact Us",
@@ -268,16 +428,20 @@
                                     "href": "/about"
                                 },
                                 {
-                                    "name": "Our Services",
-                                    "href": "/services"
-                                },
-                                {
                                     "name": "Why Choose Us",
                                     "href": "/why-choose-us"
                                 },
                                 {
-                                    "name": "Case Studies",
-                                    "href": "/case-studies"
+                                    "name": "Installation Process",
+                                    "href": "/installation-process"
+                                },
+                                {
+                                    "name": "Trusted Brands",
+                                    "href": "/brands"
+                                },
+                                {
+                                    "name": "Client Testimonials",
+                                    "href": "/testimonials"
                                 },
                                 {
                                     "name": "Contact Us",
@@ -288,6 +452,10 @@
                         "servicesLinks": {
                             "title": "Our Services",
                             "links": [
+                                {
+                                    "name": "All Services Overview",
+                                    "href": "/services"
+                                },
                                 {
                                     "name": "CCTV Installation",
                                     "href": "/services/cctv-installation"
@@ -305,14 +473,22 @@
                                     "href": "/services/maintenance-support"
                                 },
                                 {
-                                    "name": "All Services Overview",
-                                    "href": "/services"
+                                    "name": "AMC Maintenance",
+                                    "href": "/amc-maintenance"
                                 }
                             ]
                         },
                         "otherPagesLinks": {
                             "title": "Explore More",
                             "links": [
+                                {
+                                    "name": "Case Studies",
+                                    "href": "/case-studies"
+                                },
+                                {
+                                    "name": "Latest Blog",
+                                    "href": "/blog"
+                                },
                                 {
                                     "name": "Pricing Plans",
                                     "href": "/pricing"
@@ -322,20 +498,33 @@
                                     "href": "/gallery"
                                 },
                                 {
-                                    "name": "Installation Process",
-                                    "href": "/installation-process"
+                                    "name": "FAQs",
+                                    "href": "/faqs"
                                 },
                                 {
-                                    "name": "Trusted Brands",
-                                    "href": "/brands"
-                                },
-                                {
-                                    "name": "Client Testimonials",
-                                    "href": "/testimonials"
-                                },
-                                {
-                                    "name": "Get a Quote",
+                                    "name": "Get a Free Quote",
                                     "href": "/get-a-quote"
+                                }
+                            ]
+                        },
+                        "legalLinks": {
+                            "title": "Legal & Policies",
+                            "links": [
+                                {
+                                    "name": "Privacy Policy",
+                                    "href": "/privacy-policy"
+                                },
+                                {
+                                    "name": "Terms & Conditions",
+                                    "href": "/terms-conditions"
+                                },
+                                {
+                                    "name": "Disclaimer",
+                                    "href": "/disclaimer"
+                                },
+                                {
+                                    "name": "Warranty Policy",
+                                    "href": "/warranty-policy"
                                 }
                             ]
                         },
@@ -343,20 +532,20 @@
                             "copyright": "Copyright © 2026 SecureView. All Rights Reserved. Powered by Lestow",
                             "links": [
                                 {
-                                    "name": "Home",
-                                    "href": "/"
+                                    "name": "Privacy Policy",
+                                    "href": "/privacy-policy"
                                 },
                                 {
-                                    "name": "Pricing",
-                                    "href": "/pricing"
+                                    "name": "Terms & Conditions",
+                                    "href": "/terms-conditions"
                                 },
                                 {
-                                    "name": "Services",
-                                    "href": "/services"
+                                    "name": "Disclaimer",
+                                    "href": "/disclaimer"
                                 },
                                 {
-                                    "name": "Contact Us",
-                                    "href": "/contact-us"
+                                    "name": "Warranty Policy",
+                                    "href": "/warranty-policy"
                                 }
                             ]
                         }
@@ -729,6 +918,526 @@
                                         }
                                     ]
                                 }
+                            },
+                            {
+                                "title": "Home Security Systems",
+                                "slug": "home-security-systems",
+                                "description": "Comprehensive residential security setups with smart intrusion detection, wireless sensors, and instant mobile alerts for families.",
+                                "icon": "Home",
+                                "image": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Smart home security camera and doorbell installation",
+                                "overview": {
+                                    "title": "Complete Protection For",
+                                    "titleHighlight": "Your Home & Family",
+                                    "description": "Our residential security systems blend unobtrusive wireless sensors, HD perimeter cameras, and smart doorbells to protect entry points, driveways, and backyards around the clock."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Smart Perimeter & Doorbell Cameras",
+                                        "description": "Two-way audio, instant visitor alerts, and motion-activated floodlights that deter intruders before they approach.",
+                                        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Video",
+                                        "points": [
+                                            "Two-way crystal audio communication",
+                                            "Smart pet vs human motion AI detection",
+                                            "Infrared night vision up to 30 meters"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Wireless Intrusion Sensors & Sirens",
+                                        "description": "Tamper-evident door, window, and glass-break sensors linked directly to a loud wireless indoor siren and your phone.",
+                                        "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "ShieldCheck",
+                                        "points": [
+                                            "Ultra-long battery life wireless sensors",
+                                            "Instant push alerts to multiple family phones",
+                                            "Silent distress alert and panic triggers"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Home Security",
+                                    "description": "Protect loved ones and valuable property with smart, easy-to-use residential systems backed by quick support.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Family-Friendly",
+                                            "titleLine2": "Mobile Control",
+                                            "icon": "Smartphone"
+                                        },
+                                        {
+                                            "titleLine1": "Zero False",
+                                            "titleLine2": "Alarm AI",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Clean Wireless",
+                                            "titleLine2": "Installation",
+                                            "icon": "Wrench"
+                                        },
+                                        {
+                                            "titleLine1": "Lifetime Phone",
+                                            "titleLine2": "Tech Support",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Office Security Systems",
+                                "slug": "office-security-systems",
+                                "description": "Tailored corporate security solutions integrating IP cameras, server room monitoring, and employee access controls for workplace safety.",
+                                "icon": "Building2",
+                                "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Modern corporate office security system setup",
+                                "overview": {
+                                    "title": "Safeguard Workplace Assets &",
+                                    "titleHighlight": "Productive Teams",
+                                    "description": "From entrance turnstiles to confidential server rooms and executive floors, we deliver structured office surveillance that ensures regulatory compliance and complete visibility."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "High-Density Workplace IP Cameras",
+                                        "description": "Wide dynamic range (WDR) dome cameras that eliminate glare from glass partitions and fluorescent office lighting.",
+                                        "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Video",
+                                        "points": [
+                                            "Discreet recessed ceiling dome mounting",
+                                            "Crystal-clear wide-angle meeting room view",
+                                            "Anti-tamper & camera disconnection alert"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Server Room & Critical Area Monitoring",
+                                        "description": "Environmental and surveillance integration for IT rack rooms with thermal sensing, access logging, and intrusion detection.",
+                                        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Database",
+                                        "points": [
+                                            "Timestamped entry & exit video logs",
+                                            "Temperature & humidity threshold alerts",
+                                            "Encrypted audit-ready surveillance storage"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Office Solutions",
+                                    "description": "Protect intellectual property, physical assets, and employees with reliable commercial-grade infrastructure.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Enterprise Role",
+                                            "titleLine2": "Permissions",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Discreet Aesthetic",
+                                            "titleLine2": "Installation",
+                                            "icon": "CheckCircle2"
+                                        },
+                                        {
+                                            "titleLine1": "Centralized Multi-",
+                                            "titleLine2": "Floor View",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Compliance & Audit",
+                                            "titleLine2": "Readiness",
+                                            "icon": "ShieldCheck"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Retail Security Solutions",
+                                "slug": "retail-security-solutions",
+                                "description": "Smart retail surveillance designed to prevent shoplifting, minimize shrinkage, optimize cash counters, and track footfall analytics.",
+                                "icon": "ShoppingBag",
+                                "image": "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Retail store surveillance camera setup",
+                                "overview": {
+                                    "title": "Prevent Inventory Loss &",
+                                    "titleHighlight": "Boost Store Profits",
+                                    "description": "Retail stores require precise coverage over aisles, cash counters, storage rooms, and loading docks. Our systems combine HD surveillance with POS integration and AI heatmaps."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "POS Cash Register Synchronization",
+                                        "description": "Overlay transaction receipts directly onto recorded video streams to eliminate cash drawer discrepancies and phantom refunds.",
+                                        "image": "https://images.unsplash.com/photo-1556742049-0a67e557224d?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Monitor",
+                                        "points": [
+                                            "Real-time text-on-video receipt overlay",
+                                            "Immediate alert on no-sale cash drawer opens",
+                                            "Search recordings by barcode or receipt ID"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Aisle Coverage & Shoplifting Prevention",
+                                        "description": "360-degree fisheye cameras and PTZ tracking cameras that eliminate blind spots across merchandise displays.",
+                                        "image": "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Video",
+                                        "points": [
+                                            "Full 360-degree panoramic dewarping",
+                                            "Customer dwell time and queue monitoring",
+                                            "High-resolution facial capture at exits"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Retail Solutions",
+                                    "description": "Cut inventory shrinkage, streamline dispute resolution, and gain valuable customer behavior intelligence.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Drastic Loss &",
+                                            "titleLine2": "Theft Reduction",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "POS Linked Video",
+                                            "titleLine2": "Audit Trail",
+                                            "icon": "Database"
+                                        },
+                                        {
+                                            "titleLine1": "Customer Footfall",
+                                            "titleLine2": "Heatmapping",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Multi-Store Cloud",
+                                            "titleLine2": "Management",
+                                            "icon": "Monitor"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Industrial Surveillance",
+                                "slug": "industrial-surveillance",
+                                "description": "Heavy-duty surveillance engineered for factories, warehouses, logistics yards, and manufacturing plants under harsh environments.",
+                                "icon": "Factory",
+                                "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Industrial surveillance system in warehouse and plant",
+                                "overview": {
+                                    "title": "Rugged Surveillance For",
+                                    "titleHighlight": "Demanding Facilities",
+                                    "description": "We engineer specialized industrial CCTV systems built with explosion-proof, anti-corrosion, and dust-resistant housings to monitor expansive perimeters, assembly lines, and hazardous zones."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Long-Range Thermal & Perimeter Detection",
+                                        "description": "Radar-assisted and thermal sensors capable of detecting human and vehicle intrusions through fog, dust, and pitch darkness.",
+                                        "image": "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "ShieldCheck",
+                                        "points": [
+                                            "Up to 1000m perimeter intrusion sensing",
+                                            "Thermal heat spot and fire hazard alerts",
+                                            "Line-crossing and fence-tamper alerts"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Harsh Environment Rated Enclosures",
+                                        "description": "Stainless steel IP68/IK10 vandal-proof housings engineered to withstand chemical fumes, heavy vibrations, and power surges.",
+                                        "image": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Wrench",
+                                        "points": [
+                                            "Explosion-proof ATEX rated options",
+                                            "Industrial fiber-optic backbone transmission",
+                                            "Heavy-duty surge and lightning arrestors"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Industrial Systems",
+                                    "description": "Ensure occupational safety compliance, prevent equipment theft, and monitor critical production workflows 24/7.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Zero Blind-Spot",
+                                            "titleLine2": "Warehouse Views",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Explosion & Dust",
+                                            "titleLine2": "Resistant Build",
+                                            "icon": "Wrench"
+                                        },
+                                        {
+                                            "titleLine1": "Occupational Safety",
+                                            "titleLine2": "Compliance",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Fiber-Optic Long",
+                                            "titleLine2": "Range Backbone",
+                                            "icon": "Database"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Access Control Integration",
+                                "slug": "access-control-integration",
+                                "description": "Unified security linking biometric fingerprint/facial recognition readers, RFID keycards, and automatic turnstiles directly with CCTV.",
+                                "icon": "Lock",
+                                "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Biometric access control system and card reader integration",
+                                "overview": {
+                                    "title": "Unified Electronic Access &",
+                                    "titleHighlight": "Video Verification",
+                                    "description": "Merge physical door locks, smart turnstiles, and boom barriers with your surveillance cameras so every badge swipe instantly records a video snapshot of the entrant."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "AI Facial Recognition & Biometric Entry",
+                                        "description": "Touchless biometric authentication with anti-spoofing liveness detection and rapid 0.2-second door release.",
+                                        "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Users",
+                                        "points": [
+                                            "Contactless 0.2-second facial scan",
+                                            "Anti-spoofing dual-lens liveness verification",
+                                            "Encrypted local biometric database"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Automated Turnstiles & Barrier Gates",
+                                        "description": "High-throughput optical swing turnstiles and automatic vehicle barrier gates integrated with ANPR license plate cameras.",
+                                        "image": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Lock",
+                                        "points": [
+                                            "Automatic number plate recognition (ANPR)",
+                                            "Visitor badge issuance and barcode scanning",
+                                            "Emergency fire alarm automatic fail-safe release"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Access Systems",
+                                    "description": "Eliminate unauthorized tailgating, track contractor hours accurately, and lock down facilities with a single click.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Anti-Tailgating",
+                                            "titleLine2": "Video Triggers",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Instant Digital",
+                                            "titleLine2": "Visitor Badges",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "One-Touch Emergency",
+                                            "titleLine2": "Lockdown",
+                                            "icon": "Lock"
+                                        },
+                                        {
+                                            "titleLine1": "Automated Time &",
+                                            "titleLine2": "Attendance Sync",
+                                            "icon": "CheckCircle2"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Night Vision Solutions",
+                                "slug": "night-vision-solutions",
+                                "description": "Cutting-edge low-light and full-color night vision cameras that turn total pitch darkness into daytime-clarity video.",
+                                "icon": "Eye",
+                                "image": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "High definition night vision security camera in darkness",
+                                "overview": {
+                                    "title": "See In Total Darkness With",
+                                    "titleHighlight": "Color Night Vision",
+                                    "description": "Most security incidents occur after sunset. We deploy ultra-low-light ColorVu, DarkFighter, and Starlight camera sensors that capture full color video even in 0.0005 Lux pitch darkness."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Full-Color 24/7 Low-Light Imaging",
+                                        "description": "F1.0 super-aperture lenses and warm supplemental LEDs that maintain vivid color reproduction without blinding infrared glare.",
+                                        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Eye",
+                                        "points": [
+                                            "True color rendition in near-zero ambient light",
+                                            "Accurate clothing and vehicle color identification",
+                                            "Elimination of foggy infrared reflection issues"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Long-Range Smart Matrix IR Illumination",
+                                        "description": "Intelligent infrared matrix LEDs that automatically adjust intensity as subjects approach to prevent white-out overexposure.",
+                                        "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Video",
+                                        "points": [
+                                            "Smart IR up to 80 meters without hot-spots",
+                                            "Adaptive anti-reflection glass technology",
+                                            "DNR 3D digital noise reduction filter"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Night Vision",
+                                    "description": "Deliver actionable, court-admissible forensic evidence when criminal activity occurs in unlit or dimly lit spaces.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "24/7 Full Color",
+                                            "titleLine2": "Video Capture",
+                                            "icon": "Eye"
+                                        },
+                                        {
+                                            "titleLine1": "Anti-Glare Smart",
+                                            "titleLine2": "IR Technology",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "True Vehicle Plate",
+                                            "titleLine2": "Capture at Night",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Active Strobe &",
+                                            "titleLine2": "Siren Deterrence",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Mobile Viewing",
+                                "slug": "mobile-viewing",
+                                "description": "High-speed encrypted smartphone & tablet applications allowing you to watch live feeds, control PTZ cameras, and review playback anywhere.",
+                                "icon": "Smartphone",
+                                "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Person viewing security camera feed on mobile smartphone",
+                                "overview": {
+                                    "title": "Total Video Control In",
+                                    "titleHighlight": "The Palm Of Your Hand",
+                                    "description": "Never wonder what is happening at your property. Our native iOS and Android applications let you monitor live multi-camera grids, receive instant push notifications, and share video clips in seconds."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Ultra-Low Latency Live HD Streaming",
+                                        "description": "Proprietary peer-to-peer cloud routing provides instant sub-second stream connections over 4G, 5G, and Wi-Fi networks.",
+                                        "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Smartphone",
+                                        "points": [
+                                            "Instant sub-second connection worldwide",
+                                            "Configurable multi-camera split screens (1, 4, 9, 16)",
+                                            "Two-way talkback with built-in noise cancellation"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Smart Push Alerts & Video Clip Export",
+                                        "description": "Receive actionable thumbnails on your lock screen and export trimmed MP4 clips directly to WhatsApp, email, or cloud storage.",
+                                        "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Monitor",
+                                        "points": [
+                                            "Rich push notifications with preview snapshots",
+                                            "One-click clip bookmarking and MP4 download",
+                                            "Multi-user role management for family and staff"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Mobile Solutions",
+                                    "description": "Stay effortlessly connected to home or business security without cumbersome software or port forwarding.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Native iOS &",
+                                            "titleLine2": "Android Apps",
+                                            "icon": "Smartphone"
+                                        },
+                                        {
+                                            "titleLine1": "End-to-End AES",
+                                            "titleLine2": "256 Encryption",
+                                            "icon": "Lock"
+                                        },
+                                        {
+                                            "titleLine1": "Instant Push Alert",
+                                            "titleLine2": "Notifications",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Zero Complex Port",
+                                            "titleLine2": "Forwarding",
+                                            "icon": "CheckCircle2"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "System Upgrades",
+                                "slug": "system-upgrades",
+                                "description": "Modernize legacy analog, coaxial, or low-resolution CCTV systems to crisp 4K IP digital surveillance using existing cabling.",
+                                "icon": "RefreshCw",
+                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Technician upgrading security DVR recorder and camera modules",
+                                "overview": {
+                                    "title": "Upgrade Legacy Cameras To",
+                                    "titleHighlight": "High-Definition 4K",
+                                    "description": "Don't let blurry footage compromise your security. We modernize outdated analog systems, upgrade aging DVRs to high-capacity AI NVRs, and swap low-resolution lenses with minimal disruption."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Coaxial-to-IP & High-Definition Over Coax",
+                                        "description": "Upgrade old blurry analog cameras to 5MP/8MP resolution while reusing your existing RG59 coaxial cables, saving thousands in rewiring costs.",
+                                        "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Wrench",
+                                        "points": [
+                                            "Full 4K resolution over existing coax wiring",
+                                            "Zero wall drilling or conduit replacement needed",
+                                            "Substantial cost reduction compared to full rewires"
+                                        ]
+                                    },
+                                    {
+                                        "title": "AI NVR & Storage Modernization",
+                                        "description": "Replace noisy, failing hard drives and old DVRs with intelligent NVRs featuring human/vehicle AI classification and smart search.",
+                                        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Database",
+                                        "points": [
+                                            "H.265+ video compression doubling recording days",
+                                            "Instant search through hours of footage in seconds",
+                                            "RAID redundancy preventing disk failure data loss"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "System Upgrades",
+                                    "description": "Get modern high-definition security and smart mobile viewing without the expense of replacing your entire cabling infrastructure.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Massive Visual",
+                                            "titleLine2": "Clarity Leap",
+                                            "icon": "Eye"
+                                        },
+                                        {
+                                            "titleLine1": "Reuse Existing",
+                                            "titleLine2": "Cables & Save",
+                                            "icon": "Wrench"
+                                        },
+                                        {
+                                            "titleLine1": "Smart AI Search &",
+                                            "titleLine2": "Classification",
+                                            "icon": "Database"
+                                        },
+                                        {
+                                            "titleLine1": "Full Warranty On",
+                                            "titleLine2": "All New Parts",
+                                            "icon": "ShieldCheck"
+                                        }
+                                    ]
+                                }
                             }
                         ],
                         "servicesList": [
@@ -992,6 +1701,526 @@
                                         }
                                     ]
                                 }
+                            },
+                            {
+                                "title": "Home Security Systems",
+                                "slug": "home-security-systems",
+                                "description": "Comprehensive residential security setups with smart intrusion detection, wireless sensors, and instant mobile alerts for families.",
+                                "icon": "Home",
+                                "image": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Smart home security camera and doorbell installation",
+                                "overview": {
+                                    "title": "Complete Protection For",
+                                    "titleHighlight": "Your Home & Family",
+                                    "description": "Our residential security systems blend unobtrusive wireless sensors, HD perimeter cameras, and smart doorbells to protect entry points, driveways, and backyards around the clock."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Smart Perimeter & Doorbell Cameras",
+                                        "description": "Two-way audio, instant visitor alerts, and motion-activated floodlights that deter intruders before they approach.",
+                                        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Video",
+                                        "points": [
+                                            "Two-way crystal audio communication",
+                                            "Smart pet vs human motion AI detection",
+                                            "Infrared night vision up to 30 meters"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Wireless Intrusion Sensors & Sirens",
+                                        "description": "Tamper-evident door, window, and glass-break sensors linked directly to a loud wireless indoor siren and your phone.",
+                                        "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "ShieldCheck",
+                                        "points": [
+                                            "Ultra-long battery life wireless sensors",
+                                            "Instant push alerts to multiple family phones",
+                                            "Silent distress alert and panic triggers"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Home Security",
+                                    "description": "Protect loved ones and valuable property with smart, easy-to-use residential systems backed by quick support.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Family-Friendly",
+                                            "titleLine2": "Mobile Control",
+                                            "icon": "Smartphone"
+                                        },
+                                        {
+                                            "titleLine1": "Zero False",
+                                            "titleLine2": "Alarm AI",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Clean Wireless",
+                                            "titleLine2": "Installation",
+                                            "icon": "Wrench"
+                                        },
+                                        {
+                                            "titleLine1": "Lifetime Phone",
+                                            "titleLine2": "Tech Support",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Office Security Systems",
+                                "slug": "office-security-systems",
+                                "description": "Tailored corporate security solutions integrating IP cameras, server room monitoring, and employee access controls for workplace safety.",
+                                "icon": "Building2",
+                                "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Modern corporate office security system setup",
+                                "overview": {
+                                    "title": "Safeguard Workplace Assets &",
+                                    "titleHighlight": "Productive Teams",
+                                    "description": "From entrance turnstiles to confidential server rooms and executive floors, we deliver structured office surveillance that ensures regulatory compliance and complete visibility."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "High-Density Workplace IP Cameras",
+                                        "description": "Wide dynamic range (WDR) dome cameras that eliminate glare from glass partitions and fluorescent office lighting.",
+                                        "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Video",
+                                        "points": [
+                                            "Discreet recessed ceiling dome mounting",
+                                            "Crystal-clear wide-angle meeting room view",
+                                            "Anti-tamper & camera disconnection alert"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Server Room & Critical Area Monitoring",
+                                        "description": "Environmental and surveillance integration for IT rack rooms with thermal sensing, access logging, and intrusion detection.",
+                                        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Database",
+                                        "points": [
+                                            "Timestamped entry & exit video logs",
+                                            "Temperature & humidity threshold alerts",
+                                            "Encrypted audit-ready surveillance storage"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Office Solutions",
+                                    "description": "Protect intellectual property, physical assets, and employees with reliable commercial-grade infrastructure.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Enterprise Role",
+                                            "titleLine2": "Permissions",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Discreet Aesthetic",
+                                            "titleLine2": "Installation",
+                                            "icon": "CheckCircle2"
+                                        },
+                                        {
+                                            "titleLine1": "Centralized Multi-",
+                                            "titleLine2": "Floor View",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Compliance & Audit",
+                                            "titleLine2": "Readiness",
+                                            "icon": "ShieldCheck"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Retail Security Solutions",
+                                "slug": "retail-security-solutions",
+                                "description": "Smart retail surveillance designed to prevent shoplifting, minimize shrinkage, optimize cash counters, and track footfall analytics.",
+                                "icon": "ShoppingBag",
+                                "image": "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Retail store surveillance camera setup",
+                                "overview": {
+                                    "title": "Prevent Inventory Loss &",
+                                    "titleHighlight": "Boost Store Profits",
+                                    "description": "Retail stores require precise coverage over aisles, cash counters, storage rooms, and loading docks. Our systems combine HD surveillance with POS integration and AI heatmaps."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "POS Cash Register Synchronization",
+                                        "description": "Overlay transaction receipts directly onto recorded video streams to eliminate cash drawer discrepancies and phantom refunds.",
+                                        "image": "https://images.unsplash.com/photo-1556742049-0a67e557224d?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Monitor",
+                                        "points": [
+                                            "Real-time text-on-video receipt overlay",
+                                            "Immediate alert on no-sale cash drawer opens",
+                                            "Search recordings by barcode or receipt ID"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Aisle Coverage & Shoplifting Prevention",
+                                        "description": "360-degree fisheye cameras and PTZ tracking cameras that eliminate blind spots across merchandise displays.",
+                                        "image": "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Video",
+                                        "points": [
+                                            "Full 360-degree panoramic dewarping",
+                                            "Customer dwell time and queue monitoring",
+                                            "High-resolution facial capture at exits"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Retail Solutions",
+                                    "description": "Cut inventory shrinkage, streamline dispute resolution, and gain valuable customer behavior intelligence.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Drastic Loss &",
+                                            "titleLine2": "Theft Reduction",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "POS Linked Video",
+                                            "titleLine2": "Audit Trail",
+                                            "icon": "Database"
+                                        },
+                                        {
+                                            "titleLine1": "Customer Footfall",
+                                            "titleLine2": "Heatmapping",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "Multi-Store Cloud",
+                                            "titleLine2": "Management",
+                                            "icon": "Monitor"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Industrial Surveillance",
+                                "slug": "industrial-surveillance",
+                                "description": "Heavy-duty surveillance engineered for factories, warehouses, logistics yards, and manufacturing plants under harsh environments.",
+                                "icon": "Factory",
+                                "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Industrial surveillance system in warehouse and plant",
+                                "overview": {
+                                    "title": "Rugged Surveillance For",
+                                    "titleHighlight": "Demanding Facilities",
+                                    "description": "We engineer specialized industrial CCTV systems built with explosion-proof, anti-corrosion, and dust-resistant housings to monitor expansive perimeters, assembly lines, and hazardous zones."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Long-Range Thermal & Perimeter Detection",
+                                        "description": "Radar-assisted and thermal sensors capable of detecting human and vehicle intrusions through fog, dust, and pitch darkness.",
+                                        "image": "https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "ShieldCheck",
+                                        "points": [
+                                            "Up to 1000m perimeter intrusion sensing",
+                                            "Thermal heat spot and fire hazard alerts",
+                                            "Line-crossing and fence-tamper alerts"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Harsh Environment Rated Enclosures",
+                                        "description": "Stainless steel IP68/IK10 vandal-proof housings engineered to withstand chemical fumes, heavy vibrations, and power surges.",
+                                        "image": "https://images.unsplash.com/photo-1581092335397-9583fe92d232?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Wrench",
+                                        "points": [
+                                            "Explosion-proof ATEX rated options",
+                                            "Industrial fiber-optic backbone transmission",
+                                            "Heavy-duty surge and lightning arrestors"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Industrial Systems",
+                                    "description": "Ensure occupational safety compliance, prevent equipment theft, and monitor critical production workflows 24/7.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Zero Blind-Spot",
+                                            "titleLine2": "Warehouse Views",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Explosion & Dust",
+                                            "titleLine2": "Resistant Build",
+                                            "icon": "Wrench"
+                                        },
+                                        {
+                                            "titleLine1": "Occupational Safety",
+                                            "titleLine2": "Compliance",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Fiber-Optic Long",
+                                            "titleLine2": "Range Backbone",
+                                            "icon": "Database"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Access Control Integration",
+                                "slug": "access-control-integration",
+                                "description": "Unified security linking biometric fingerprint/facial recognition readers, RFID keycards, and automatic turnstiles directly with CCTV.",
+                                "icon": "Lock",
+                                "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Biometric access control system and card reader integration",
+                                "overview": {
+                                    "title": "Unified Electronic Access &",
+                                    "titleHighlight": "Video Verification",
+                                    "description": "Merge physical door locks, smart turnstiles, and boom barriers with your surveillance cameras so every badge swipe instantly records a video snapshot of the entrant."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "AI Facial Recognition & Biometric Entry",
+                                        "description": "Touchless biometric authentication with anti-spoofing liveness detection and rapid 0.2-second door release.",
+                                        "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Users",
+                                        "points": [
+                                            "Contactless 0.2-second facial scan",
+                                            "Anti-spoofing dual-lens liveness verification",
+                                            "Encrypted local biometric database"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Automated Turnstiles & Barrier Gates",
+                                        "description": "High-throughput optical swing turnstiles and automatic vehicle barrier gates integrated with ANPR license plate cameras.",
+                                        "image": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Lock",
+                                        "points": [
+                                            "Automatic number plate recognition (ANPR)",
+                                            "Visitor badge issuance and barcode scanning",
+                                            "Emergency fire alarm automatic fail-safe release"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Access Systems",
+                                    "description": "Eliminate unauthorized tailgating, track contractor hours accurately, and lock down facilities with a single click.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Anti-Tailgating",
+                                            "titleLine2": "Video Triggers",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Instant Digital",
+                                            "titleLine2": "Visitor Badges",
+                                            "icon": "Users"
+                                        },
+                                        {
+                                            "titleLine1": "One-Touch Emergency",
+                                            "titleLine2": "Lockdown",
+                                            "icon": "Lock"
+                                        },
+                                        {
+                                            "titleLine1": "Automated Time &",
+                                            "titleLine2": "Attendance Sync",
+                                            "icon": "CheckCircle2"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Night Vision Solutions",
+                                "slug": "night-vision-solutions",
+                                "description": "Cutting-edge low-light and full-color night vision cameras that turn total pitch darkness into daytime-clarity video.",
+                                "icon": "Eye",
+                                "image": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "High definition night vision security camera in darkness",
+                                "overview": {
+                                    "title": "See In Total Darkness With",
+                                    "titleHighlight": "Color Night Vision",
+                                    "description": "Most security incidents occur after sunset. We deploy ultra-low-light ColorVu, DarkFighter, and Starlight camera sensors that capture full color video even in 0.0005 Lux pitch darkness."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Full-Color 24/7 Low-Light Imaging",
+                                        "description": "F1.0 super-aperture lenses and warm supplemental LEDs that maintain vivid color reproduction without blinding infrared glare.",
+                                        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Eye",
+                                        "points": [
+                                            "True color rendition in near-zero ambient light",
+                                            "Accurate clothing and vehicle color identification",
+                                            "Elimination of foggy infrared reflection issues"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Long-Range Smart Matrix IR Illumination",
+                                        "description": "Intelligent infrared matrix LEDs that automatically adjust intensity as subjects approach to prevent white-out overexposure.",
+                                        "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Video",
+                                        "points": [
+                                            "Smart IR up to 80 meters without hot-spots",
+                                            "Adaptive anti-reflection glass technology",
+                                            "DNR 3D digital noise reduction filter"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Night Vision",
+                                    "description": "Deliver actionable, court-admissible forensic evidence when criminal activity occurs in unlit or dimly lit spaces.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "24/7 Full Color",
+                                            "titleLine2": "Video Capture",
+                                            "icon": "Eye"
+                                        },
+                                        {
+                                            "titleLine1": "Anti-Glare Smart",
+                                            "titleLine2": "IR Technology",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "True Vehicle Plate",
+                                            "titleLine2": "Capture at Night",
+                                            "icon": "Monitor"
+                                        },
+                                        {
+                                            "titleLine1": "Active Strobe &",
+                                            "titleLine2": "Siren Deterrence",
+                                            "icon": "Headphones"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "Mobile Viewing",
+                                "slug": "mobile-viewing",
+                                "description": "High-speed encrypted smartphone & tablet applications allowing you to watch live feeds, control PTZ cameras, and review playback anywhere.",
+                                "icon": "Smartphone",
+                                "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Person viewing security camera feed on mobile smartphone",
+                                "overview": {
+                                    "title": "Total Video Control In",
+                                    "titleHighlight": "The Palm Of Your Hand",
+                                    "description": "Never wonder what is happening at your property. Our native iOS and Android applications let you monitor live multi-camera grids, receive instant push notifications, and share video clips in seconds."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Ultra-Low Latency Live HD Streaming",
+                                        "description": "Proprietary peer-to-peer cloud routing provides instant sub-second stream connections over 4G, 5G, and Wi-Fi networks.",
+                                        "image": "https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Smartphone",
+                                        "points": [
+                                            "Instant sub-second connection worldwide",
+                                            "Configurable multi-camera split screens (1, 4, 9, 16)",
+                                            "Two-way talkback with built-in noise cancellation"
+                                        ]
+                                    },
+                                    {
+                                        "title": "Smart Push Alerts & Video Clip Export",
+                                        "description": "Receive actionable thumbnails on your lock screen and export trimmed MP4 clips directly to WhatsApp, email, or cloud storage.",
+                                        "image": "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Monitor",
+                                        "points": [
+                                            "Rich push notifications with preview snapshots",
+                                            "One-click clip bookmarking and MP4 download",
+                                            "Multi-user role management for family and staff"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "Mobile Solutions",
+                                    "description": "Stay effortlessly connected to home or business security without cumbersome software or port forwarding.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Native iOS &",
+                                            "titleLine2": "Android Apps",
+                                            "icon": "Smartphone"
+                                        },
+                                        {
+                                            "titleLine1": "End-to-End AES",
+                                            "titleLine2": "256 Encryption",
+                                            "icon": "Lock"
+                                        },
+                                        {
+                                            "titleLine1": "Instant Push Alert",
+                                            "titleLine2": "Notifications",
+                                            "icon": "ShieldCheck"
+                                        },
+                                        {
+                                            "titleLine1": "Zero Complex Port",
+                                            "titleLine2": "Forwarding",
+                                            "icon": "CheckCircle2"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "title": "System Upgrades",
+                                "slug": "system-upgrades",
+                                "description": "Modernize legacy analog, coaxial, or low-resolution CCTV systems to crisp 4K IP digital surveillance using existing cabling.",
+                                "icon": "RefreshCw",
+                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop",
+                                "heroImage": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop",
+                                "heroImageAlt": "Technician upgrading security DVR recorder and camera modules",
+                                "overview": {
+                                    "title": "Upgrade Legacy Cameras To",
+                                    "titleHighlight": "High-Definition 4K",
+                                    "description": "Don't let blurry footage compromise your security. We modernize outdated analog systems, upgrade aging DVRs to high-capacity AI NVRs, and swap low-resolution lenses with minimal disruption."
+                                },
+                                "featureHighlights": [
+                                    {
+                                        "title": "Coaxial-to-IP & High-Definition Over Coax",
+                                        "description": "Upgrade old blurry analog cameras to 5MP/8MP resolution while reusing your existing RG59 coaxial cables, saving thousands in rewiring costs.",
+                                        "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Wrench",
+                                        "points": [
+                                            "Full 4K resolution over existing coax wiring",
+                                            "Zero wall drilling or conduit replacement needed",
+                                            "Substantial cost reduction compared to full rewires"
+                                        ]
+                                    },
+                                    {
+                                        "title": "AI NVR & Storage Modernization",
+                                        "description": "Replace noisy, failing hard drives and old DVRs with intelligent NVRs featuring human/vehicle AI classification and smart search.",
+                                        "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=800&auto=format&fit=crop",
+                                        "icon": "Database",
+                                        "points": [
+                                            "H.265+ video compression doubling recording days",
+                                            "Instant search through hours of footage in seconds",
+                                            "RAID redundancy preventing disk failure data loss"
+                                        ]
+                                    }
+                                ],
+                                "benefits": {
+                                    "title": "Benefits With Our",
+                                    "titleHighlight": "System Upgrades",
+                                    "description": "Get modern high-definition security and smart mobile viewing without the expense of replacing your entire cabling infrastructure.",
+                                    "benefitsList": [
+                                        {
+                                            "titleLine1": "Massive Visual",
+                                            "titleLine2": "Clarity Leap",
+                                            "icon": "Eye"
+                                        },
+                                        {
+                                            "titleLine1": "Reuse Existing",
+                                            "titleLine2": "Cables & Save",
+                                            "icon": "Wrench"
+                                        },
+                                        {
+                                            "titleLine1": "Smart AI Search &",
+                                            "titleLine2": "Classification",
+                                            "icon": "Database"
+                                        },
+                                        {
+                                            "titleLine1": "Full Warranty On",
+                                            "titleLine2": "All New Parts",
+                                            "icon": "ShieldCheck"
+                                        }
+                                    ]
+                                }
                             }
                         ]
                     }
@@ -1005,82 +2234,6 @@
                         "titleHighlight": "Stronger Security.",
                         "description": "Explore how our CCTV solutions have helped homes and businesses increase safety and peace of mind.",
                         "caseStudies": [
-                            {
-                                "slug": "office-security-upgrade",
-                                "title": "Office Security Upgrade",
-                                "description": "See how we helped a fast-growing company enhance its workplace security with a smart CCTV solution, ensuring a safer environment for employees and complete peace of mind for the management.",
-                                "icon": "Building2",
-                                "image": "/images/case-studies/case-study-hero.png",
-                                "imageAlt": "Technician installing security CCTV camera for office upgrade",
-                                "badge": "CASE STUDY",
-                                "titlePart1": "Office Security Upgrade",
-                                "titleHighlight": "Growing Business",
-                                "leadDescription": "See how we helped a fast-growing company enhance its workplace security with a smart CCTV solution, ensuring a safer environment for employees and complete peace of mind for the management.",
-                                "sections": [
-                                    {
-                                        "title": "Overview",
-                                        "description": "A mid-sized corporate office approached us to upgrade their outdated security system. They needed a modern CCTV solution to monitor multiple floors, improve employee safety, and secure critical areas like entry points, workstations, and server rooms. Our goal was to design a reliable, easy-to-manage system that provided complete coverage and remote access."
-                                    },
-                                    {
-                                        "title": "The Challenge",
-                                        "description": "The existing system had low-resolution cameras, limited coverage, and no remote access. As the company expanded, it became difficult to monitor activities effectively, leading to security concerns. They also needed a system that could be easily managed across multiple floors without complex maintenance."
-                                    },
-                                    {
-                                        "title": "Our Solution",
-                                        "description": "We designed and installed a customized CCTV system with high-resolution cameras, complete coverage, and remote monitoring. The solution was tailored to the client's office layout, with strategic camera placement at entry points, common areas, workstations, and server rooms. We also provided a user-friendly monitoring setup for real-time access from any location."
-                                    },
-                                    {
-                                        "title": "The Results",
-                                        "description": "The new system significantly improved surveillance, reduced security risks, and provided real-time monitoring from anywhere. The client now has a safer workplace, better control over their premises, and increased peace of mind for their employees and management."
-                                    }
-                                ],
-                                "projectDetails": {
-                                    "title": "Project Details",
-                                    "items": [
-                                        {
-                                            "label": "Client",
-                                            "value": "TechVision Pvt. Ltd."
-                                        },
-                                        {
-                                            "label": "Category",
-                                            "value": "CCTV, Security"
-                                        },
-                                        {
-                                            "label": "Date",
-                                            "value": "March 15, 2024"
-                                        },
-                                        {
-                                            "label": "Project Value",
-                                            "value": "$25,000"
-                                        },
-                                        {
-                                            "label": "Location",
-                                            "value": "Noida, India"
-                                        }
-                                    ]
-                                },
-                                "ourServices": {
-                                    "title": "Our Services",
-                                    "items": [
-                                        {
-                                            "name": "CCTV Installation",
-                                            "desc": "High-quality camera setup for complete coverage"
-                                        },
-                                        {
-                                            "name": "System Configuration",
-                                            "desc": "Customized setup as per your needs"
-                                        },
-                                        {
-                                            "name": "Remote Monitoring",
-                                            "desc": "Access your cameras from anywhere"
-                                        },
-                                        {
-                                            "name": "Maintenance & Support",
-                                            "desc": "Ongoing support for uninterrupted security"
-                                        }
-                                    ]
-                                }
-                            },
                             {
                                 "slug": "security-consulting",
                                 "title": "Security Consulting",
@@ -1308,6 +2461,462 @@
                                         }
                                     ]
                                 }
+                            },
+                            {
+                                "slug": "industrial-security",
+                                "title": "Industrial Security",
+                                "description": "Implemented a heavy-duty perimeter radar and thermal CCTV solution across a 40-acre manufacturing and logistics plant to prevent unauthorized intrusions.",
+                                "icon": "Factory",
+                                "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=800&auto=format&fit=crop",
+                                "imageAlt": "Industrial facility security system monitoring manufacturing floor",
+                                "badge": "CASE STUDY",
+                                "titlePart1": "Industrial Security",
+                                "titleHighlight": "Manufacturing Plant",
+                                "leadDescription": "Implemented a heavy-duty perimeter radar and thermal CCTV solution across a 40-acre manufacturing and logistics plant to prevent unauthorized intrusions.",
+                                "sections": [
+                                    {
+                                        "title": "Overview",
+                                        "description": "A sprawling 40-acre chemical and manufacturing facility required a robust surveillance overhaul. With multiple unmanned perimeter gates, heavy machinery yards, and hazardous chemical storage, the facility needed uninterrupted 24/7 visibility and automated perimeter breach detection."
+                                    },
+                                    {
+                                        "title": "The Challenge",
+                                        "description": "Severe ambient dust, high electromagnetic interference, and dark perimeter fences caused frequent blind spots and false alarms on previous camera systems. The client suffered repeated material theft and could not effectively police perimeter breaches during nighttime hours."
+                                    },
+                                    {
+                                        "title": "Our Solution",
+                                        "description": "We engineered an industrial-grade fiber-optic CCTV backbone equipped with 48 thermal bullet cameras, long-range PTZ units with laser illumination, and explosion-proof stainless steel enclosures for hazardous chemical zones. The system integrated radar perimeter intrusion detection to automatically track any fence approach."
+                                    },
+                                    {
+                                        "title": "The Results",
+                                        "description": "Zero unauthorized perimeter intrusions recorded in the first 12 months. Material theft was eliminated entirely, and plant managers can now safely audit assembly line workflows and emergency muster zones remotely from any facility terminal."
+                                    }
+                                ],
+                                "projectDetails": {
+                                    "title": "Project Details",
+                                    "items": [
+                                        {
+                                            "label": "Client",
+                                            "value": "Apex PetroChem Logistics"
+                                        },
+                                        {
+                                            "label": "Category",
+                                            "value": "Industrial CCTV, Thermal Security"
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "June 20, 2024"
+                                        },
+                                        {
+                                            "label": "Project Value",
+                                            "value": ",000"
+                                        },
+                                        {
+                                            "label": "Location",
+                                            "value": "Houston, TX"
+                                        }
+                                    ]
+                                },
+                                "ourServices": {
+                                    "title": "Our Services",
+                                    "items": [
+                                        {
+                                            "name": "CCTV Installation",
+                                            "desc": "Ruggedized industrial camera mounting and cabling"
+                                        },
+                                        {
+                                            "name": "Perimeter Defense",
+                                            "desc": "Thermal radar tracking and line-crossing alerts"
+                                        },
+                                        {
+                                            "name": "Fiber-Optic Backbone",
+                                            "desc": "High-speed zero-latency long distance transmission"
+                                        },
+                                        {
+                                            "name": "24/7 AMC Maintenance",
+                                            "desc": "Preventative quarterly cleaning and health audits"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "slug": "educational-institutions",
+                                "title": "Educational Institutions",
+                                "description": "Deployed a comprehensive campus-wide security network covering lecture halls, sports grounds, entry gates, and student dormitories with emergency panic integration.",
+                                "icon": "GraduationCap",
+                                "image": "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop",
+                                "imageAlt": "University campus building with modern safety surveillance",
+                                "badge": "CASE STUDY",
+                                "titlePart1": "Educational Institutions",
+                                "titleHighlight": "Campus Safety",
+                                "leadDescription": "Deployed a comprehensive campus-wide security network covering lecture halls, sports grounds, entry gates, and student dormitories with emergency panic integration.",
+                                "sections": [
+                                    {
+                                        "title": "Overview",
+                                        "description": "A prominent university campus serving over 8,000 students and staff sought a unified security ecosystem. The administration wanted to deter vandalism, regulate visitor vehicle flow, and guarantee student safety across sprawling outdoor walkways, dormitories, and library complexes."
+                                    },
+                                    {
+                                        "title": "The Challenge",
+                                        "description": "The campus had fragmented legacy equipment from different vendors with no central control room. Low illumination on perimeter walkways raised student safety concerns during evening hours, and vehicular traffic bottlenecks formed daily at entry gates."
+                                    },
+                                    {
+                                        "title": "Our Solution",
+                                        "description": "We installed 120 high-resolution AI dome and bullet cameras tied into a centralized command center. We added solar-powered emergency panic call stations with two-way intercoms across illuminated campus walkways, alongside ANPR cameras at main vehicle gates for automated license plate scanning."
+                                    },
+                                    {
+                                        "title": "The Results",
+                                        "description": "Incident response times dropped from 15 minutes to under 90 seconds. Unauthorized vehicular entries decreased by 98%, and student surveys reported a 94% increase in perceived campus safety during late-night study hours."
+                                    }
+                                ],
+                                "projectDetails": {
+                                    "title": "Project Details",
+                                    "items": [
+                                        {
+                                            "label": "Client",
+                                            "value": "Oakridge University Campus"
+                                        },
+                                        {
+                                            "label": "Category",
+                                            "value": "Campus Surveillance, Emergency Intercom"
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "August 12, 2024"
+                                        },
+                                        {
+                                            "label": "Project Value",
+                                            "value": ",000"
+                                        },
+                                        {
+                                            "label": "Location",
+                                            "value": "Boston, MA"
+                                        }
+                                    ]
+                                },
+                                "ourServices": {
+                                    "title": "Our Services",
+                                    "items": [
+                                        {
+                                            "name": "Campus Wide CCTV",
+                                            "desc": "120+ HD cameras covering academic & residential zones"
+                                        },
+                                        {
+                                            "name": "ANPR Vehicle Access",
+                                            "desc": "Automated student & faculty gate entry"
+                                        },
+                                        {
+                                            "name": "Emergency Call Stations",
+                                            "desc": "Instant two-way security dispatch integration"
+                                        },
+                                        {
+                                            "name": "Central Control Room",
+                                            "desc": "Multi-screen command hub with video wall"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "slug": "healthcare-facilities",
+                                "title": "Healthcare Facilities",
+                                "description": "Designed a HIPAA-compliant surveillance and access control system for a 350-bed multi-specialty hospital, safeguarding pharmacies, ICUs, and pediatric wards.",
+                                "icon": "Hospital",
+                                "image": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?q=80&w=800&auto=format&fit=crop",
+                                "imageAlt": "Modern hospital corridor and healthcare security monitoring",
+                                "badge": "CASE STUDY",
+                                "titlePart1": "Healthcare Facilities",
+                                "titleHighlight": "Hospital Protection",
+                                "leadDescription": "Designed a HIPAA-compliant surveillance and access control system for a 350-bed multi-specialty hospital, safeguarding pharmacies, ICUs, and pediatric wards.",
+                                "sections": [
+                                    {
+                                        "title": "Overview",
+                                        "description": "A major regional hospital needed to upgrade security infrastructure to prevent medication tampering in pharmacy storage, monitor busy emergency room triage desks, and protect pediatric wards without infringing on patient privacy rights."
+                                    },
+                                    {
+                                        "title": "The Challenge",
+                                        "description": "Strict HIPAA privacy mandates prohibited recording in patient treatment rooms while requiring strict video audits around narcotic dispensary units and newborn nurseries. Frequent agitated visitors in emergency waiting rooms also posed staff safety risks."
+                                    },
+                                    {
+                                        "title": "Our Solution",
+                                        "description": "We engineered a privacy-masked IP camera solution with role-based viewing permissions. Restricted pharmacy lockers were fitted with biometric access control linked to instant CCTV video tags, while pediatric wards received anti-infant-abduction tag sensors paired with automated door interlocks."
+                                    },
+                                    {
+                                        "title": "The Results",
+                                        "description": "Pharmacy inventory discrepancies fell to zero. Healthcare staff reported an enhanced sense of safety in triage zones, and the hospital passed all state health accreditation and security compliance inspections with highest marks."
+                                    }
+                                ],
+                                "projectDetails": {
+                                    "title": "Project Details",
+                                    "items": [
+                                        {
+                                            "label": "Client",
+                                            "value": "St. Jude Memorial Hospital"
+                                        },
+                                        {
+                                            "label": "Category",
+                                            "value": "Healthcare Security, Access Control"
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "October 05, 2024"
+                                        },
+                                        {
+                                            "label": "Project Value",
+                                            "value": ",000"
+                                        },
+                                        {
+                                            "label": "Location",
+                                            "value": "Chicago, IL"
+                                        }
+                                    ]
+                                },
+                                "ourServices": {
+                                    "title": "Our Services",
+                                    "items": [
+                                        {
+                                            "name": "HIPAA-Compliant CCTV",
+                                            "desc": "Privacy-masked video with encrypted audit logs"
+                                        },
+                                        {
+                                            "name": "Pharmacy Access Lock",
+                                            "desc": "Biometric dual-factor authentication"
+                                        },
+                                        {
+                                            "name": "Pediatric Ward Security",
+                                            "desc": "Sensor-linked security interlocks"
+                                        },
+                                        {
+                                            "name": "Emergency Room Defense",
+                                            "desc": "Duress buttons with direct video alerts"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "slug": "retail-stores",
+                                "title": "Retail Stores",
+                                "description": "Secured a 15-branch retail supermarket chain with POS cash register video integration and AI customer footfall analytics, cutting shrinkage by 42%.",
+                                "icon": "ShoppingBag",
+                                "image": "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?q=80&w=800&auto=format&fit=crop",
+                                "imageAlt": "Supermarket retail store aisles with CCTV camera coverage",
+                                "badge": "CASE STUDY",
+                                "titlePart1": "Retail Stores",
+                                "titleHighlight": "Loss Prevention",
+                                "leadDescription": "Secured a 15-branch retail supermarket chain with POS cash register video integration and AI customer footfall analytics, cutting shrinkage by 42%.",
+                                "sections": [
+                                    {
+                                        "title": "Overview",
+                                        "description": "A regional grocery and apparel retail chain operating 15 high-volume stores faced growing losses from internal checkout sweethearting, organized shoplifting rings, and inventory shrinkage in back-of-house receiving bays."
+                                    },
+                                    {
+                                        "title": "The Challenge",
+                                        "description": "Store managers were unable to reconcile disputed cash register shortages with video footage. Blind spots in cosmetic and liquor aisles allowed shoplifters to conceal goods without detection, costing hundreds of thousands annually."
+                                    },
+                                    {
+                                        "title": "Our Solution",
+                                        "description": "We deployed 360-degree panoramic fisheye ceiling cameras across merchandise floors, paired with high-definition cameras directly synchronized to cash register POS terminals. Receipt transactions were overlaid in real-time onto video streams, with automatic alerts triggered on no-sale register opens."
+                                    },
+                                    {
+                                        "title": "The Results",
+                                        "description": "Inventory shrinkage dropped by 42% across all 15 branches within the first quarter. Disputed transactions were resolved in minutes using receipt text searches, yielding a full return on investment in under six months."
+                                    }
+                                ],
+                                "projectDetails": {
+                                    "title": "Project Details",
+                                    "items": [
+                                        {
+                                            "label": "Client",
+                                            "value": "PrimeMart Retail Chain"
+                                        },
+                                        {
+                                            "label": "Category",
+                                            "value": "Retail POS Integration, Loss Prevention"
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "January 18, 2025"
+                                        },
+                                        {
+                                            "label": "Project Value",
+                                            "value": ",000"
+                                        },
+                                        {
+                                            "label": "Location",
+                                            "value": "Dallas, TX"
+                                        }
+                                    ]
+                                },
+                                "ourServices": {
+                                    "title": "Our Services",
+                                    "items": [
+                                        {
+                                            "name": "POS Video Overlay",
+                                            "desc": "Instant transaction-synced video verification"
+                                        },
+                                        {
+                                            "name": "360° Fisheye Cameras",
+                                            "desc": "Zero-blindspot merchandise aisle coverage"
+                                        },
+                                        {
+                                            "name": "Customer AI Analytics",
+                                            "desc": "Footfall counts, heatmaps, and dwell time"
+                                        },
+                                        {
+                                            "name": "Multi-Store Cloud",
+                                            "desc": "Central loss prevention manager dashboard"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "slug": "parking-areas",
+                                "title": "Parking Areas",
+                                "description": "Installed automated ANPR license plate recognition, boom barrier controls, and vandal-proof surveillance across a 1,200-bay multi-level parking garage.",
+                                "icon": "Car",
+                                "image": "https://images.unsplash.com/photo-1506521781263-d8422e82f27a?q=80&w=800&auto=format&fit=crop",
+                                "imageAlt": "Multi-level parking structure with automated security barriers and cameras",
+                                "badge": "CASE STUDY",
+                                "titlePart1": "Parking Areas",
+                                "titleHighlight": "Smart Garage Security",
+                                "leadDescription": "Installed automated ANPR license plate recognition, boom barrier controls, and vandal-proof surveillance across a 1,200-bay multi-level parking garage.",
+                                "sections": [
+                                    {
+                                        "title": "Overview",
+                                        "description": "A commercial downtown parking garage with 1,200 spaces across four subterranean levels required an upgrade to stop vehicle break-ins, resolve hit-and-run parking disputes, and streamline monthly subscriber vehicle flow."
+                                    },
+                                    {
+                                        "title": "The Challenge",
+                                        "description": "Dim lighting in lower garage decks caused grainy video, while ticket machine bottlenecks backed up evening exit queues onto city streets. Hit-and-run claims were impossible to verify due to blurry, low-frame-rate recording."
+                                    },
+                                    {
+                                        "title": "Our Solution",
+                                        "description": "We installed 64 ultra-low-light Starlight cameras with wide dynamic range to eliminate headlight glare, combined with high-accuracy ANPR (Automatic Number Plate Recognition) cameras at all vehicle entry and exit lanes connected to high-speed barrier gates."
+                                    },
+                                    {
+                                        "title": "The Results",
+                                        "description": "Vehicle break-in complaints plunged by 88%. Exit queue wait times were reduced by 65% through automated plate scanning, and hit-and-run claims are now instantly resolved with crystal-clear timestamped evidence."
+                                    }
+                                ],
+                                "projectDetails": {
+                                    "title": "Project Details",
+                                    "items": [
+                                        {
+                                            "label": "Client",
+                                            "value": "MetroCenter Parking Authority"
+                                        },
+                                        {
+                                            "label": "Category",
+                                            "value": "ANPR, Garage Surveillance, Boom Gates"
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "March 10, 2025"
+                                        },
+                                        {
+                                            "label": "Project Value",
+                                            "value": ",000"
+                                        },
+                                        {
+                                            "label": "Location",
+                                            "value": "Seattle, WA"
+                                        }
+                                    ]
+                                },
+                                "ourServices": {
+                                    "title": "Our Services",
+                                    "items": [
+                                        {
+                                            "name": "ANPR License Plate Capture",
+                                            "desc": "99.4% accuracy rate day and night"
+                                        },
+                                        {
+                                            "name": "Low-Light Starlight CCTV",
+                                            "desc": "Clear vision in dark underground levels"
+                                        },
+                                        {
+                                            "name": "Automated Barrier Gates",
+                                            "desc": "Fast ticketless subscriber drive-through"
+                                        },
+                                        {
+                                            "name": "Vandal-Proof IK10 Housing",
+                                            "desc": "Tamper and impact-resistant camera chassis"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "slug": "hospitality-hostels",
+                                "title": "Hospitality & Hostels",
+                                "description": "Implemented discreet guest corridor CCTV, smart RFID keycard access, and luggage room biometric tracking for a boutique hotel and student hostel facility.",
+                                "icon": "Bed",
+                                "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
+                                "imageAlt": "Boutique hotel reception and guest corridor security setup",
+                                "badge": "CASE STUDY",
+                                "titlePart1": "Hospitality & Hostels",
+                                "titleHighlight": "Guest Protection",
+                                "leadDescription": "Implemented discreet guest corridor CCTV, smart RFID keycard access, and luggage room biometric tracking for a boutique hotel and student hostel facility.",
+                                "sections": [
+                                    {
+                                        "title": "Overview",
+                                        "description": "A prominent hospitality group managing a 180-room urban hotel and adjoining international student hostel needed an integrated security solution that guaranteed guest safety, prevented unauthorized floor access, and preserved an inviting aesthetic."
+                                    },
+                                    {
+                                        "title": "The Challenge",
+                                        "description": "Hostel backpacker luggage rooms experienced periodic lost luggage claims, while non-resident visitors frequently bypassed front desks to access upper accommodation corridors during busy check-in hours."
+                                    },
+                                    {
+                                        "title": "Our Solution",
+                                        "description": "We implemented elevator access control restricting floor transit exclusively to valid keycard holders. We installed discreet micro-dome cameras in guest hallways, biometric access for the luggage holding vaults, and pool/gym surveillance with automated after-hours intrusion alarms."
+                                    },
+                                    {
+                                        "title": "The Results",
+                                        "description": "Luggage dispute claims were reduced to zero. Unauthorized room floor transit was completely eliminated, and the hotel achieved a 4.9-star guest safety rating on major international travel booking platforms."
+                                    }
+                                ],
+                                "projectDetails": {
+                                    "title": "Project Details",
+                                    "items": [
+                                        {
+                                            "label": "Client",
+                                            "value": "The Grand Vista Hotel & Hostel"
+                                        },
+                                        {
+                                            "label": "Category",
+                                            "value": "Hospitality CCTV, Elevator Access"
+                                        },
+                                        {
+                                            "label": "Date",
+                                            "value": "May 14, 2025"
+                                        },
+                                        {
+                                            "label": "Project Value",
+                                            "value": ",000"
+                                        },
+                                        {
+                                            "label": "Location",
+                                            "value": "San Francisco, CA"
+                                        }
+                                    ]
+                                },
+                                "ourServices": {
+                                    "title": "Our Services",
+                                    "items": [
+                                        {
+                                            "name": "Elevator Access Control",
+                                            "desc": "Restricted guest floor transit"
+                                        },
+                                        {
+                                            "name": "Discreet Micro-Dome CCTV",
+                                            "desc": "Architectural luxury corridor integration"
+                                        },
+                                        {
+                                            "name": "Biometric Luggage Storage",
+                                            "desc": "Fingerprint and RFID dual verification"
+                                        },
+                                        {
+                                            "name": "Night Perimeter Sensor",
+                                            "desc": "Automated guest zone safety monitoring"
+                                        }
+                                    ]
+                                }
                             }
                         ]
                     }
@@ -1355,30 +2964,353 @@
                         "description": "Stay informed with our latest blogs on security solutions, tips and industry trends.",
                         "blogPosts": [
                             {
+                                "title": "How to Choose the Right CCTV Camera for Your Property",
+                                "slug": "how-to-choose-the-right-cctv-camera",
+                                "titlePart1": "How to Choose the Right",
+                                "titleHighlight": "CCTV Camera",
+                                "titlePart2": "for Your Property",
+                                "date": "April 12, 2024",
+                                "category": "Security Tips",
+                                "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&auto=format&fit=crop",
+                                "commentsCount": 3,
+                                "leadDescription": "A complete guide to help you select the best CCTV camera for your home or business based on your security needs, location and budget.",
+                                "introduction": "Choosing the right CCTV camera is an important step towards securing your property. With so many options available, it can be confusing to decide which one is best for your needs. In this guide, we’ll walk you through the key factors to consider before making a decision.",
+                                "steps": [
+                                    {
+                                        "num": "01",
+                                        "title": "Understand Your Security Needs",
+                                        "description": "Start by identifying what you want to protect. Is it your home, office, shop or a large commercial space? Different properties have different security requirements, and understanding your needs will help you choose the right camera type and features."
+                                    },
+                                    {
+                                        "num": "02",
+                                        "title": "Choose the Right Type of Camera",
+                                        "description": "There are various types of CCTV cameras such as dome cameras, bullet cameras, PTZ cameras and wireless cameras. Each type is designed for specific environments and offers different features. For example, bullet cameras are great for outdoor use, while dome cameras are ideal for indoor spaces."
+                                    },
+                                    {
+                                        "num": "03",
+                                        "title": "Look for Essential Features",
+                                        "description": "When selecting a CCTV camera, consider important features like high-resolution video quality, night vision, motion detection, remote access and weather resistance. These features ensure better surveillance and reliability."
+                                    },
+                                    {
+                                        "num": "04",
+                                        "title": "Consider Your Budget",
+                                        "description": "CCTV cameras are available in a wide range of prices. Set a budget and choose a camera that offers the best value for your investment. Remember, a good security system is a long-term investment in the safety of your property."
+                                    }
+                                ]
+                            },
+                            {
                                 "title": "How to Find The Best Security Guard Services Near Me",
                                 "slug": "how-to-find-best-security-guard-services",
-                                "date": "12 Apr",
-                                "category": "Our Blog V5",
-                                "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop",
-                                "commentsCount": 0
+                                "titlePart1": "How to Find The Best",
+                                "titleHighlight": "Security Guard Services",
+                                "titlePart2": "for Your Premises",
+                                "date": "April 12, 2024",
+                                "category": "Security Tips",
+                                "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop",
+                                "commentsCount": 0,
+                                "leadDescription": "A practical guide to hiring licensed, certified and highly capable security personnel tailored for your facility protection.",
+                                "introduction": "Hiring the right security guard service is crucial for maintaining safety, order, and deterrence at commercial and residential premises. Knowing the right certifications, operational training, and technological integrations helps you make a confident decision.",
+                                "steps": [
+                                    {
+                                        "num": "01",
+                                        "title": "Assess Your Threat & Vulnerability Level",
+                                        "description": "Determine whether you need armed personnel, unarmed patrols, access control specialists, or rapid emergency responders based on physical layouts and daily traffic."
+                                    },
+                                    {
+                                        "num": "02",
+                                        "title": "Verify State Licensing & Compliance",
+                                        "description": "Ensure the security firm complies with all statutory regulations, background checks, guard card certifications, and general liability insurance coverage."
+                                    },
+                                    {
+                                        "num": "03",
+                                        "title": "Look for Integrated Tech & Guard Patrol Tracking",
+                                        "description": "Modern guard providers use GPS-tagged patrol verification, real-time incident reporting, and seamless CCTV coordination for total visibility."
+                                    },
+                                    {
+                                        "num": "04",
+                                        "title": "Evaluate Rapid Response & Supervision",
+                                        "description": "A dependable security company provides 24/7 dedicated dispatch supervisors to respond instantly during escalating situations."
+                                    }
+                                ]
                             },
                             {
                                 "title": "The Benefits of Access Control Systems for a Business",
                                 "slug": "benefits-of-access-control-systems",
-                                "date": "12 Apr",
-                                "category": "Our Blog V5",
-                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600&auto=format&fit=crop",
-                                "commentsCount": 0
+                                "titlePart1": "The Benefits of",
+                                "titleHighlight": "Access Control Systems",
+                                "titlePart2": "for Modern Businesses",
+                                "date": "April 10, 2024",
+                                "category": "Business Security",
+                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop",
+                                "commentsCount": 2,
+                                "leadDescription": "Discover how modern access control systems enhance workplace safety, audit trail visibility, and digital identity management.",
+                                "introduction": "Keys can be lost, duplicated, or stolen. Access control systems replace traditional locks with biometric, RFID card, and mobile credentials, giving administrators instant authorization controls and real-time entry logs.",
+                                "steps": [
+                                    {
+                                        "num": "01",
+                                        "title": "Eliminate Key Duplication Risks",
+                                        "description": "Digital credentials cannot be easily copied, allowing one-click credential revocation whenever personnel changes occur."
+                                    },
+                                    {
+                                        "num": "02",
+                                        "title": "Enforce Multi-Tiered Zone Permissions",
+                                        "description": "Restrict sensitive areas like server rooms, inventory vaults, and executive suites to authorized personnel only."
+                                    },
+                                    {
+                                        "num": "03",
+                                        "title": "Maintain Timestamped Audit Records",
+                                        "description": "Every entry attempt is digitally logged, offering compliance records and instant traceability during any investigation."
+                                    },
+                                    {
+                                        "num": "04",
+                                        "title": "Seamless Integration with CCTV Systems",
+                                        "description": "Sync door badge swipes with video surveillance bookmarks to verify visual identity simultaneously."
+                                    }
+                                ]
                             },
                             {
                                 "title": "What Makes Us The Best Armed Security Guard Company?",
                                 "slug": "what-makes-us-best-armed-security-guard-company",
-                                "date": "12 Apr",
-                                "category": "Our Blog V5",
-                                "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop",
-                                "commentsCount": 0
+                                "titlePart1": "What Makes Us The",
+                                "titleHighlight": "Best Armed Security",
+                                "titlePart2": "Guard Company",
+                                "date": "April 08, 2024",
+                                "category": "Industry Trends",
+                                "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1200&auto=format&fit=crop",
+                                "commentsCount": 5,
+                                "leadDescription": "Explore the rigorous training, tactical de-escalation protocols, and technological edge behind our armed security operations.",
+                                "introduction": "Armed security requires the highest level of trust, professional tactical preparation, and strict legal compliance. Discover why leading enterprises and high-value properties choose our armed protection services.",
+                                "steps": [
+                                    {
+                                        "num": "01",
+                                        "title": "Ex-Military & Law Enforcement Leadership",
+                                        "description": "Our tactical officers bring extensive real-world experience, firearms mastery, and disciplined judgment to every deployment."
+                                    },
+                                    {
+                                        "num": "02",
+                                        "title": "Continuous De-escalation & Crisis Training",
+                                        "description": "Guards undergo continuous situational de-escalation, conflict resolution, and medical first-aid readiness certifications."
+                                    },
+                                    {
+                                        "num": "03",
+                                        "title": "24/7 Command Center Coordination",
+                                        "description": "Every armed unit remains linked to our central monitoring dispatch for immediate backup and live surveillance support."
+                                    },
+                                    {
+                                        "num": "04",
+                                        "title": "Strict Background Vetting & Compliance",
+                                        "description": "We perform multi-state criminal checks, psychological evaluations, and recurring drug screenings on all armed officers."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Top Benefits of CCTV Installation for Homes",
+                                "slug": "top-benefits-of-cctv-installation-for-homes",
+                                "titlePart1": "Top Benefits of",
+                                "titleHighlight": "CCTV Installation",
+                                "titlePart2": "for Modern Homes",
+                                "date": "June 14, 2024",
+                                "category": "Home Security",
+                                "image": "https://images.unsplash.com/photo-1558002038-1055907df827?q=80&w=1200&auto=format&fit=crop",
+                                "commentsCount": 5,
+                                "leadDescription": "Discover how installing home CCTV cameras deters burglaries, protects your family, lowers home insurance rates, and provides complete peace of mind.",
+                                "introduction": "Investing in a home CCTV security system is one of the most effective measures a homeowner can take to safeguard their family and property. Modern residential cameras offer much more than passive recording—they act as active visual deterrents and smart communication hubs. Here are the top benefits of installing CCTV in your home.",
+                                "steps": [
+                                    {
+                                        "num": "01",
+                                        "title": "Proven Crime & Burglary Deterrence",
+                                        "description": "Visible security cameras are the number one deterrent against opportunist burglars. Studies show properties with visible CCTV are up to 300% less likely to be targeted by intruders."
+                                    },
+                                    {
+                                        "num": "02",
+                                        "title": "Real-Time Remote Family & Pet Monitoring",
+                                        "description": "Keep an eye on children arriving home from school, verify delivery parcels on your porch, or check on pets while you are at work using live encrypted smartphone streaming."
+                                    },
+                                    {
+                                        "num": "03",
+                                        "title": "Substantial Insurance Premium Discounts",
+                                        "description": "Most major home insurance carriers offer discounts between 5% and 20% on annual home insurance premiums when certified security surveillance is installed."
+                                    },
+                                    {
+                                        "num": "04",
+                                        "title": "Actionable Forensic Evidence in Disputes",
+                                        "description": "In the rare event of trespassing, property damage, or neighbor boundary disputes, high-definition timestamped footage provides decisive court-admissible evidence."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "How CCTV Systems Improve Business Security",
+                                "slug": "how-cctv-systems-improve-business-security",
+                                "titlePart1": "How CCTV Systems",
+                                "titleHighlight": "Improve Business Security",
+                                "titlePart2": "& Workplace Safety",
+                                "date": "July 22, 2024",
+                                "category": "Business Security",
+                                "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+                                "commentsCount": 4,
+                                "leadDescription": "Learn how commercial CCTV surveillance protects intellectual property, stops internal shrinkage, resolves customer disputes, and boosts productivity.",
+                                "introduction": "For businesses of all sizes, physical security is directly tied to profitability and employee safety. High-definition commercial CCTV is no longer just for overnight security—it is a vital operational tool that streamlines inventory control, mitigates liability claims, and fosters a productive workplace.",
+                                "steps": [
+                                    {
+                                        "num": "01",
+                                        "title": "Eliminate Internal & External Theft",
+                                        "description": "Strategically placed cameras across receiving bays, inventory stockrooms, and cash handling desks drastically reduce internal shrinkage and organized retail theft."
+                                    },
+                                    {
+                                        "num": "02",
+                                        "title": "Protection Against Fraudulent Liability Claims",
+                                        "description": "Slip-and-fall lawsuits and staged customer injury claims cost businesses millions annually. Unaltered video archives provide definitive proof to refute false claims."
+                                    },
+                                    {
+                                        "num": "03",
+                                        "title": "Enhanced Employee Safety & Workplace Accountability",
+                                        "description": "CCTV promotes a respectful, secure work environment by discouraging workplace harassment, verifying compliance with safety protocols, and auditing high-risk zones."
+                                    },
+                                    {
+                                        "num": "04",
+                                        "title": "Multi-Site Centralized Management",
+                                        "description": "Executive leadership and loss prevention teams can view real-time operations across multiple branches from a single unified browser or mobile dashboard."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Wired vs Wireless CCTV Cameras: Which is Better?",
+                                "slug": "wired-vs-wireless-cctv-cameras-which-is-better",
+                                "titlePart1": "Wired vs Wireless",
+                                "titleHighlight": "CCTV Cameras",
+                                "titlePart2": "Which System is Better?",
+                                "date": "August 18, 2024",
+                                "category": "Product Guides",
+                                "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1200&auto=format&fit=crop",
+                                "commentsCount": 7,
+                                "leadDescription": "An unbiased comparison between wired PoE and wireless Wi-Fi security cameras covering reliability, installation costs, video quality, and maintenance.",
+                                "introduction": "One of the most common dilemmas when planning a surveillance system is choosing between wired (PoE) and wireless (Wi-Fi) cameras. While wireless cameras offer quick DIY installation, wired systems provide rock-solid reliability. Here is how they stack up across critical performance factors.",
+                                "steps": [
+                                    {
+                                        "num": "01",
+                                        "title": "Reliability & Signal Interference",
+                                        "description": "Wired PoE systems transmit data and power through a single Cat6 cable, offering immune protection against Wi-Fi dropouts, bandwidth throttling, and RF signal jammers."
+                                    },
+                                    {
+                                        "num": "02",
+                                        "title": "Installation Complexity & Flexibility",
+                                        "description": "Wireless cameras are ideal for renters or finished homes where running cables is prohibitive. However, they still require power cables or regular battery recharging."
+                                    },
+                                    {
+                                        "num": "03",
+                                        "title": "Video Quality & Streaming Bandwidth",
+                                        "description": "Wired cameras support higher bitrates, constant 4K/8K resolution, and zero compression latency. Multiple wireless cameras can choke residential Wi-Fi networks during uploads."
+                                    },
+                                    {
+                                        "num": "04",
+                                        "title": "The Verdict for Your Property",
+                                        "description": "Choose wireless for small apartments or temporary rental setups. Choose wired PoE for permanent homes, large estates, and all commercial business applications."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "Common Mistakes to Avoid During CCTV Installation",
+                                "slug": "common-mistakes-to-avoid-during-cctv-installation",
+                                "titlePart1": "Common Mistakes",
+                                "titleHighlight": "to Avoid During",
+                                "titlePart2": "CCTV Installation",
+                                "date": "September 09, 2024",
+                                "category": "CCTV Installation",
+                                "image": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1200&auto=format&fit=crop",
+                                "commentsCount": 6,
+                                "leadDescription": "Avoid critical security oversights like bad camera angles, direct sunlight glare, exposed wiring, and inadequate hard drive storage.",
+                                "introduction": "Even the most expensive 4K camera is useless if it is installed incorrectly. Many DIY installations and inexperienced contractors make avoidable mistakes that create blind spots or render footage unusable when needed. Here are the top installation pitfalls to avoid.",
+                                "steps": [
+                                    {
+                                        "num": "01",
+                                        "title": "Mounting Cameras Too High",
+                                        "description": "Mounting cameras too high captures only the tops of heads and hats instead of identifiable facial features. Aim for 8 to 10 feet off the ground for optimal facial angle capture."
+                                    },
+                                    {
+                                        "num": "02",
+                                        "title": "Ignoring Direct Sunlight & Backlighting Glare",
+                                        "description": "Pointing a camera directly east or west creates blinding lens glare at sunrise and sunset. Ensure cameras utilize True WDR (Wide Dynamic Range) and avoid direct sun angles."
+                                    },
+                                    {
+                                        "num": "03",
+                                        "title": "Leaving Vulnerable Exposed Wiring",
+                                        "description": "Exposed cables can be easily severed by burglars or damaged by pests and weather. Always route cables inside tamper-proof PVC or galvanized conduit piping."
+                                    },
+                                    {
+                                        "num": "04",
+                                        "title": "Underestimating Storage & Hard Drive Speeds",
+                                        "description": "Desktop hard drives fail under continuous 24/7 video writes. Always install surveillance-grade drives (like WD Purple or Seagate SkyHawk) with sufficient capacity."
+                                    }
+                                ]
+                            },
+                            {
+                                "title": "CCTV Installation Tips for Maximum Security",
+                                "slug": "cctv-installation-tips-for-maximum-security",
+                                "titlePart1": "CCTV Installation Tips",
+                                "titleHighlight": "for Maximum Security",
+                                "titlePart2": "& Optimal Coverage",
+                                "date": "October 15, 2024",
+                                "category": "Security Tips",
+                                "image": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1200&auto=format&fit=crop",
+                                "commentsCount": 3,
+                                "leadDescription": "Master professional security camera placement tactics, perimeter overlap techniques, and lighting strategies to ensure zero vulnerabilities.",
+                                "introduction": "Maximizing your security ROI requires strategic engineering rather than merely hanging cameras randomly. Certified surveillance professionals design overlapping zones of detection so that no intruder can access blind angles. Here are essential tips for fortress-level security.",
+                                "steps": [
+                                    {
+                                        "num": "01",
+                                        "title": "Implement Overlapping Coverage Angles",
+                                        "description": "Position cameras so that every camera blind spot is monitored by another adjacent camera. This eliminates blind zones and stops vandalism attempts."
+                                    },
+                                    {
+                                        "num": "02",
+                                        "title": "Focus on Choke Points & Entry Gates",
+                                        "description": "Ensure dedicated cameras with narrow focal lengths are aimed at entry doors, driveways, and main gates to reliably capture license plates and visitor faces."
+                                    },
+                                    {
+                                        "num": "03",
+                                        "title": "Pair With Motion-Activated Lighting",
+                                        "description": "Even cameras with infrared vision perform significantly better when paired with exterior motion-activated LED floodlights, providing vivid color night identification."
+                                    },
+                                    {
+                                        "num": "04",
+                                        "title": "Secure Your NVR / DVR in a Lockbox",
+                                        "description": "If burglars steal your physical recorder, they steal your evidence. Anchor the NVR in a tamper-resistant steel lockbox in an attic or concealed closet with backup cloud sync."
+                                    }
+                                ]
                             }
-                        ]
+                        ],
+                        "categories": [
+                            {
+                                "name": "Security Tips",
+                                "count": 12
+                            },
+                            {
+                                "name": "CCTV Installation",
+                                "count": 10
+                            },
+                            {
+                                "name": "Home Security",
+                                "count": 8
+                            },
+                            {
+                                "name": "Business Security",
+                                "count": 9
+                            },
+                            {
+                                "name": "Product Guides",
+                                "count": 7
+                            },
+                            {
+                                "name": "Industry Trends",
+                                "count": 6
+                            }
+                        ],
+                        "sidebarCta": {
+                            "title": "Need Help Choosing the Right CCTV System?",
+                            "description": "Get expert advice and a customized solution for your property.",
+                            "buttonText": "Get a Free Consultation",
+                            "buttonHref": "/contact-us"
+                        }
                     }
                 }
             },
@@ -1915,6 +3847,437 @@
                             {
                                 "title": "No Obligation",
                                 "description": "Free and transparent quote"
+                            }
+                        ],
+                        "formTitlePart1": "Request a",
+                        "formTitleHighlight": "Quote",
+                        "formDescription": "Fill in your details and our team will get in touch with you shortly.",
+                        "formButtonText": "Get a Quote",
+                        "services": [
+                            "CCTV Installation",
+                            "24/7 Monitoring",
+                            "Access Control Systems",
+                            "Maintenance & Support"
+                        ],
+                        "propertyTypes": [
+                            "Residential (Home / Apartment)",
+                            "Commercial (Office / Retail)",
+                            "Industrial (Warehouse / Factory)"
+                        ],
+                        "successMessage": {
+                            "title": "Quote Request Received!",
+                            "description": "Thank you for reaching out. Our team will review your requirements and get back to you shortly with a customized quote.",
+                            "buttonText": "Send Another Request"
+                        }
+                    }
+                }
+            },
+            "faq": {
+                "variants": {
+                    "SecureViewFaq1": {
+                        "badge": "FAQ",
+                        "titlePart1": "Frequently Asked",
+                        "titleHighlight": "Questions",
+                        "description1": "Have questions about our CCTV installation and security services? We’ve got you covered. Find quick answers to common queries below.",
+                        "description2": "If you still need help, feel free to get in touch with our team. We're always happy to assist you with the right information and guidance for your security needs.",
+                        "buttonText": "Contact Us",
+                        "buttonHref": "/contact",
+                        "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=800&auto=format&fit=crop",
+                        "quoteTitlePart1": "Safer Spaces,",
+                        "quoteTitleHighlight": "Brighter Tomorrows",
+                        "quoteDescription": "Reliable CCTV solutions for homes, businesses and beyond.",
+                        "faqItems": [
+                            {
+                                "question": "What types of CCTV cameras do you install?",
+                                "answer": "We install a wide range of CCTV cameras, including dome cameras, bullet cameras, IP cameras, wireless cameras, and PTZ cameras, based on your security needs and location requirements."
+                            },
+                            {
+                                "question": "Do you provide on-site consultation?",
+                                "answer": "Yes, we offer professional on-site evaluations to assess your property layout and design the most effective camera placement strategy."
+                            },
+                            {
+                                "question": "How long does the installation take?",
+                                "answer": "Most standard residential and commercial CCTV installations are completed efficiently within 1 to 2 days by our certified technicians."
+                            },
+                            {
+                                "question": "Can I view my CCTV footage on my mobile phone?",
+                                "answer": "Yes, our systems feature robust mobile app integration, allowing you to stream live HD feeds and review recordings directly from your smartphone anywhere, anytime."
+                            },
+                            {
+                                "question": "Do you offer warranty on products and installation?",
+                                "answer": "Yes, we provide extensive manufacturer warranties on all hardware equipment along with a dedicated workmanship warranty for all installation services."
+                            },
+                            {
+                                "question": "What areas do you serve?",
+                                "answer": "We provide comprehensive security consulting, installation, and maintenance services across the metropolitan area and nearby regions."
+                            }
+                        ]
+                    }
+                }
+            },
+            "legal": {
+                "privacyPolicy": {
+                    "pageTitle": "Privacy Policy",
+                    "breadcrumbText": "Privacy Policy",
+                    "lastUpdated": "September 16, 2026",
+                    "sections": [
+                        {
+                            "id": "introduction",
+                            "title": "Privacy Policy",
+                            "highlight": "Policy",
+                            "content": "At SecureView, we value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our CCTV installation and security services."
+                        },
+                        {
+                            "id": "collection",
+                            "title": "Information We",
+                            "highlight": "Collect",
+                            "content": [
+                                "We may collect personal information that you provide directly to us, such as your name, email address, phone number, company name, address, and any other details you share through contact forms, service inquiries, or email communication.",
+                                "We also automatically collect certain information when you visit our website, such as your IP address, browser type, device information, pages visited, and time spent on our site. This helps us understand how our website is used and improve your experience."
+                            ]
+                        },
+                        {
+                            "id": "use",
+                            "title": "How We Use Your",
+                            "highlight": "Information",
+                            "content": "We use the information we collect to provide and improve our CCTV installation and security services, respond to your inquiries, communicate with you about our services, send important updates, and personalize your experience. It also helps us analyze website performance, understand user behavior, and enhance the functionality and content of our website."
+                        },
+                        {
+                            "id": "sharing",
+                            "title": "Sharing Your",
+                            "highlight": "Information",
+                            "content": "We do not sell, rent, or trade your personal information. We may share your information with trusted third-party service providers, who assist us in operating our website, delivering our services, or communicating with you. These partners are obligated to keep your information confidential and use it only for the purpose of providing services to us. We may also disclose your information if required by law or to protect our rights, property, or safety."
+                        },
+                        {
+                            "id": "cookies",
+                            "title": "Cookies",
+                            "content": "Our website uses cookies to enhance your browsing experience, analyze website traffic, and understand user behavior. Cookies help us remember your preferences and improve our content and services. You can choose to disable cookies through your browser settings, but this may affect certain features of our website."
+                        },
+                        {
+                            "id": "security",
+                            "title": "Data",
+                            "highlight": "Security",
+                            "content": "We take appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. While we strive to use commercially acceptable means to protect your data, please understand that no method of transmission over the internet or electronic storage is 100% secure."
+                        },
+                        {
+                            "id": "rights",
+                            "title": "Your",
+                            "highlight": "Rights",
+                            "content": "You have the right to access, update, or request the deletion of your personal information at any time. If you wish to exercise any of these rights or have any questions about your data, please contact us using the details provided below."
+                        },
+                        {
+                            "id": "links",
+                            "title": "Third-Party",
+                            "highlight": "Links",
+                            "content": "Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review their privacy policies before providing any personal information."
+                        },
+                        {
+                            "id": "changes",
+                            "title": "Changes to This",
+                            "highlight": "Privacy Policy",
+                            "content": "We may update this Privacy Policy from time to time to reflect changes in our practices or for legal and regulatory reasons. Any updates will be posted on this page with the revised effective date. We encourage you to review this policy periodically to stay informed."
+                        },
+                        {
+                            "id": "contact",
+                            "title": "Contact",
+                            "highlight": "Us",
+                            "content": "If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out to us at info@secureview.com. We are always here to help."
+                        }
+                    ]
+                },
+                "warrantyPolicy": {
+                    "pageTitle": "Warranty Policy",
+                    "breadcrumbText": "Warranty Policy",
+                    "lastUpdated": "September 16, 2026",
+                    "sections": [
+                        {
+                            "id": "coverage",
+                            "title": "Warranty",
+                            "highlight": "Coverage",
+                            "content": "SecureView provides warranty coverage on all genuine hardware products and installation craftsmanship. Equipment warranties are covered according to OEM manufacturer policies, ensuring peace of mind for every installation."
+                        },
+                        {
+                            "id": "duration",
+                            "title": "Warranty",
+                            "highlight": "Duration",
+                            "content": "Standard hardware carries a 1-year to 3-year manufacturer replacement or repair warranty depending on the equipment brand. Workmanship on cable routing and camera mounting includes a 1-year service warranty."
+                        },
+                        {
+                            "id": "exclusions",
+                            "title": "Warranty",
+                            "highlight": "Exclusions",
+                            "content": "Warranties do not cover damage caused by power surges, lightning, unauthorized tampering, physical vandalism, natural disasters, or improper third-party modifications."
+                        },
+                        {
+                            "id": "claim-process",
+                            "title": "How to File a",
+                            "highlight": "Claim",
+                            "content": "To request warranty service, contact our support team at support@secureview.com with your invoice copy and device serial number. A certified technician will be dispatched for troubleshooting."
+                        }
+                    ]
+                },
+                "Disclaimer": {
+                    "pageTitle": "Disclaimer",
+                    "breadcrumbText": "Disclaimer",
+                    "lastUpdated": "September 16, 2026",
+                    "sections": [
+                        {
+                            "id": "general",
+                            "title": "General",
+                            "highlight": "Disclaimer",
+                            "content": "The information provided by SecureView on this website is for general informational purposes only. All information is provided in good faith, however we make no representation or warranty of any kind regarding its completeness or accuracy."
+                        },
+                        {
+                            "id": "limitation",
+                            "title": "Limitation of",
+                            "highlight": "Liability",
+                            "content": "Under no circumstances shall SecureView be liable for any direct, indirect, consequential, or incidental loss or damage resulting from system downtime, network outages, or unauthorized network intrusions beyond our control."
+                        },
+                        {
+                            "id": "external",
+                            "title": "External Links",
+                            "highlight": "Notice",
+                            "content": "Our site may contain links to external third-party portals. SecureView does not investigate, monitor, or endorse the accuracy of information found on third-party domains."
+                        }
+                    ]
+                },
+                "termsAndConditions": {
+                    "pageTitle": "Terms & Conditions",
+                    "breadcrumbText": "Terms & Conditions",
+                    "lastUpdated": "September 16, 2026",
+                    "sections": [
+                        {
+                            "id": "acceptance",
+                            "title": "Acceptance of",
+                            "highlight": "Terms",
+                            "content": "By accessing or using SecureView services and website, you agree to be bound by these Terms and Conditions. If you disagree with any part of these terms, you may not access our services."
+                        },
+                        {
+                            "id": "services-scope",
+                            "title": "Scope of",
+                            "highlight": "Services",
+                            "content": "SecureView provides professional surveillance installation, remote viewing setup, AMC maintenance, and security advisory. Specific deliverables and SLA schedules are outlined in individual project proposals."
+                        },
+                        {
+                            "id": "payment",
+                            "title": "Payment &",
+                            "highlight": "Billing",
+                            "content": "Payments for hardware and installation milestones must be settled as per invoice terms. Late payments may result in temporary suspension of cloud storage or remote monitoring services."
+                        },
+                        {
+                            "id": "termination",
+                            "title": "Service",
+                            "highlight": "Termination",
+                            "content": "Either party may terminate ongoing maintenance contracts with 30 days written notice in accordance with the signed service agreement."
+                        }
+                    ]
+                }
+            },
+            "notFound": {
+                "variants": {
+                    "SecureViewNotFound1": {
+                        "badge": "SORRY!",
+                        "errorCode": "404",
+                        "titlePart1": "Page",
+                        "titleHighlight": "Not Found",
+                        "description": "The page you’re looking for doesn’t exist or may have been moved.",
+                        "buttonText": "Go to Homepage",
+                        "buttonHref": "/",
+                        "cameraImage": "/images/404-camera.jpg",
+                        "cameraAlt": "CCTV Security Camera",
+                        "annotationLine1": "Looks like",
+                        "annotationLine2": "you're lost!"
+                    }
+                }
+            },
+            "amcMaintenance": {
+                "variants": {
+                    "SecureViewAmc1": {
+                        "badge": "CCTV AMC & MAINTENANCE",
+                        "titlePart1": "Reliable Maintenance",
+                        "titlePart2": "for Uninterrupted",
+                        "titleHighlight": "Security",
+                        "description": "Keep your CCTV system running smoothly with our professional AMC and maintenance services. We ensure maximum uptime, quick issue resolution, and complete peace of mind for your home or business.",
+                        "features": [
+                            "Regular system health check",
+                            "Preventive maintenance",
+                            "Quick issue resolution",
+                            "Genuine replacement support",
+                            "Dedicated technical assistance"
+                        ],
+                        "buttonText": "Get a Free Quote",
+                        "buttonHref": "/contact-us",
+                        "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1000&auto=format&fit=crop",
+                        "imageAlt": "Technician maintaining security camera",
+                        "stats": [
+                            {
+                                "value": "24/7",
+                                "label": "Support Availability"
+                            },
+                            {
+                                "value": "500+",
+                                "label": "Happy Clients"
+                            },
+                            {
+                                "value": "100%",
+                                "label": "System Uptime Focus"
+                            }
+                        ]
+                    },
+                    "SecureViewOurAmc1": {
+                        "badge": "OUR AMC PLANS",
+                        "titlePart1": "Simple Plans,",
+                        "titleHighlight": "Complete",
+                        "titlePart2": "Peace of Mind",
+                        "description": "Choose the right AMC plan to keep your CCTV system secure, reliable and hassle-free all year round.",
+                        "plans": [
+                            {
+                                "id": "basic-amc",
+                                "name": "Basic AMC",
+                                "target": "Essential care for small setups",
+                                "price": "₹4,999",
+                                "priceNote": "per year maintenance",
+                                "image": "/images/pricing/enterprises-cctv1.png",
+                                "alt": "Basic AMC CCTV Camera",
+                                "isPopular": false,
+                                "features": [
+                                    "Periodic inspection",
+                                    "Basic diagnostics",
+                                    "On-call support",
+                                    "Software updates"
+                                ],
+                                "buttonText": "Choose Plan",
+                                "buttonHref": "/contact-us"
+                            },
+                            {
+                                "id": "standard-amc",
+                                "name": "Standard AMC",
+                                "target": "Comprehensive support for businesses",
+                                "price": "₹8,999",
+                                "priceNote": "per year maintenance",
+                                "popularBadge": "Most Popular",
+                                "image": "/images/pricing/enterprises-cctv2.png",
+                                "alt": "Standard AMC CCTV Camera",
+                                "isPopular": true,
+                                "features": [
+                                    "Regular maintenance",
+                                    "Priority support",
+                                    "Minor part replacements",
+                                    "System health reports"
+                                ],
+                                "buttonText": "Choose Plan",
+                                "buttonHref": "/contact-us"
+                            },
+                            {
+                                "id": "premium-amc",
+                                "name": "Premium AMC",
+                                "target": "Complete peace of mind",
+                                "price": "₹14,999",
+                                "priceNote": "per year maintenance",
+                                "image": "/images/pricing/enterprises-cctv3.png",
+                                "alt": "Premium AMC CCTV Camera",
+                                "isPopular": false,
+                                "features": [
+                                    "All standard AMC benefits",
+                                    "Major part replacements",
+                                    "On-site support (priority)",
+                                    "24/7 emergency assistance"
+                                ],
+                                "buttonText": "Choose Plan",
+                                "buttonHref": "/contact-us"
+                            }
+                        ]
+                    },
+                    "SecureViewEnquiry1": {
+                        "titlePart1": "Request",
+                        "titleHighlight": "AMC Enquiry",
+                        "description": "Fill in your details and our team will get in touch with you promptly.",
+                        "planOptions": [
+                            {
+                                "value": "basic",
+                                "label": "Basic AMC Plan"
+                            },
+                            {
+                                "value": "standard",
+                                "label": "Standard AMC Plan"
+                            },
+                            {
+                                "value": "premium",
+                                "label": "Premium AMC Plan"
+                            },
+                            {
+                                "value": "custom",
+                                "label": "Customized Solution"
+                            }
+                        ],
+                        "submitButtonText": "Submit Enquiry",
+                        "assistanceCard": {
+                            "title": "Need Assistance?",
+                            "description": "Our support team is available 24/7 to help you with AMC plans and maintenance.",
+                            "phone": "+91 98765 43210",
+                            "phoneHref": "tel:+919876543210",
+                            "footerText": "Talk to our certified security experts for the best AMC solution.",
+                            "image": "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=1000&auto=format&fit=crop",
+                            "imageAlt": "CCTV Security Camera"
+                        }
+                    },
+                    "SecureViewProcessAmc1": {
+                        "processBadge": "OUR AMC PROCESS",
+                        "processTitlePart1": "A Simple &",
+                        "processTitleHighlight": "Hassle-Free Process",
+                        "processDescription": "We make CCTV maintenance easy, structured, and completely transparent.",
+                        "processSteps": [
+                            {
+                                "num": "01",
+                                "title": "Enquiry",
+                                "desc": "Share your requirements with us."
+                            },
+                            {
+                                "num": "02",
+                                "title": "Assessment",
+                                "desc": "Our team evaluates your system."
+                            },
+                            {
+                                "num": "03",
+                                "title": "Plan Activation",
+                                "desc": "Choose the best AMC plan for your needs."
+                            },
+                            {
+                                "num": "04",
+                                "title": "Ongoing Support",
+                                "desc": "Enjoy uninterrupted security with regular service."
+                            }
+                        ],
+                        "faqBadge": "FREQUENTLY ASKED QUESTIONS",
+                        "faqTitlePart1": "AMC & Maintenance",
+                        "faqTitleHighlight": "FAQs",
+                        "faqDescription": "Find answers to common questions about our CCTV AMC and maintenance services.",
+                        "image": "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=800&auto=format&fit=crop",
+                        "imageAlt": "Security monitoring control room",
+                        "faqs": [
+                            {
+                                "question": "What does the CCTV AMC include?",
+                                "answer": "Our CCTV Annual Maintenance Contract (AMC) includes periodic system health checks, routine camera cleaning, lens calibration, firmware updates, basic diagnostics, and priority technician support."
+                            },
+                            {
+                                "question": "How often is maintenance done under AMC?",
+                                "answer": "Routine preventive maintenance visits are typically scheduled on a quarterly basis (every 3 months), along with on-call emergency support whenever required."
+                            },
+                            {
+                                "question": "Are spare parts included in the AMC plan?",
+                                "answer": "Coverage depends on the selected plan. While Basic and Standard plans cover labor and service visits, our Premium AMC covers major part replacements and hardware components."
+                            },
+                            {
+                                "question": "What happens if a camera stops working?",
+                                "answer": "Simply raise a support request through our helpline or portal. Our technician will provide remote troubleshooting or visit your site promptly according to your plan's SLA."
+                            },
+                            {
+                                "question": "Can I upgrade my plan later?",
+                                "answer": "Yes, you can upgrade your AMC tier (e.g., from Basic to Standard or Premium) at any time during your contract period by paying the prorated difference."
+                            },
+                            {
+                                "question": "Do you provide 24/7 support under AMC?",
+                                "answer": "Yes, our Premium AMC plan includes 24/7 emergency monitoring and technical assistance to ensure continuous security coverage."
                             }
                         ]
                     }

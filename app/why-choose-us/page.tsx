@@ -14,7 +14,7 @@ export default function WhyChooseUsPage() {
                 title={pageTopSection?.title || "Why Choose Us"}
                 breadcrumbPath="Why Choose Us"
             />
-            <WhyChooseUsSection data={whyChooseUs} />
+            <WhyChooseUsSection data={whyChooseUs} variant="light" />
             <TestimonialSection data={testimonial} />
         </main>
     );

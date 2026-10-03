@@ -44,7 +44,7 @@ export default function TestimonialSection({
     }, [api]);
 
     return (
-        <section className={`relative w-full py-12 lg:py-20 bg-white text-neutral-900 overflow-hidden ${className}`}>
+        <section className={`relative w-full py-8 lg:py-14 bg-neutral-50 text-neutral-900 overflow-hidden ${className}`}>
             {/* Ambient soft background glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-gradient-to-b from-[#84cc16]/10 to-transparent rounded-full blur-3xl pointer-events-none" />
 

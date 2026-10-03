@@ -4,17 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown, CheckCircle } from "lucide-react";
-import {
-    fadeInUp,
-    fadeInLeft,
-    fadeInRight,
-    staggerContainer,
-    staggerItem,
-    scaleUp,
-    buttonHoverTap,
-    defaultViewport
-} from "@/utils/animations";
-
+import { fadeInLeft, fadeInRight, staggerContainer, staggerItem, scaleUp, buttonHoverTap, defaultViewport } from "@/utils/animations";
 import { site, SecureViewGetAQuoteData } from "@/data";
 
 export interface GetAQuoteFeatureItem {
@@ -40,6 +30,26 @@ export default function GetAQuoteSection({ data = site.getAQuote, className = ""
             { title: "Customized Solutions", description: "As per your requirement" },
             { title: "No Obligation", description: "Free and transparent quote" },
         ],
+        formTitlePart1 = "Request a",
+        formTitleHighlight = "Quote",
+        formDescription = "Fill in your details and our team will get in touch with you shortly.",
+        formButtonText = "Get a Quote",
+        services = [
+            "CCTV Installation",
+            "24/7 Monitoring",
+            "Access Control Systems",
+            "Maintenance & Support",
+        ],
+        propertyTypes = [
+            "Residential (Home / Apartment)",
+            "Commercial (Office / Retail)",
+            "Industrial (Warehouse / Factory)",
+        ],
+        successMessage = {
+            title: "Quote Request Received!",
+            description: "Thank you for reaching out. Our team will review your requirements and get back to you shortly with a customized quote.",
+            buttonText: "Send Another Request",
+        },
     } = quoteData || {};
 
     const [formData, setFormData] = useState({
@@ -110,15 +120,13 @@ export default function GetAQuoteSection({ data = site.getAQuote, className = ""
                             initial="hidden"
                             whileInView="visible"
                             viewport={defaultViewport}
-                            className="relative z-10 space-y-3 max-w-md"
-                        >
+                            className="relative z-10 space-y-3 max-w-md">
                             {features.map((item: GetAQuoteFeatureItem, idx: number) => (
                                 <motion.div
                                     key={idx}
                                     variants={staggerItem}
                                     whileHover={{ x: 4, transition: { duration: 0.2 } }}
-                                    className="flex items-start gap-4 rounded-lg transition-transform"
-                                >
+                                    className="flex items-start gap-4 rounded-lg transition-transform">
                                     <div className="w-1.5 h-14 bg-[#84cc16] rounded-full shrink-0" />
                                     <div>
                                         <h3 className="font-bold text-black text-base">{item.title}</h3>
@@ -136,38 +144,35 @@ export default function GetAQuoteSection({ data = site.getAQuote, className = ""
                         initial="hidden"
                         whileInView="visible"
                         viewport={defaultViewport}
-                        className="lg:col-span-6 bg-gray-50 border border-neutral-200 rounded-lg p-6 relative flex flex-col justify-center"
-                    >
+                        className="lg:col-span-6 bg-gray-50 border border-neutral-200 rounded-lg p-6 relative flex flex-col justify-center">
                         {submitted ? (
                             <motion.div
                                 variants={scaleUp}
                                 initial="hidden"
                                 animate="visible"
-                                className="text-center py-16 space-y-6"
-                            >
+                                className="text-center py-16 space-y-6">
                                 <div className="w-16 h-16 rounded-full bg-lime-100 text-[#84cc16] flex items-center justify-center mx-auto">
                                     <CheckCircle className="w-10 h-10" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-neutral-900">Quote Request Received!</h3>
+                                <h3 className="text-2xl font-bold text-neutral-900">{successMessage?.title || "Quote Request Received!"}</h3>
                                 <p className="text-neutral-600 text-sm max-w-sm mx-auto">
-                                    Thank you for reaching out. Our team will review your requirements and get back to you shortly with a customized quote.
+                                    {successMessage?.description || "Thank you for reaching out. Our team will review your requirements and get back to you shortly with a customized quote."}
                                 </p>
                                 <motion.button
                                     {...buttonHoverTap}
                                     onClick={() => setSubmitted(false)}
-                                    className="px-6 py-3 rounded-xl bg-[#84cc16] text-white font-bold text-sm hover:bg-[#65a30d] transition-colors cursor-pointer"
-                                >
-                                    Send Another Request
+                                    className="px-6 py-3 rounded-xl bg-[#84cc16] text-white font-bold text-sm hover:bg-[#65a30d] transition-colors cursor-pointer">
+                                    {successMessage?.buttonText || "Send Another Request"}
                                 </motion.button>
                             </motion.div>
                         ) : (
                             <>
                                 <div className="space-y-1 mb-8">
                                     <h3 className="text-2xl sm:text-3xl font-extrabold text-neutral-900">
-                                        Request a <span className="text-[#84cc16]">Quote</span>
+                                        {formTitlePart1} <span className="text-[#84cc16]">{formTitleHighlight}</span>
                                     </h3>
                                     <p className="text-xs sm:text-sm text-neutral-500">
-                                        Fill in your details and our team will get in touch with you shortly.
+                                        {formDescription}
                                     </p>
                                 </div>
 
@@ -231,10 +236,11 @@ export default function GetAQuoteSection({ data = site.getAQuote, className = ""
                                                 className="w-full px-4 py-3 rounded-md border border-neutral-200 bg-white text-neutral-900 text-sm focus:outline-none focus:border-[#84cc16] focus:ring-1 focus:ring-[#84cc16] transition-colors appearance-none cursor-pointer"
                                             >
                                                 <option value="">-- Select Service --</option>
-                                                <option value="cctv">CCTV Installation</option>
-                                                <option value="monitoring">24/7 Monitoring</option>
-                                                <option value="access">Access Control Systems</option>
-                                                <option value="maintenance">Maintenance & Support</option>
+                                                {services.map((serviceName: string, idx: number) => (
+                                                    <option key={idx} value={serviceName}>
+                                                        {serviceName}
+                                                    </option>
+                                                ))}
                                             </select>
                                             <ChevronDown className="absolute right-4 top-[38px] w-4 h-4 text-neutral-500 pointer-events-none" />
                                         </div>
@@ -251,9 +257,11 @@ export default function GetAQuoteSection({ data = site.getAQuote, className = ""
                                             className="w-full px-4 py-2 rounded-md border border-neutral-200 bg-white text-neutral-900 text-sm focus:outline-none focus:border-[#84cc16] focus:ring-1 focus:ring-[#84cc16] transition-colors appearance-none cursor-pointer"
                                         >
                                             <option value="">-- Select Property Type --</option>
-                                            <option value="residential">Residential (Home / Apartment)</option>
-                                            <option value="commercial">Commercial (Office / Retail)</option>
-                                            <option value="industrial">Industrial (Warehouse / Factory)</option>
+                                            {propertyTypes.map((propType: string, idx: number) => (
+                                                <option key={idx} value={propType}>
+                                                    {propType}
+                                                </option>
+                                            ))}
                                         </select>
                                         <ChevronDown className="absolute right-4 top-[38px] w-4 h-4 text-neutral-500 pointer-events-none" />
                                     </div>
@@ -279,7 +287,7 @@ export default function GetAQuoteSection({ data = site.getAQuote, className = ""
                                         type="submit"
                                         className="w-full py-3 rounded-md bg-[#84cc16] text-white font-bold text-sm transition-all duration-300 hover:bg-[#65a30d] shadow-lg shadow-lime-500/25 flex items-center justify-center gap-2 cursor-pointer group"
                                     >
-                                        <span>Get a Quote</span>
+                                        <span>{formButtonText}</span>
                                         <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
                                     </motion.button>
 

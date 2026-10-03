@@ -6,13 +6,18 @@ import { ShieldCheck } from "lucide-react";
 import { site, SecureViewWhyChooseUsData, SectionProps } from "@/data";
 import { renderIcon } from "@/utils/icons";
 
-export interface WhyChooseUsSectionProps extends SectionProps<SecureViewWhyChooseUsData> { }
+export interface WhyChooseUsSectionProps extends SectionProps<SecureViewWhyChooseUsData> {
+    theme?: "light" | "dark";
+}
 
 export default function WhyChooseUsSection({
     data,
     className = "",
+    variant,
+    theme,
 }: WhyChooseUsSectionProps = {}) {
     const whyChooseUs = data || site.whyChooseUs;
+    const isLight = variant === "light" || theme === "light" || className.includes("bg-white");
 
     const {
         badge = "WHY CHOOSE US",
@@ -27,7 +32,10 @@ export default function WhyChooseUsSection({
     } = whyChooseUs || {};
 
     return (
-        <section className={`relative w-full lg:py-16 py-10 bg-black text-white overflow-hidden ${className}`}>
+        <section
+            className={`relative w-full lg:py-14 py-8 overflow-hidden transition-colors duration-300 ${isLight ? "bg-white text-neutral-900" : "bg-black text-white"
+                } ${className}`}
+        >
             <div className="max-w-[1400px] mx-auto px-4">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-3 lg:gap-12 lg:gap-16 items-center">
 
@@ -77,7 +85,10 @@ export default function WhyChooseUsSection({
                             </motion.div>
 
                             {/* Photo with smooth zoom on hover */}
-                            <div className="absolute left-[5.8%] top-[10%] h-[78.1%] w-[83.5%] overflow-hidden rounded-[12px] shadow-[0_0_0_1px_rgba(255,255,255,0.04)]">
+                            <div className={`absolute left-[5.8%] top-[10%] h-[78.1%] w-[83.5%] overflow-hidden rounded-[12px] ${isLight
+                                    ? "shadow-[0_10px_30px_rgba(0,0,0,0.08)] ring-1 ring-black/5"
+                                    : "shadow-[0_0_0_1px_rgba(255,255,255,0.04)]"
+                                }`}>
                                 <Image
                                     src={image.src}
                                     alt={image.alt || "Why Choose Us"}
@@ -123,23 +134,26 @@ export default function WhyChooseUsSection({
                                         transition={{ duration: 0.8, delay: 0.2 }}
                                         className="h-[2px] bg-[#84cc16]"
                                     />
-                                    <span className="text-xs lg:text-sm uppercase tracking-[0.25em] font-bold text-[#84cc16]">
+                                    <span className={`text-xs lg:text-sm uppercase tracking-[0.25em] font-bold ${isLight ? "text-[#65a30d]" : "text-[#84cc16]"
+                                        }`}>
                                         {badge}
                                     </span>
                                 </div>
                             )}
 
                             {/* Main Headline */}
-                            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-wide">
+                            <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-wide ${isLight ? "text-neutral-950" : "text-white"
+                                }`}>
                                 {titlePart1}{" "}
                                 {titleHighlight && (
-                                    <span className="text-[#84cc16]">{titleHighlight}</span>
+                                    <span className={isLight ? "text-[#65a30d]" : "text-[#84cc16]"}>{titleHighlight}</span>
                                 )}
                             </h2>
 
                             {/* Description */}
                             {description && (
-                                <p className="text-neutral-400 text-sm sm:text-base leading-relaxed max-w-xl">
+                                <p className={`text-sm sm:text-base leading-relaxed max-w-xl ${isLight ? "text-neutral-600" : "text-neutral-400"
+                                    }`}>
                                     {description}
                                 </p>
                             )}
@@ -173,13 +187,20 @@ export default function WhyChooseUsSection({
                                             whileHover={{ y: -6, scale: 1.02 }}
                                             whileTap={{ scale: 0.98 }}
                                             transition={{ type: "spring", stiffness: 350, damping: 22 }}
-                                            className={`group relative rounded-lg p-5 flex flex-col items-center text-center space-y-3 transition-all duration-300 border cursor-pointer ${isHighlighted
-                                                ? "bg-gradient-to-b from-neutral-900 to-[#142304] border-[#84cc16] shadow-xl shadow-[#84cc16]/10"
-                                                : "bg-black border-neutral-800 hover:border-[#84cc16]/50 hover:shadow-lg hover:shadow-[#84cc16]/5"
+                                            className={`group relative rounded-xl p-5 flex flex-col items-center text-center space-y-3 transition-all duration-300 border cursor-pointer ${isLight
+                                                    ? isHighlighted
+                                                        ? "bg-gradient-to-b from-lime-50/80 to-white border-[#84cc16] shadow-xl shadow-[#84cc16]/10"
+                                                        : "bg-white border-neutral-200/90 shadow-sm hover:border-[#84cc16] hover:shadow-xl hover:shadow-[#84cc16]/10"
+                                                    : isHighlighted
+                                                        ? "bg-gradient-to-b from-neutral-900 to-[#142304] border-[#84cc16] shadow-xl shadow-[#84cc16]/10"
+                                                        : "bg-black border-neutral-800 hover:border-[#84cc16]/50 hover:shadow-lg hover:shadow-[#84cc16]/5"
                                                 }`}
                                         >
                                             {/* Icon Badge with spring rotation & scale */}
-                                            <div className="w-14 h-14 rounded-full bg-[#2D3E07] border border-neutral-800 flex items-center justify-center text-[#84cc16] shadow-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#84cc16] group-hover:text-black">
+                                            <div className={`w-14 h-14 rounded-full flex items-center justify-center shadow-md transition-all duration-300 group-hover:scale-110 group-hover:bg-[#84cc16] group-hover:text-black ${isLight
+                                                    ? "bg-lime-100/90 border border-lime-200 text-[#65a30d]"
+                                                    : "bg-[#2D3E07] border border-neutral-800 text-[#84cc16]"
+                                                }`}>
                                                 {renderIcon(
                                                     feature.icon,
                                                     ShieldCheck,
@@ -189,10 +210,14 @@ export default function WhyChooseUsSection({
 
                                             {/* Content */}
                                             <div className="space-y-1.5 flex flex-col items-center">
-                                                <h3 className="text-lg font-bold text-white transition-colors duration-300 group-hover:text-[#84cc16]">
+                                                <h3 className={`text-lg font-bold transition-colors duration-300 ${isLight
+                                                        ? "text-neutral-900 group-hover:text-[#65a30d]"
+                                                        : "text-white group-hover:text-[#84cc16]"
+                                                    }`}>
                                                     {feature.title}
                                                 </h3>
-                                                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                                                <p className={`text-xs sm:text-sm leading-relaxed ${isLight ? "text-neutral-600" : "text-neutral-400"
+                                                    }`}>
                                                     {feature.description}
                                                 </p>
                                             </div>
