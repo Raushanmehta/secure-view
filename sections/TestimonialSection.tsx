@@ -88,7 +88,7 @@ export default function TestimonialSection({
                             }}
                             className="w-full"
                         >
-                            <CarouselContent className="-ml-4 sm:-ml-6 pt-7 lg:pt-12 pb-6">
+                            <CarouselContent className="-ml-4 sm:-ml-6 pt-10 lg:pt-12 pb-6">
                                 {testimonials.map((item, index) => (
                                     <CarouselItem
                                         key={item.name || index}
