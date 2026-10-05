@@ -153,7 +153,13 @@ export default function GallerySection({ data }: GallerySectionProps = {}) {
                             <div className="relative w-full h-[380px] sm:h-[420px] rounded-3xl overflow-hidden shadow-2xl border-4 border-neutral-100 bg-neutral-900 group">
                                 <div className="absolute inset-0 bg-neutral-950/40 z-10" />
                                 <Image
-                                    src={featuredVideo?.image || "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1000&auto=format&fit=crop"}
+                                    src={
+                                        featuredVideo?.image?.startsWith("http") || featuredVideo?.image?.startsWith("/")
+                                            ? featuredVideo.image
+                                            : featuredVideo?.image
+                                            ? `/${featuredVideo.image}`
+                                            : "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1000&auto=format&fit=crop"
+                                    }
                                     alt={featuredVideo?.alt || featuredVideo?.title || "Featured CCTV Installation Video"}
                                     fill
                                     sizes="(max-width: 1024px) 100vw, 60vw"

@@ -46,7 +46,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
     const cardTitle = title || service?.title || "";
     const cardDesc = description || service?.description || "";
-    const cardImage = image || service?.image || "";
+    const cardImage = image || service?.image || "/images/services/cctv-installation.jpg";
     const cardHref = href || (service?.slug ? `/services/${service.slug}` : "#");
     const highlighted = isHighlighted ?? service?.isHighlighted ?? false;
     const rawIcon = IconComponent || service?.icon || Video;

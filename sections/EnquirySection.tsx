@@ -24,8 +24,8 @@ export default function EnquirySection({ data, className = "" }: EnquirySectionP
     const assistance = amcEnquiryData.assistanceCard || {
         title: "Need Assistance?",
         description: "Our support team is available 24/7 to help you with AMC plans and maintenance.",
-        phone: "+91 98765 43210",
-        phoneHref: "tel:+919876543210",
+        phone: "+1 000000000",
+        phoneHref: "tel:+1000000000",
         footerText: "Talk to our certified security experts for the best AMC solution.",
         image: "https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=1000&auto=format&fit=crop",
         imageAlt: "CCTV Security Camera",

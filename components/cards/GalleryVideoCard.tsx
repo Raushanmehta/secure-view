@@ -12,6 +12,12 @@ export interface GalleryVideoCardProps {
 }
 
 export default function GalleryVideoCard({ vid, idx }: GalleryVideoCardProps) {
+    const imageSrc = !vid.image
+        ? "/images/gallery/gallery-banner.jpg"
+        : vid.image.startsWith("http://") || vid.image.startsWith("https://") || vid.image.startsWith("/")
+        ? vid.image
+        : `/${vid.image}`;
+
     return (
         <motion.div
             key={idx}
@@ -19,7 +25,7 @@ export default function GalleryVideoCard({ vid, idx }: GalleryVideoCardProps) {
             className=" rounded-2xl overflow-hidden  transition-all flex flex-col justify-between">
             <div className="relative h-44 w-full bg-neutral-900 overflow-hidden">
                 <Image
-                    src={vid.image}
+                    src={imageSrc}
                     alt={vid.alt || vid.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

@@ -62,18 +62,27 @@ function Surveillance24Icon({ className = "w-14 h-14 text-[#84cc16]" }: { classN
 export default function ServiceDetailSection({ initialSlug }: ServiceDetailSectionProps = {}) {
     const router = useRouter();
     const servicesData = site.services;
-    const servicesList: ServiceItem[] = servicesData.servicesList;
+    const servicesList: ServiceItem[] = servicesData?.servicesList || [];
 
     // Use initialSlug or fallback to first slug
     const fallbackSlug = servicesList[0]?.slug || "";
     const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
-    const activeSlug = selectedSlug ?? (initialSlug || fallbackSlug);
 
-    const activeService = servicesList.find((s) => s.slug === activeSlug) || servicesList[0];
+    React.useEffect(() => {
+        if (initialSlug) {
+            setSelectedSlug(initialSlug);
+        }
+    }, [initialSlug]);
+
+    const activeSlug = selectedSlug ?? (initialSlug || fallbackSlug);
+    const activeService = servicesList.find(
+        (s) => s.slug === activeSlug || s.slug?.toLowerCase() === activeSlug?.toLowerCase()
+    ) || servicesList[0];
+    const currentActiveSlug = activeService?.slug || activeSlug;
 
     const sidebarTitle = servicesData?.sidebarTitle || "Our Services";
     const helpCta = servicesData?.helpCta;
-    const heroImage = activeService?.heroImage || activeService?.image || "";
+    const heroImage = activeService?.heroImage || activeService?.image || "/images/services/cctv-installation.jpg";
     const heroImageAlt = activeService?.heroImageAlt || activeService?.title || "Service Hero";
     const overview = activeService?.overview;
     const featureHighlights = activeService?.featureHighlights || [];
@@ -106,7 +115,7 @@ export default function ServiceDetailSection({ initialSlug }: ServiceDetailSecti
 
                             <div className="space-y-2">
                                 {servicesList.map((tab) => {
-                                    const isActive = activeSlug === tab.slug;
+                                    const isActive = currentActiveSlug === tab.slug;
                                     return (
                                         <motion.button
                                             key={tab.slug}
@@ -263,7 +272,7 @@ export default function ServiceDetailSection({ initialSlug }: ServiceDetailSecti
                                                         }`}
                                                 >
                                                     <Image
-                                                        src={feature.image}
+                                                        src={feature.image || "/images/services/cctv-installation.jpg"}
                                                         alt={feature.title}
                                                         fill
                                                         sizes="(max-width: 768px) 100vw, 40vw"

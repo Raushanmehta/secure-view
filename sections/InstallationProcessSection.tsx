@@ -89,7 +89,7 @@ export default function InstallationProcessSection({ data }: InstallationProcess
                             className="relative w-full h-[260px] sm:h-[340px] md:h-[400px] rounded-3xl overflow-hidden shadow-sm group"
                         >
                             <Image
-                                src="/images/installation/site-survey.jpg"
+                                src="/images/installation/hero-installation.png"
                                 alt={processData?.titleHighlight || "CCTV Installation Process"}
                                 fill
                                 sizes="(max-width: 1024px) 100vw, 66vw"

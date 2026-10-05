@@ -113,6 +113,12 @@ export default function GalleryImageCard({
     onClick,
     className = "",
 }: GalleryImageCardProps) {
+    const imageSrc = !image
+        ? "/images/gallery/gallery-1.jpg"
+        : image.startsWith("http://") || image.startsWith("https://") || image.startsWith("/")
+        ? image
+        : `/${image}`;
+
     return (
         <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -131,7 +137,7 @@ export default function GalleryImageCard({
 
             {/* 3. Main Background Image */}
             <Image
-                src={image}
+                src={imageSrc}
                 alt={title || alt}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

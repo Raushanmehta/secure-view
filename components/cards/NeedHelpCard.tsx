@@ -5,14 +5,16 @@ import { Phone, Headphones } from "lucide-react";
 export interface HelpCtaData {
     title?: string;
     description?: string;
+    subtitle?: string;
     phoneNumber?: string;
+    phone?: string;
 }
 
 export default function NeedHelpCard({ helpCta }: { helpCta?: HelpCtaData }) {
     const data = {
         title: helpCta?.title || "Need Help With Your Installation?",
-        description: helpCta?.description || "Our experts are here to guide you at every step, from planning to installation and beyond.",
-        phoneNumber: helpCta?.phoneNumber || "+91 98765 43210"
+        description: helpCta?.description || helpCta?.subtitle || "Our experts are here to guide you at every step, from planning to installation and beyond.",
+        phoneNumber: helpCta?.phoneNumber || helpCta?.phone || "+1 000000000"
     };
 
     return (
